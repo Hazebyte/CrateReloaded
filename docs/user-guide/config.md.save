@@ -1,0 +1,12 @@
+# The Config
+
+'
+prefix: '%black%[%gold%Crates%black%] %dark_grey%'
+
+
+'
+locale: en
+
+updater: true
+
+debug: false

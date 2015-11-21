@@ -1,0 +1,110 @@
+# What is CrateReloaded?
+
+Crate Reloaded is an plugin that allows you to create Crates to give great rewards and prizes! Crate Reloaded is fully customizable and
+ features six types of crates ....
+
+- Supply
+- Mystery
+- Menu
+- Key
+- Roulette
+- CS:GO
+
+## Why CrateReloaded?
+
+Contrasting from other crate plugins, CrateReloaded is the one and only 
+crate plugin which will always have more features incoming. 
+CrateReloaded features its own API which allows for an easy and 
+fast developing experience allowing users to add in features at 
+ease. In addition to that, we are open to new ideas and always 
+looking to improve the crate adventure!
+
+## Features
+
+- **HQ** - The one and only crate plugin which has all your needs.
+- **Six Types of Crates** - Unlike other plugins which only have keys, or maybe GUI. CrateReloaded not only has keys, but also Roulettes, CSGO and the original Mystery Crates.
+- **Full Customization** - From the language file to the crates, everything is fully customizable!
+- **Language Support** - Tu parle francais? Simply change the language file.
+- **Economy Support** - Integrated with Vault for quality economy.
+- **Chance System** - Our Unique Probability System allows you to have what you want, the way you want it.
+- **Command/Item Support** - Fully supports commands/items with our own Parsing system.
+- **Particles** - Light the night sky with fireworks!
+- **Documented** - Too hard to ask me about the plugin, we have everything documented!
+- **Preview Option** - Show players what they can win! Left click to preview, right click to win rewards!
+- **CSGO & Roulette Style** - An unique type of crate featuring animated menu simulating CSGO and Archon key openings. 
+- **Sound Effects/Visual Effects** - Bingg! You won $1,000,000! Over 40 appealing effects, including hearts and more! Let everyone know that there is a winner!
+
+# Commands
+
+## Base Command
+
+- **/cr** - The base command for Crate Reloaded.
+- **/crate** - The base command for Crate Reloaded.
+
+## Admins
+
+- **/cr reload** - Reloads the crate plugin.
+
+## Moderators
+
+- **/cr give <player> <crate name> <amount>** - Gives the player crates.
+- **/cr giveall <crate name> <amount>** - Gives every player crates.
+- **cr givekey <player> <crate name> <amount>>** - Gives the player keys.
+- **/cr giveallkey <crate name> <amount>** - Gives every player keys.
+- **/cr set <crate name>** - Sets a crate at the location the player is looking at.
+- **/cr remove <crate name>** - Removes a crate at the location the player is looking at.
+- **/cr list** - List available crates.
+- **/cr commands** - List every command available.
+
+## Users
+
+- **/cr info <crate name>** - Shows information about a crate.
+- **/cr buy <crate name> <amount>** - Allows the player to buy crates.
+- **/cr buy** - Allows the player to access crates from a GUI. `Note:
+ Requires permission cr.crate`
+
+# Permissions
+
+| **Recommended User** | **Command** | **Permission** |
+
+
+
+
+
+
+
+
+
+
+
+# Installation
+|----------------------|-------------|----------------|
+
+1. Download CrateReloaded, Vault, and an Economy Plugin. 2. Install 
+all three plugins. 3. Start up the server. 4. Enjoy! You can now start 
+customizing the plugin!
+| Admin                | reload      | cr.reload      |
+
+| Moderator            | give        | cr.give        |
+
+|                      | giveall     | cr.giveall     |
+
+|                      | givekey     | cr.givekey     |
+
+|                      | giveallkey  | cr.giveallkey  |
+
+|                      | set         | cr.set         |
+
+|                      | remove      | cr.remove      |
+
+|                      | list        | cr.list        |
+
+| User                 | crate       | cr.crate       |
+
+|                      | cr          | cr.crate       |
+
+|                      | menu        | cr.menu        |
+
+|                      | info        | cr.info        |
+
+|                      | buy         |                |
