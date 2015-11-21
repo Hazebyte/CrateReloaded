@@ -1,11 +1,12 @@
 # CrateReloaded Documentation
 
-# Notes
-We are using Markdown for formatting.
+Docs
 
-# Recommended Setup
-* Clone this repo
-* Start writing docs
+## Usage
 
-# Documentation Page
-http://crate.hazebyte.com/guide/pro/user/start-guide/
+Markdown
+
+## Credits
+
+TODO
+
