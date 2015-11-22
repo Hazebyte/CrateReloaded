@@ -2,6 +2,26 @@
 
 Documentation for the bukkit plugin, CrateReloaded.
 
+## Progress
+
+[Documentation Link](http://crate.hazebyte.com/guide/pro/user/start-guide/)
+
+### Pages
+
+The documentation is current being rewritten. 
+
+1. Start Guide **Done** 
+2. User Guide **WIP**
+  * Config.md
+  * Crate.md
+  * Translate.md
+3. Reference **Done**
+4. Example **WIP**
+  * GlobalFormat.md
+  * Screenshots.md
+  * Examples.md
+5. Dedication **Done**
+
 ## Contributing
 
 1. Fork it!
@@ -13,3 +33,4 @@ Documentation for the bukkit plugin, CrateReloaded.
 ## Credits
 
 * Dinosaur
+
