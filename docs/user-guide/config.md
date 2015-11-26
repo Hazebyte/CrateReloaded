@@ -1,35 +1,29 @@
-# The Config
+# Configuration
+
+Many of CrateReloaded's features exist as configuration options (Prefix, Creating Crates, Translations). 
+Every configuration option is listed on the User Guide section of this documentation.
+
+## Configuration Files
+
+Once you have run your server with CrateReloaded installed, you will find the main configuration file inside the 
+**plugins/CrateReloaded** folder:
+
+* Config.yml
+* Crate.yml
+* Block.yml
+* Storage.yml
+
+In this page, we will only be talking about the **config.yml**.
+
+## Config.yml
+
+The **config.yml** holds global configuration settings such as the prefix, locale, and debug settings.
 
 ```
-#################################################
-# +--------------------------------------------+#
-# |              Admininistration              |#
-# +--------------------------------------------+#
-#################################################
-
-# Prefix
-# The prefix before every message
 prefix: '%black%[%gold%Crates%black%] %dark_grey%'
-
-# Language
-# Currently Supports: en, fr
 locale: en
-
-# Updater
-# Do you wish to check for updates?
 updater: true
-
-# Debugger (Developer Note: Outdated and Disabled. ETA: 1.1.0)
-# Developing Use Only. Disable, if you do not want to recieve debug messages.
 debug: false
-
-#################################################
-# +--------------------------------------------+#
-# |                   Crates                   |#
-# +--------------------------------------------+#
-#################################################
-# Menu Display Settings
-# This sets the items for the virtual GUI type crates.
 menu:
     name: 'Crate Menu'
     amountDisplay: 
@@ -38,39 +32,25 @@ menu:
         item: 'diamond_block 1 %green%Open_Crate'
     keyDisplay: 
         item: 'tripwire_hook 1 %gold%Keys %white%You_have_%kamount%_left.'
-
-#################################################
-# +--------------------------------------------+#
-# |               RouletteCrates               |#
-# +--------------------------------------------+#
-#################################################
-
+pushback:
+    enabled: true
+    modifiers:
+        x: 1.0
+        y: 1.0
+        z: 1.0
 roulette:
-    length: 4
+    length: 5
+csgo:
+    length: 6
 ```
 
-# How To's
-
-## How to change the prefix
-
-Change the `prefix:`.
-
-## How to change the language
-
-We currently only support `en, fr` as English and French.
-
-Please visit [Translations](http://crate.hazebyte.com/guide/user/user-guide/translate/) on how to translate to your own language.
-
-## How to change the items for the Menu Crate
-
-Under Menu, there are options to change the settings.
-
-Simply edit and remember to follow the format.
-
-`[Item] [Amount] [Name] [Lore] [Data]`
-
-## How to change the length of the CS:GO and Roulette Crates
-
-Under Roulettes, there is an length which can be changed to any amount.
-
-It is recommended that the length does not exceed `9` seconds.
+|       Setting         |         Default           |        Description            |
+------------------------|---------------------------|-------------------------------|
+| prefix                |'%black%[%gold%Crates%black%] %dark_grey%'| Shows up before every command. |
+| locale                |            en             | The language pack that the plugin will use. |
+| debug                 |            false          | Prints out information to the console. |
+| menu.name             |        'Crate Menu'       | The name for the in-game GUI.  |
+| menu.amountDisplay    |'chest 1 %gold%Crate %white%You_have_%camount%_left.'| Item that displays the amount of crate the user has left inside the in-game GUI. |
+| menu.openCrateDisplay |'diamond_block 1 %green%Open_Crate'| Clickable item that allows the user to open a crate inside the in-game GUI. |
+| menu.keyDisplay       |'tripwire_hook 1 %gold%Keys %white%You_have_%kamount%_left.'| Item that displays the amount of keys the user has inside the in-game GUI. |
+| roulette.length       |            4              | The length of the Roulette |
