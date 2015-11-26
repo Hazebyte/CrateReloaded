@@ -46,11 +46,14 @@ csgo:
 
 |       Setting         |         Default           |        Description            |
 ------------------------|---------------------------|-------------------------------|
-| prefix                |'%black%[%gold%Crates%black%] %dark_grey%'| Shows up before every command. |
-| locale                |            en             | The language pack that the plugin will use. |
-| debug                 |            false          | Prints out information to the console. |
+| prefix                |'%black%[%gold%Crates%black%] %dark_grey%'| Set the prefix before every command. |
+| locale                |            en             | Set the language pack that your plugin uses. |
+| debug                 |            false          | Whether the plugin should print out information in the console. |
 | menu.name             |        'Crate Menu'       | The name for the in-game GUI.  |
 | menu.amountDisplay    |'chest 1 %gold%Crate %white%You_have_%camount%_left.'| Item that displays the amount of crate the user has left inside the in-game GUI. |
 | menu.openCrateDisplay |'diamond_block 1 %green%Open_Crate'| Clickable item that allows the user to open a crate inside the in-game GUI. |
 | menu.keyDisplay       |'tripwire_hook 1 %gold%Keys %white%You_have_%kamount%_left.'| Item that displays the amount of keys the user has inside the in-game GUI. |
-| roulette.length       |            4              | The length of the Roulette |
+| pushback.enabled      |          true             | Whether the key crate should push the player.   |
+| pushback.modifiers    |      x=1, y=1, z=1        | Set the force of the push in key crates. |
+| roulette.length       |            5              | Set the length of the Roulette Menu |
+| csgo.length           |            6              | Set the length of the CSGO Menu |
