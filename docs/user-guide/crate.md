@@ -90,19 +90,99 @@ CrateReloaded features several activation types that range from simple clicking 
 | ROULETTEKEYCRATE | Crate that is derived from *KEYCRATE* which activates a roulette GUI. |
 | CSGOKEYCRATE | Crate that is derived from *KEYCRATE* which activates a cs:go GUI. |
 
+# Enchantments
+For a list of enchantments, please check out the [Enchantment List.](../reference/enchantmentList.md)
+
+```
+    - 'item:(268 1 &3Sword_L1 &aBeginner_Kit! 16:1;17:1), chance:(7)'
+```
+To implement enchantments into your items, use the data section of the **item** to add in the enchantment id.
+For several enchantment ids, use a ";" as a separator.
+
+The code snippet above is a sword that has two enchantments, **Sharpness(16)** and **Smite(17)**.
+
+# Effects
+For visual effects, please check out the [Particle List.](../reference/particleList.md) 
+Otherwise, for sound effects, please check out the [Sound List.](../reference/soundList.md) 
+
+```
+    effect:
+        onOpenEffects: 'firework;explode'
+        dormantEffects: 'happyVillager'
+```
+To implement effects, use the effect section inside the crate options. To add in multiple effects, use a ";" as a separator.
+
 # Rewards Section
 The options you set in the reward section are per crate rewards. This, ultimately, means that you can have unlimited rewards with each crate!
+
+```
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'item:(268 1 &3Sword_L1 &aBeginner_Kit! 16:1), chance:(7)'
+            - 'cmd:(/tell %player% I'm going to execute the player!), cmd:(/kill %player%), chance:(7)'
+```
 
 ## Tags
 The rewards section uses tags to identify the type of information being passed through.
 
 | Tag | Parameters | Example |
-| item | [item_id] [amount] [name] [lore] [data] | wip |
-| cmd | [command] | wip |
-| chance | [number] | wip |
-| display | [item_id] [amount] [name] [lore] [data] | wip |
-| broadcast | [message]] | wip |
-| inbroadcast | [message]] | wip |
-| onopen | [message]] | wip |
-| noduplicate | *N/A* | wip |
+|-|-|-|
+| item | [item_id] [amount] [name] [lore] [data] | item:(1 30 DIRT! &aAmazing_Dirt! 300:1) |
+| cmd | [command] | cmd:(/executeMyCommand) |
+| chance | [number] | chance:(5) |
+| display | [item_id] [amount] [name] [lore] [data] | display:(1 30 DIRT! &aAmazing_Dirt! 300:1) |
+| broadcast | [message]] | broadcast:(Sending this to the entire server!) |
+| inbroadcast | [message]] | broadcast:(This will be added onto the original broadcast message!) |
+| onopen | [message]] | broadcast:(Sending this only to the player!) |
+| noduplicate | *N/A* | noduplicate:() |
+
+### Items
+The reward section allows you to add in Items with unique characteristics.
+
+#### Parsing
+```
+    - 'item:(268 1 &3Sword_L1 &aBeginner_Kit!%line%&1Level_2 16:1;17:1)'
+```
+| String | Explanation | Example |
+|-|-|-|
+| **_** | Replaces the character with a space. | &3Sword_L1 |
+| **%line%** | Replaces the string with a new line. | &aBeginner_Kit!%line%&1Level_2 |
+| **;** | Allows you to add in several enchantments. | 16:1;17:1 |
+
+### Chances
+The reward section for CrateReloaded uses a weighted system as a chance system.
+
+#### Weight System Explained
+Think of 5 different individual people at a lottery. Each person will recieve a lottery ticket, but a different amount.
+In an unequal world, the person who weighs the most receives 5 tickets descending from there. 
+The person with the *largest* **weight** will have the largest chance of being picked because he has the most tickets.
+The person with the *smallest* **weight** will have the smallest chance of being picked because he has the least amount of tickets.
+
+This is similar to our system, the reward with the largest **weight**, or number, will have the greatest chance of being picked.
+Thus, Weight System!
+
+#### Basics
+For those who don't like calculations, the weight system makes it easy. The larger the number, the higher chance it will have
+and vice versa.
+
+```
+    - 'item:(dirt 1), chance:(10)'
+    - 'item:(stone 1), chance:(5)'
+    - 'item:(iron_ingot 1), chance:(3)'
+    - 'item:(gold_ingot 1), chance:(2)'
+    - 'item:(diamond 1), chance:(1)'
+```
+
+For our example, we will be using **dirt**, **stone**, **iron**, **gold**, **diamond**. Starting off, you want to create
+a simple base number (We will use the lucky number, **5**), and build off from there. 
+
+Analysis
+
+* **Dirt**, which is extremely common, will be *way above* the base value which will make it appear several times more than normal.
+* **Stone**, which is pretty common, will be *at* the base value which will make it appear a lot of the time.
+* **Iron**, which is somewhat rare, will be *below* the base value which will appear less often.
+* **Gold**, which is rare, will be *below* the base value which will appear less often.
+* **Diamond**, which is very rare, will be *way below* the base value which will appear not very often.
 
