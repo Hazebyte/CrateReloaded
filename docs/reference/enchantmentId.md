@@ -1,9 +1,6 @@
-# Enchantments
-CrateReloaded supports enchantments in its own Parser! Please check out the Creating a Crate in User Guide to see how.
+# Effects
+CrateReloaded supports effects such as **glow**, and others to get your crates shining!
 
-`Free Version Notice` The glow effect is not ported yet.
-
-## Enchantment List
 ID | Enchantment Name
 ---|------------------
 300| Glow
