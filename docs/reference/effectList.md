@@ -1,10 +1,9 @@
-# Effects
-CrateReloaded supports a variety of effects and sounds to get your server the unique crate experience.
+# Effects 
+CrateReloaded supports a variety of particle effects to give your server the brilliant light it deserves. 
 
-`Free Version Notice` Effects are not ported yet. There are currently two free effects in the config.
+```Cauldron Users: Please note that effects do not work with Cauldron```
 
-## Effects List 
-### Visual
+## Visual
 ```
 firework
 explode
@@ -50,7 +49,7 @@ droplet
 take
 mobappearance
 ```
-### Sound
+## Sound
 ```
 AMBIENCE_CAVE
 AMBIENCE_RAIN
