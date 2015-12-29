@@ -1,0 +1,118 @@
+# Global Example
+
+Please check out the [Global Example](http://crate.hazebyte.com/guide/user/example/global/) as a example and format to follow.
+
+# Lets get started!
+
+## Quick Note
+
+Hi Guys, the developer, Dinosaurs, here. The system may seem like a hefty
+task to learn, however it is quite simple! Once learned, it is easy to
+master. To be honest, you don't even need to master it... copy-paste!
+Just copy-paste the lines and easily edit from there! 
+
+# Creating a crate
+
+
+
+## Our Tags
+
+Data inside **[Brackets]** are required!
+
+Data insite {Curlys} are optional.
+```
+item:([item] [amount] {name} {lore} {data}) - An tag for a item.
+cmd:([Command]) - An tag for a command.
+chance:([Number]) - An tag for chance.
+display:([item] [amount] {name} {lore} {data}) - An tag for a display item.
+broadcast:([Message]) - An tag for a message to be broadcasted to every player.
+onopen:([Message]) - An tag for a message to be send to the winning player.
+noduplicate:() - An tag to prevent this line from executing twice in a single session.
+```
+
+## Explain the Chances
+The chance system is quite different from other systems. However, it
+allows an unlimited customizibility and it is quite simple to learn.
+
+### The Basics
+Basically, you want to start with a base number (`100`), and building
+from that, we can create a chance system. Numbers higher than `100` will
+be common, while numbers lower than `100` will be rarer. Think the larger
+the number, the large the chance it will have, Vice-versa.
+
+### Examples
+```
+
+ - 'item:(apple 1),chance:(1)'
+
+
+
+
+## Item Parsing
+ - 'cmd:(/give %player% cake 1),chance:(4)'```
+_ = Space
+/n = New Line
+%line% = New Line
+; = Seperate Enchantments
+```
+### Example
+```
+diamond_sword 1 &1Sword_1 Legendary_Sword 35:5;34:5
+dirt 1 &Just_plain_old_dirt dirt 33:5;34:5
+```
+
+## A Few Variables
+
+```
+Variables
+```
+
+For a full list of variables, click here.
+
+## Effects List 
+### Visual
+```
+explode
+largeexplode
+hugeexplosion
+fireworksSpark
+bubble
+splash
+wake
+suspended
+depthSuspend
+crit
+magicCrit
+smoke
+largesmoke
+spell
+instantSpell
+mobSpell
+mobSpellAmbient
+witchMagic
+dripWater
+dripLava
+angryVillager
+happyVillager
+townaura
+note
+portal
+enchantmenttable
+flame
+lava
+footstep
+cloud
+reddust
+snowballpoof
+snowshovel
+slime
+heart
+barrier
+iconcrack
+blockcrack
+blockdust
+droplet
+take
+mobappearance
+```
+### Sound
