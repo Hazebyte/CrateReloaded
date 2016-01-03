@@ -68,7 +68,7 @@ Default:
 | **Setting** | **Example** | **Explanation** |
 |-|-|-|
 | Crate UUID | Default | Set the UUID for the crate. It will be used in every command. |
-| type | CSGOKEYCRATE | Set the crate activation type that will be used. Please check [Types.](#types)|
+| type | CSGOKEYCRATE | Set the crate activation type that will be used. Please check [Types.](#crate-type)|
 | displayName | &aDefault Crate | Set the name of the GUI when players open the CS:GO or Roulette GUI. Option is specific to *KEYCRATE, CSGOKEYCRATE, ROULETTEKEYCRATE* |
 | preview | enabled: true | Set whether the preview GUI is enabled. Option is specific to *KEYCRATE, CSGOKEYCRATE, ROULETTEKEYCRATE* |
 | buy | enabled: false; cost:0 | Set whether the shop feature is enabled. |
