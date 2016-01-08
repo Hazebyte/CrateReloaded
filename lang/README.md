@@ -7,4 +7,4 @@ CrateReloaded supports different languages with UTF encoding.
 * **Dinosaur** English
 * **Heroiik62** French
 * **Favoo** Finnish
-* **using-xenforo** Bulgarian
+* **DoNotSpamPls (using-xenforo)** Bulgarian
