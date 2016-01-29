@@ -133,9 +133,9 @@ The rewards section uses tags to identify the type of information being passed t
 | cmd | [command] | cmd:(/executeMyCommand) |
 | chance | [number] | chance:(5) |
 | display | [item_id] [amount] [name] [lore] [data] | display:(1 30 DIRT! &aAmazing_Dirt! 300:1) |
-| broadcast | [message]] | broadcast:(Sending this to the entire server!) |
-| inbroadcast | [message]] | broadcast:(This will be added onto the original broadcast message!) |
-| onopen | [message]] | broadcast:(Sending this only to the player!) |
+| broadcast | [message] | broadcast:(Sending this to the entire server!) |
+| inbroadcast | [message] | inbroadcast:(This will be added onto the original broadcast message!) |
+| onopen | [message] | onopen:(Sending this only to the player!) |
 | noduplicate | *N/A* | noduplicate:() |
 
 ### Items
