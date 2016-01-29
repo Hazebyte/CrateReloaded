@@ -20,7 +20,7 @@ Crate Reloaded is an all around reward's system that creates a fun experience fo
 ## Configure
 * [Config.yml](../user-guide/config.md)
 * [Crate.yml](../user-guide/crate.md)
-* [Screenshot](../example/screenshots.md)
+* [Screenshot](../reference/screenshots.md)
 
 
 
