@@ -11,9 +11,11 @@ Allowing the flowers to blossom into light.
 ## Supporters
 For the supporters, thank you for purchasing coffee for the nights of development. 
 
-1. Special Thanks to **CECMinecraft.com** for a top donation of $50
-2. **Luke Nguyen** $20
-3. **Carbs. Inc** $10
+1. Thank you, **MineCove** for a donation of $100. *20 cups of coffee*
+2. **CECMinecraft.com** $50 *10 cups of coffee*
+3. **TeamFactions.net** $22 *4 cups of coffee*
+4. **Luke Nguyen** $20 *4 cups of coffee*
+5. **Carbs. Inc** $10 *2 cups of coffee*
 
 ## Contributors
 * Thanks to **Koz** for creating the video.
