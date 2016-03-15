@@ -1,5 +1,5 @@
-# Effects
-CrateReloaded supports effects such as **glow**, and others to get your crates shining!
+# Enchantment
+CrateReloaded supports enchantments such as **glow**, and others to get your crates shining!
 
 ID | Enchantment Name
 ---|------------------
