@@ -1,0 +1,115 @@
+
+##################
+#-     Help     -#
+##################
+
+# Unknown Command
+help.user=%gray%------------------- %prefix%%gray%-------------------\
+\n%light_purple%CrateReloaded %green%features %light_purple%MysteryCrates %green%to %light_purple%Supply Crates \
+%green%filled with prizes and rewards!\
+\n%white%/crate list %green%to view what crates there are!\
+\n%white%/crate info <crate_name> %green%to view the crates info!\
+\n%gray%-----------------------------------------------------
+
+# Info Command
+info.user=%gray%----------------------- %prefix%%gray%----------------------\
+\n%green%Nombre de crate: %white%%cratename%\
+\n%green%Tipo de crate: %white%%cratetype%\
+\n%green%En venta: %white%%cratebuy%\
+\n%green%Precio de venta: %white%%cratecost%\
+\n%gray%-----------------------------------------------------
+
+# List Command
+list.user=%gray%----------------------- %prefix%%gray%----------------------\
+\n%green%Crates Actuales: %white%%list%\
+\n%gray%-----------------------------------------------------\
+
+##################
+#-   Commands   -#
+##################
+
+# No Permission
+command.permission.none=%prefix%No tienes permiso para usar este comando.
+
+# Unknown Command
+command.unknown.notfound=%prefix%Comando no encontrado.
+
+# Incorrect Usage
+command.incorrect.usage=%prefix%Uso incorrecto
+
+# Player only command
+command.playeronly.usage=%prefix%Solo los jugadores pueden ejecutar este comando.
+
+# Incorrect Parameters
+command.incorrect.parameters=%prefix%Parametros erroneos
+
+# Incorrect Arguments
+command.incorrect.arguments=%prefix%Numero de argumentos erroneo %green%
+
+# Argument must be numbers
+command.incorrect.numbers=%prefix%Los argumentos tienen que ser numericos
+
+#######################
+#-     Crate/Keys    -#
+#######################
+
+# Incorrect crate name
+crate.incorrect.name=%prefix%Nombre de crate incorrecto
+
+# Player is offline, unable to receive items
+crate.player.offline=%prefix%El jugador tiene que estar conectado para recibir los items.
+
+# Received a crate
+crate.player.recieved=%prefix%Has recibido un crate.
+
+# Unable to buy crate
+crate.player.unabletobuy=%prefix%No puedes comprar un crate. Comprueba si tienes suficiente dinero o el crate esta a la venta.
+# Select a crate
+crate.player.noselection=%prefix%Por favor, selecciona un crate.
+
+# You cannot give a key crate.
+crate.player.nogivekeycrate=%prefix%No puedes dar una crate de llave, tienes que dar la llave.
+
+# No Key
+crate.player.nokey=%prefix%Necesitas una llave para abrir este crate.
+
+# Received a key
+crate.player.keyrecieved=%prefix%Has recibido una llave
+
+# Unable to set key crate
+crate.key.createerror=%prefix%No se ha podido establecer un crate de llave.
+
+# Successfully created a key crate
+crate.key.createsuccess=%prefix%¡Has establecido un crate de llave en esta localizacion!
+
+# Unable to remove key crate
+crate.key.removeerror=%prefix%No se ha podido eliminar el crate de llave.
+
+# Successfully remove a key crate
+crate.key.removesuccess=%prefix%¡Has eliminado el crate de llave de esta localizacion!
+
+# Not a keycrate
+crate.key.notankey=%prefix%¡Esto no es un crate de llave!
+
+# Unable to use the key here
+crate.key.unabletouse=%prefix%No puedes usar una llave aqui.
+
+# You don't have the right key
+crate.key.wrongkey=%prefix%"No tienes una llave "%cratename%"!
+
+##################
+#-     Money    -#
+##################
+
+# -UNUSED- Replaced by crate.player.unabletobuy
+money.notenough=%prefix%No tienes suficiente dinero para comprar este crate.
+
+# Transaction Complete
+money.transaction.complete=%prefix%Transaccion completa, te queda %money% de dinero.
+
+##################
+#-     Error    -#
+##################
+
+# Number Error
+error.excp.numberformat=%prefix%Recibido un valor no numerico.
