@@ -13,6 +13,7 @@ Crate Reloaded supports the following options...
 * **Particle Effects**
 * **Min.** and **Max.** amount of rewards
 * **Unlimited** Rewards
+* **Permission-Based** Rewards
 * Rewards consist of **items** or **commands**
 
 ## Configuration File
@@ -137,6 +138,7 @@ The rewards section uses tags to identify the type of information being passed t
 | inbroadcast | [message] | inbroadcast:(This will be added onto the original broadcast message!) |
 | onopen | [message] | onopen:(Sending this only to the player!) |
 | noduplicate | *N/A* | noduplicate:() |
+| onetime | [permission] | onetime:(rank.noble) |
 
 ### Items
 The reward section allows you to add in Items with unique characteristics.
@@ -186,3 +188,5 @@ Analysis
 * **Gold**, which is rare, will be *below* the base value which will appear less often.
 * **Diamond**, which is very rare, will be *way below* the base value which will appear not very often.
 
+### One-Time and No Duplicate Rewards
+Crate Reloaded supports unique handling of the rewards for specific players. 
