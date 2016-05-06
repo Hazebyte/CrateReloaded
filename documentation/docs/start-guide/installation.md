@@ -7,11 +7,11 @@ CrateReloaded requires the Bukkit API. Note that the official Minecraft server i
 In addition, CrateReloaded requires vault, an economy hook, and a valid economy plugin 
 such as Essentials Economy
 
+[Vault](http://dev.bukkit.org/bukkit-plugins/vault/) `` and an economy plugin is required for older versions of CrateReloaded`` 
+
 1. Download CrateReloaded from [Spigot - Free](https://www.spigotmc.org/resources/mystery-crate-crate-reloaded.861/), 
 [Spigot - Premium](https://www.spigotmc.org/resources/.3663/),
 [Bukkit](http://dev.bukkit.org/bukkit-plugins/http://dev.bukkit.org/bukkit-plugins/crate-reloaded//)
-2. Download [Vault](http://dev.bukkit.org/bukkit-plugins/vault/)
-3. Download an Economy Plugin
 
 ## Installation
 
