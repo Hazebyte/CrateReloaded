@@ -22,4 +22,4 @@ The purpose of this repository, as of right now, is to keep track of issues as w
 http://crate.hazebyte.com/guide/pro/user/start-guide/installation/
 
 ## Test Server
-mc.hazebyte.com
+IP: **mc.hazebyte.com**
