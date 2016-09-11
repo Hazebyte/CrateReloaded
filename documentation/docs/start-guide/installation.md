@@ -4,8 +4,8 @@
 
 CrateReloaded requires the Bukkit API. Note that the official Minecraft server is not supported.
 
-In addition, CrateReloaded requires vault, an economy hook, and a valid economy plugin 
-such as Essentials Economy
+In addition, CrateReloaded uses vault, an economy hook, which requires a valid economy plugin 
+such as Essentials Economy.
 
 [Vault](http://dev.bukkit.org/bukkit-plugins/vault/) `` and an economy plugin is required for older versions of CrateReloaded`` 
 
