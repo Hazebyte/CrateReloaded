@@ -219,4 +219,4 @@ is here for you.
 ````
 
 In the example above, we have a minimum and maximum of four rewards. Additionally, every reward has the no duplicate tag. With these two settings put into place,
-users who open the crate are granted all four items, or the kit.
+users who open the crate are granted all four items, the sword, shovel, pick, and axe! The no-duplicate tag allows for rewards to be unique! 
