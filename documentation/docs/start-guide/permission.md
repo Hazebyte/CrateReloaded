@@ -1,7 +1,6 @@
 # Permissions
 
-Permissions are given only to yourself, ops, and console. You, yourself, must provide the permissions to the nodes.
-`OPs are automatically given permission to all nodes`
+The console and operators are automatically given permission to all nodes. Additional permission nodes may be granted to admins, moderators, or users.
 
 | **Recommended User** | **Command** | **Permission** | ** Explanation **             |
 |----------------------|-------------|----------------|-------------------------------|
