@@ -177,7 +177,7 @@ and vice versa.
     - 'item:(diamond 1), chance:(1)'
 ```
 
-For our example, we will be using **dirt**, **stone**, **iron**, **gold**, **diamond**. Starting off, you want to create
+In our example, we will be using **dirt**, **stone**, **iron**, **gold**, **diamond**. Starting off, you want to create
 a simple base number (We will use the lucky number, **5**), and build off from there. 
 
 Analysis
@@ -189,4 +189,34 @@ Analysis
 * **Diamond**, which is very rare, will be *way below* the base value which will appear not very often.
 
 ### One-Time and No Duplicate Rewards
-Crate Reloaded supports unique handling of the rewards for specific players. 
+Crate Reloaded supports unique handling of rewards for specific players. 
+
+CrateReloaded has two tags, **noduplicate** and **onetime**, both individual ways to grant rewards.
+
+#### One Time Tag
+The one time tag is a unique tag that allows for permission checks. The one time tag takes one argument and multiple one time tags can be used.
+
+````
+	- 'cmd:(/pex add rank.upper), onetime:(rank.lower), onetime:(rank.middle), chance:(1)'
+````
+
+In our example, we have two one time, a command, and a chance tag. Our plugin will check for the two permissions *rank.lower* and *rank.middle* and 
+if the user does not have both permissions, the player will have a chance to win the permission node, *rank.upper*. 
+
+#### No Duplicate Tag
+The no duplicate tag is a per-reward check. In the case that you want to give out unique rewards every time a person opens the crate, the no duplicate tag
+is here for you. 
+
+````
+    reward:
+        minimumRewards: 4
+        maximumRewards: 4
+        rewards:
+            - 'item:(267 1 &3Sword_L1 &aBeginner_Kit! 16:1), chance:(1), noduplicate:()'
+            - 'item:(256 1 &3Shovel_L1 &aBeginner_Kit! 16:1), chance:(1), noduplicate:()'
+            - 'item:(257 1 &3Pick_L1 &aBeginner_Kit! 16:1), chance:(1), noduplicate:()'
+            - 'item:(258 1 &3Axe_L1 &aBeginner_Kit! 16:1), chance:(1), noduplicate:()'
+````
+
+In the example above, we have a minimum and maximum of four rewards. Additionally, every reward has the no duplicate tag. With these two settings put into place,
+users who open the crate are granted all four items, or the kit.
