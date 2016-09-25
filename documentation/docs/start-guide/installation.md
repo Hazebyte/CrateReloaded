@@ -8,7 +8,7 @@ In addition, CrateReloaded uses vault, an economy hook, which requires a valid e
 such as Essentials Economy.
 
 !!! note
-  [Vault](http://dev.bukkit.org/bukkit-plugins/vault/) and an economy plugin is required for older versions of CrateReloaded
+    [Vault](http://dev.bukkit.org/bukkit-plugins/vault/) and an economy plugin is required for older versions of CrateReloaded
 
 1. Download CrateReloaded from [Spigot - Free](https://www.spigotmc.org/resources/mystery-crate-crate-reloaded.861/), 
 [Spigot - Premium](https://www.spigotmc.org/resources/.3663/),
