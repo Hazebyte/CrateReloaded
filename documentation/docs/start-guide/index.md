@@ -5,7 +5,7 @@
 # What is CrateReloaded?
 Crate Reloaded is an all around reward's system that creates a fun experience for not only the players but also the owners. [Read More](overview.md)
 
-# Installation
+## Installation
 [Bukkit - Spigot - Cauldron > Installation](http://crate.hazebyte.com/guide/test/user/start-guide/installation/)
 
 # Navigation
