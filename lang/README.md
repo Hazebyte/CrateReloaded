@@ -9,3 +9,4 @@ CrateReloaded supports different languages with UTF encoding.
 * **Favoo** Finnish
 * **DoNotSpamPls (using-xenforo)** Bulgarian
 * **Sr_Aldeano** Spanish
+* **Einwegrasierer** German
