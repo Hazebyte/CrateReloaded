@@ -1,6 +1,0 @@
-name: ListenerExample
-main: com.hazebyte.crate.example.ListenerExample
-version: 1.0.0
-author: Bart bartrawr@gmail.com
-website: crate.hazebyte.com
-depend: [CrateReloaded]
