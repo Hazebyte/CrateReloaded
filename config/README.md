@@ -6,4 +6,4 @@ Here are some example configurations.
 | -------------- |:-------------:|:----------------:|
 | SpawnEgg       | imWillX       |                  |
 | MMS            | ProfCube      | Mob Spawners     |
-| RandomKeyPack  | ProfCube      | Randomice Key    |
+| RandomKeyPack  | ProfCube      | Random Key       |
