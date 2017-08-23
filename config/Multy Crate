@@ -1,0 +1,479 @@
+############################################
+# +---------------------------------------+#
+# |         Config Revision 16            |#
+# +---------------------------------------+#
+############################################
+
+KeyPack:
+    type: MYSTERYCRATE
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    item:
+        item: EMERALD
+        enchantment: '300:1'
+        name: '&6&lKeyPack'
+        lore:
+            - '&eWith in this &6&lKeyPack&e you will be able'
+            - '&eto get ether one of the &a&lKey&e use to open'
+            - '&ethe Keys.'
+            - '&7To use me &7[ &e&oRight Click Me&7 ]'
+            - ''
+            - '&7More can be bought @ &e&nstore.webpage.com'
+    effect:
+        onOpenEffects: 'happyVillager, DRINK'
+        dormantEffects: ''
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/crate givekey %player% VoteCrate 1), chance:(0.5), noduplicate:()'
+            - 'cmd:(/crate givekey %player% CommonCrate 1), chance:(0.4), noduplicate:()'
+            - 'cmd:(/crate givekey %player% RareCrate 1), chance:(0.3), noduplicate:()'
+MMS:
+    type: MYSTERYCRATE
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    item:
+        item: 52
+        enchantment: '300:1'
+        name: '&6&lMysteryMobSpawner'
+        lore:
+            - '&7Right-click in had to reveal one'
+            - '&7of the following mob spawner types:'
+            - ''
+            - '&6&lx &7Pig'
+            - '&6&lx &7Cow'
+            - '&6&lx &7Sheep'
+            - '&6&lx &7Chicken'
+            - '&6&lx &7Wolf'
+            - '&6&lx &7Mooshroom'
+            - '&6&lx &7Ocelot'
+            - '&6&lx &eIronGolem'
+            - '&6&lx &eWitch'
+            - '&6&lx &eCreeper'
+            - '&6&lx &eSkeleton'
+            - '&6&lx &eSpider'
+            - '&6&lx &eZombie'
+            - '&6&lx &eZombiePigman'
+            - '&6&lx &eEndermand'
+            - '&6&lx &eBlaze'
+            - '&6&lx &eMagmaCube'
+            - ''
+            - '&7More can be bought @ &e&nstore.webpage.com'
+    effect:
+        onOpenEffects: 'happyVillager, DRINK'
+        dormantEffects: ''
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/ss give %player% Pig), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Cow), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Sheep), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Chicken), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Wolf), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Mooshroom), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Ocelot), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% IronGolem), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Witch), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Creeper), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Skeleton), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Spider), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Zombie), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% ZombePigman), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Enderman), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Blaze), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% MagmaCube), chance:(0.5), noduplicate:()'
+VoteCrate:
+    type: CSGOKEYCRATE
+    displayName: '&a&lVoteCrate'
+    preview:
+        enabled: true
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&a&lVoteKey'
+        lore:
+            - '&7Usable at &b/warp Crate&7.'
+            - '&7Rewarded via &b/vote&7.'
+    effect:
+        onOpenEffects: 'firework, DRINK'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/give %player% grass 64), chance:(8.8), display:(grass 1 &f&lx64_Grass_Block &6&lChance:_&78.8%)'
+            - 'cmd:(/give %player% log 128), chance:(8.8), display:(log 1 &f&lx128_Log &6&lChance:_&78.8%)'
+            - 'cmd:(/give %player% cobblestone 128), chance:(8.8), display:(cobblestone 1 &f&lx128_CobbleStone &6&lChance:_&78.8%)'
+            - 'cmd:(/eco give %player% 500), chance:(6.6), display:(paper 1 &f&l$500 &6&lChance:_&76.6%)'
+            - 'cmd:(/eco give %player% 1000), chance:(5.5), display:(paper 1 &f&l$1000 &6&lChance:_&75.5%)'
+            - 'cmd:(/eco give %player% 1500), chance:(4.4), display:(paper 1 &f&l$1500 &6&lChance:_&74.4%)'
+            - 'cmd:(/te add %player% 3), chance:(4.4), display:(snow_ball 1 &f&l3_Tokens &6&lChance:_&74.4%)'
+            - 'cmd:(/te add %player% 5), chance:(3.3), display:(snow_ball 1 &f&l5_Tokens &6&lChance:_&73.3%)'
+            - 'cmd:(/te add %player% 10), chance:(2.2), display:(snow_ball 1 &f&l10_Tokens &6&lChance:_&72.2%)'
+            - 'cmd:(/addcredits %player% 10), chance:(6.6), display:(magma_cream 1 &f&l10_McMMO_Credits &6&lChance:_&76.6%)'
+            - 'cmd:(/addcredits %player% 15), chance:(5.5), display:(magma_cream 1 &f&l15_McMMO_Credits &6&lChance:_&75.5%)'
+            - 'cmd:(/addcredits %player% 20), chance:(4.4), display:(magma_cream 1 &f&l20_McMMO_Credits &6&lChance:_&74.4%)'
+            - 'cmd:(/give %player% iron_block 4), chance:(6.6), display:(iron_block 4 &f&lx4_Iron_Block &6&lChance:_&76.6%)'
+            - 'cmd:(/give %player% gold_block 4), chance:(5.5), display:(gold_block 4 &f&lx4_Gold_Block &6&lChance:_&75.5%)'
+            - 'cmd:(/give %player% diamond_block 4), chance:(4.4), display:(diamond_block 4 &f&lx4_Diamond_Block &6&lChance:_&74.4%)'
+            - 'cmd:(/give %player% emerald_block 4), chance:(3.3), display:(emerald_block 4 &f&lx4_Emerald_Block &6&lChance:_&73.3%)'
+            - 'cmd:(/ss give %player% pig), chance:(0.4), display:(mob_spawner 1 &f&lPig_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% cow), chance:(0.4), display:(mob_spawner 1 &f&lCow_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% mooshroom), chance:(0.4), display:(mob_spawner 1 &f&lMooshroom_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% sheep), chance:(0.4), display:(mob_spawner 1 &f&lSheep_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% chicken), chance:(0.4), display:(mob_spawner 1 &f&lChicken_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Zombie), chance:(0.4), display:(mob_spawner 1 &f&lZombie_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Skeleton), chance:(0.4), display:(mob_spawner 1 &f&lSkeleton_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Spider), chance:(0.4), display:(mob_spawner 1 &f&lSpider_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% blaze), chance:(0.4), display:(mob_spawner 1 &f&lBlaze_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% magmacube), chance:(0.4), display:(mob_spawner 1 &f&lMagma_Cube_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Witch), chance:(0.4), display:(mob_spawner 1 &f&lWitch_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% irongolem), chance:(0.2), display:(mob_spawner 1 &f&lIron_Golem_Spawner &6&lChance:_&70.2%)'
+            - 'cmd:(/ss give %player% creeper), chance:(0.2), display:(mob_spawner 1 &f&lCreeper_Spawner &6&lChance:_&70.2%)'
+            - 'cmd:(/ss give %player% enderman), chance:(0.2), display:(mob_spawner 1 &f&lEnderman_Spawner &6&lChance:_&70.2%)'
+            - 'cmd:(/kit Vip %player%), chance:(0.5), display:(book 1 &a&lKit_Vip_&7(Items) &6&lChance:_&70.5%)'
+            - 'cmd:(/kit Elite %player%), chance:(0.4), display:(book 1 &b&lKit_Elite_&7(Items) &6&lChance:_&70.4%)'
+            - 'cmd:(/kit MVP %player%), chance:(0.3), display:(book 1 &6&lKit_MVP_&7(Items) &6&lChance:_&70.3%)'
+            - 'cmd:(/kit King %player%), chance:(0.2), display:(book 1 &5&lKit_King_&7(Items) &6&lChance:_&70.2%)'
+            - 'cmd:(/give %player% hopper 1), chance:(1.1), display:(hopper 1 &f&lHooper &6&lChance:_&71.1%)'
+            - 'cmd:(/give %player% beacon 1), chance:(0.2), display:(beacon 1 &f&lBeacon &6&lChance:_&70.2%)'
+            - 'cmd:(/crate givekey %player% VoteCrate 1), chance:(1.8), display:(nether_star 1 &a&lVoteCrate &6&lChance:_&71.8%)'
+            - 'cmd:(/crate givekey %player% CommonCrate 1), chance:(1.1), display:(nether_star 1 &c&lCommonCrate &6&lChance:_&71.1%)'
+            - 'cmd:(/crate givekey %player% RareCrate 1), chance:(0.4), display:(nether_star 1 &6&lRareCrate &6&lChance:_&70.4%)'
+CommonCrate:
+    type: CSGOKEYCRATE
+    displayName: '&c&lCommonCrate'
+    preview:
+        enabled: true
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&c&lCommonKey'
+        lore:
+            - '&7Usable at &b/warp Crate&7.'
+            - '&7Rewarded via &b/vote&7.'
+    effect:
+        onOpenEffects: 'firework, DRINK'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/eco give %player% 1000), chance:(11.2), display:(paper 1 &f&l$1000 &6&lChance:_&711.2%)'
+            - 'cmd:(/eco give %player% 2000), chance:(10.1), display:(paper 1 &f&l$2000 &6&lChance:_&710.1%)'
+            - 'cmd:(/eco give %player% 3000), chance:(9), display:(paper 1 &f&l$3000 &6&lChance:_&79%)'
+            - 'cmd:(/te add %player% 10), chance:(4.5), display:(snow_ball 1 &f&l10_Tokens &6&lChance:_&74.5%)'
+            - 'cmd:(/te add %player% 15), chance:(3.4), display:(snow_ball 1 &f&l15_Tokens &6&lChance:_&73.4%)'
+            - 'cmd:(/te add %player% 20), chance:(2.2), display:(snow_ball 1 &f&l20_Tokens &6&lChance:_&72.2%)'
+            - 'cmd:(/addcredits %player% 10), chance:(6.7), display:(magma_cream 1 &f&l10_McMMO_Credits &6&lChance:_&76.7%)'
+            - 'cmd:(/addcredits %player% 15), chance:(5.6), display:(magma_cream 1 &f&l15_McMMO_Credits &6&lChance:_&75.6%)'
+            - 'cmd:(/addcredits %player% 20), chance:(4.5), display:(magma_cream 1 &f&l20_McMMO_Credits &6&lChance:_&74.5%)'
+            - 'cmd:(/give %player% iron_block 8), chance:(6.7), display:(iron_block 8 &f&lx8_Iron_Block &6&lChance:_&76.7)'
+            - 'cmd:(/give %player% gold_block 8), chance:(5.6), display:(gold_block 8 &f&lx8_Gold_Block &6&lChance:_&75.6%)'
+            - 'cmd:(/give %player% diamond_block 8), chance:(4.5), display:(diamond_block 8 &f&lx8_Diamond_Block &6&lChance:_&74.5%)'
+            - 'cmd:(/give %player% emerald_block 8), chance:(3.4), display:(emerald_block 8 &f&lx8_Emerald_Block &6&lChance:_&73.4%)'
+            - 'cmd:(/ss give %player% pig), chance:(1.1), display:(mob_spawner 1 &f&lPig_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% cow), chance:(1.1), display:(mob_spawner 1 &f&lCow_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% mooshroom), chance:(1.1), display:(mob_spawner 1 &f&lMooshroom_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% sheep), chance:(1.1), display:(mob_spawner 1 &f&lSheep_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% chicken), chance:(1.1), display:(mob_spawner 1 &f&lChicken_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% Zombie), chance:(1.1), display:(mob_spawner 1 &f&lZombie_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% Skeleton), chance:(1.1), display:(mob_spawner 1 &f&lSkeleton_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% Spider), chance:(1.1), display:(mob_spawner 1 &f&lSpider_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% blaze), chance:(1.1), display:(mob_spawner 1 &f&lBlaze_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% magmacube), chance:(1.1), display:(mob_spawner 1 &f&lMagma_Cube_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% Witch), chance:(1.1), display:(mob_spawner 1 &f&lWitch_Spawner &6&lChance:_&71.1%)'
+            - 'cmd:(/ss give %player% irongolem), chance:(0.7), display:(mob_spawner 1 &f&lIron_Golem_Spawner &6&lChance:_&70.7%)'
+            - 'cmd:(/ss give %player% creeper), chance:(0.7), display:(mob_spawner 1 &f&lCreeper_Spawner &6&lChance:_&70.7%)'
+            - 'cmd:(/ss give %player% enderman), chance:(0.7), display:(mob_spawner 1 &f&lEnderman_Spawner &6&lChance:_&70.7%)'
+            - 'cmd:(/kit Vip %player%), chance:(0.5), display:(book 1 &a&lKit_Vip_&7(Items) &6&lChance:_&70.5%)'
+            - 'cmd:(/kit Elite %player%), chance:(0.4), display:(book 1 &b&lKit_Elite_&7(Items) &6&lChance:_&70.4%)'
+            - 'cmd:(/kit MVP %player%), chance:(0.3), display:(book 1 &6&lKit_MVP_&7(Items) &6&lChance:_&70.3%)'
+            - 'cmd:(/kit King %player%), chance:(0.2), display:(book 1 &5&lKit_King_&7(Items) &6&lChance:_&70.2%)'
+            - 'cmd:(/give %player% hopper 1), chance:(3.4), display:(hopper 1 &f&lHooper &6&lChance:_&73.4%)'
+            - 'cmd:(/give %player% beacon 1), chance:(0.2), display:(beacon 1 &f&lBeacon &6&lChance:_&70.2%)'
+            - 'cmd:(/crate givekey %player% VoteCrate 1), chance:(2.0), display:(nether_star 1 &a&lVoteCrate &6&lChance:_&72.0%)'
+            - 'cmd:(/crate givekey %player% CommonCrate 1), chance:(1.3), display:(nether_star 1 &c&lCommonCrate &6&lChance:_&71.3%)'
+            - 'cmd:(/crate givekey %player% RareCrate 1), chance:(0.7), display:(nether_star 1 &6&lRareCrate &6&lChance:_&70.7%)'
+RareCrate:
+    type: CSGOKEYCRATE
+    displayName: '&6&lRareCrate'
+    preview:
+        enabled: true
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&6&lRareKey'
+        lore:
+            - '&7Usable at &b/warp Crate&7.'
+            - '&7Rewarded via &b/vote&7.'
+    effect:
+        onOpenEffects: 'firework, DRINK'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/eco give %player% 5000), chance:(7.8), display:(paper 1 &f&l$5000 &6&lChance:_&717.8%)'
+            - 'cmd:(/eco give %player% 10000), chance:(6.5), display:(paper 1 &f&l$10000 &6&lChance:_&76.5%)'
+            - 'cmd:(/eco give %player% 20000), chance:(5.2), display:(paper 1 &f&l$20000 &6&lChance:_&75.2%)'
+            - 'cmd:(/te add %player% 20), chance:(5.2), display:(snow_ball 1 &f&l20_Tokens &6&lChance:_&75.2%)'
+            - 'cmd:(/te add %player% 30), chance:(3.9), display:(snow_ball 1 &f&l30_Tokens &6&lChance:_&73.9%)'
+            - 'cmd:(/te add %player% 50), chance:(2.6), display:(snow_ball 1 &f&l50_Tokens &6&lChance:_&72.6%)'
+            - 'cmd:(/addcredits %player% 20), chance:(6.5), display:(magma_cream 1 &f&l20_McMMO_Credits &6&lChance:_&76.5%)'
+            - 'cmd:(/addcredits %player% 30), chance:(5.2), display:(magma_cream 1 &f&l30_McMMO_Credits &6&lChance:_&75.2%)'
+            - 'cmd:(/addcredits %player% 50), chance:(3.9), display:(magma_cream 1 &f&l50_McMMO_Credits &6&lChance:_&73.9%)'
+            - 'cmd:(/give %player% iron_block 16), chance:(6.5), display:(iron_block 16 &f&lx16_Iron_Block &6&lChance:_&76.5)'
+            - 'cmd:(/give %player% gold_block 16), chance:(5.2), display:(gold_block 16 &f&lx16_Gold_Block &6&lChance:_&75.2%)'
+            - 'cmd:(/give %player% diamond_block 16), chance:(3.9), display:(diamond_block 16 &f&lx16_Diamond_Block &6&lChance:_&73.9%)'
+            - 'cmd:(/give %player% emerald_block 16), chance:(3.4), display:(emerald_block 16 &f&lx16_Emerald_Block &6&lChance:_&73.4%)'
+            - 'cmd:(/ss give %player% cow), chance:(2.1), display:(mob_spawner 1 &f&lCow_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% mooshroom), chance:(2.1), display:(mob_spawner 1 &f&lMooshroom_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% sheep), chance:(2.1), display:(mob_spawner 1 &f&lSheep_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% Skeleton), chance:(2.1), display:(mob_spawner 1 &f&lSkeleton_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% Spider), chance:(2.1), display:(mob_spawner 1 &f&lSpider_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% blaze), chance:(2.1), display:(mob_spawner 1 &f&lBlaze_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% magmacube), chance:(2.1), display:(mob_spawner 1 &f&lMagma_Cube_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% Witch), chance:(2.1), display:(mob_spawner 1 &f&lWitch_Spawner &6&lChance:_&72.1%)'
+            - 'cmd:(/ss give %player% irongolem), chance:(1.3), display:(mob_spawner 1 &f&lIron_Golem_Spawner &6&lChance:_&71.3%)'
+            - 'cmd:(/ss give %player% creeper), chance:(1.3), display:(mob_spawner 1 &f&lCreeper_Spawner &6&lChance:_&71.3%)'
+            - 'cmd:(/ss give %player% enderman), chance:(1.3), display:(mob_spawner 1 &f&lEnderman_Spawner &6&lChance:_&71.3%)'
+            - 'cmd:(/kit Lightning %player%), chance:(0.8), display:(book 1 &f&lKit_Lightning_&7(Items) &6&lChance:_&710.8%)'
+            - 'cmd:(/kit Fluffy %player%), chance:(0.8), display:(book 1 &f&lKit_Fluffy_&7(Items) &6&lChance:_&710.8%)'
+            - 'cmd:(/kit Sky %player%), chance:(0.8), display:(book 1 &f&lKit_Sky_&7(Items) &6&lChance:_&710.8%)'
+            - 'cmd:(/kit Vip %player%), chance:(0.5), display:(book 1 &a&lKit_Vip_&7(Items) &6&lChance:_&70.5%)'
+            - 'cmd:(/kit Elite %player%), chance:(0.4), display:(book 1 &b&lKit_Elite_&7(Items) &6&lChance:_&70.4%)'
+            - 'cmd:(/kit MVP %player%), chance:(0.3), display:(book 1 &6&lKit_MVP_&7(Items) &6&lChance:_&70.3%)'
+            - 'cmd:(/kit King %player%), chance:(0.2), display:(book 1 &5&lKit_King_&7(Items) &6&lChance:_&70.2%)'
+            - 'cmd:(/give %player% hopper 3), chance:(3.9), display:(hopper 3 &f&lHooper &6&lChance:_&73.9%)'
+            - 'cmd:(/give %player% beacon 1), chance:(0.5), display:(beacon 1 &f&lBeacon &6&lChance:_&70.5%)'
+            - 'cmd:(/crate give %player% KeyPack 1), chance:(1.0), display:(emerald 1 &a&lKeyPack &6&lChance:_&71.0%)'
+            - 'cmd:(/crate givekey %player% VoteCrate 1), chance:(2.5), display:(nether_star 1 &a&lVoteCrate &6&lChance:_&72.5%)'
+            - 'cmd:(/crate givekey %player% CommonCrate 1), chance:(1.9), display:(nether_star 1 &c&lCommonCrate &6&lChance:_&71.9%)'
+            - 'cmd:(/crate givekey %player% RareCrate 1), chance:(1.3), display:(nether_star 1 &6&lRareCrate &6&lChance:_&71.3%)'
+FVoteCrate:
+    type: CSGOKEYCRATE
+    displayName: '&a&lVoteCrate'
+    preview:
+        enabled: true
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&a&lVoteKey'
+        lore:
+            - '&7Usable at &b/warp Crate&7.'
+            - '&7Rewarded via &b/vote&7.'
+    effect:
+        onOpenEffects: 'firework, DRINK'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/eco give %player% 1000), chance:(5.3), display:(paper 1 &f&l$1000 &6&lChance:_&75.3%)'
+            - 'cmd:(/eco give %player% 2000), chance:(5.3), display:(paper 1 &f&l$2000 &6&lChance:_&75.3%)'
+            - 'cmd:(/eco give %player% 3000), chance:(5.3), display:(paper 1 &f&l$3000 &6&lChance:_&75.3%)'
+            - 'cmd:(/give %player% sulphur 32), chance:(4.4), display:(sulphur 32 &f&l32_Gunpowder &6&lChance:_&74.4%)'
+            - 'cmd:(/give %player% obsidian 32), chance:(4.4), display:(obsidian 32 &f&l32_Obsidian &6&lChance:_&74.4%)'
+            - 'cmd:(/give %player% tnt 32), chance:(4.4), display:(tnt 32 &f&l32_TNT &6&lChance:_&74.4%)'
+            - 'cmd:(/te add %player% 5), chance:(2.6), display:(snow_ball 1 &f&l5_Tokens &6&lChance:_&72.6%)'
+            - 'cmd:(/addcredits %player% 15), chance:(2.6), display:(magma_cream 1 &f&l15_McMMO_Credits &6&lChance:_&72.6%)'
+            - 'cmd:(/exp give %player% 500), chance:(5.3), display:(exp_bottle 1 &f&l500_Exp &6&lChance:_&75.3%)'
+            - 'cmd:(/give %player% diamond_helmet 1 enchant: protection:1), chance:(3.3), display:(diamond_helmet 1 &bDiamond_Helmet &6&lChance:_&73.3% 0:1)'
+            - 'cmd:(/give %player% diamond_chestplate 1 enchant: protection:1), chance:(3.3), display:(diamond_chestplate 1 &bDiamond_Chestplate &6&lChance:_&73.3% 0:1)'
+            - 'cmd:(/give %player% diamond_leggings 1 enchant: protection:1), chance:(3.3), display:(diamond_leggings 1 &bDiamond_Leggings &6&lChance:_&73.3% 0:1)'
+            - 'cmd:(/give %player% diamond_boots 1 enchant: protection:1), chance:(3.3), display:(diamond_boots 1 &bDiamond_Boots &6&lChance:_&73.3% 0:1)'
+            - 'cmd:(/give %player% diamond_sword 1 enchant: sharpness:1 Looting:1), chance:(3.3), display:(diamond_sword 1 &bDiamond_Sword &6&lChance:_&73.3% 0:1;21:1)'
+            - 'cmd:(/give %player% bow 1 enchant: power:1), chance:(3.3), display:(bow 1 &bBow &6&lChance:_&73.3% 48:1)'
+            - 'cmd:(/give %player% diamond_axe 1 enchant: efficiency:1), chance:(3.3), display:(diamond_axe 1 &bDiamond_Axe &6&lChance:_&73.3% 32:1)'
+            - 'cmd:(/give %player% diamond_pickaxe 1 enchant: efficiency:1), chance:(3.3), display:(diamond_pickaxe 1 &bDiamond_Pickaxe &6&lChance:_&73.3% 32:1)'
+            - 'cmd:(/give %player% diamond_shovel 1 enchant: efficiency:1), chance:(3.3), display:(diamond_spade 1 &bDiamond_Shovel &6&lChance:_&73.3% 32:1)'
+            - 'cmd:(/give %player% 322 4), chance:(2.6), display:(322 1 &bGolden_Apple &6&lChance:_&72.6%)'
+            - 'cmd:(/give %player% 322:1 1), chance:(1.3), display:(322:1 1 &dGolden_Apple &6&lChance:_&71.3%)'
+            - 'cmd:(/give %player% iron_block 4), chance:(1.8), display:(iron_block 4 &f&lx4_Iron_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% gold_block 4), chance:(1.8), display:(gold_block 4 &f&lx4_Gold_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% diamond_block 4), chance:(1.8), display:(diamond_block 4 &f&lx4_Diamond_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% emerald_block 4), chance:(1.8), display:(emerald_block 4 &f&lx4_Emerald_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: sharpness:1), chance:(3.5), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.5% 16:1)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: efficiency:1), chance:(3.5), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.5% 32:1)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: fortune:1), chance:(3.5), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.5% 35:1)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: unbreaking:1), chance:(3.5), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.5% 34:1)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: looting:1), chance:(3.5), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.5% 21:1)'
+            - 'cmd:(/ss give %player% pig), chance:(0.3), display:(mob_spawner 1 &f&lPig_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% cow), chance:(0.3), display:(mob_spawner 1 &f&lCow_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Zombie), chance:(0.3), display:(mob_spawner 1 &f&lZombie_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Skeleton), chance:(0.3), display:(mob_spawner 1 &f&lSkeleton_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Witch), chance:(0.3), display:(mob_spawner 1 &f&lWitch_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Blaze), chance:(0.3), display:(mob_spawner 1 &f&lBlaze_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% ZombePigman), chance:(0.2), display:(mob_spawner 1 &f&lZombePigman_Spawner &6&lChance:_&70.2%)'
+            - 'cmd:(/ss give %player% Enderman), chance:(0.2), display:(mob_spawner 1 &f&lEnderman_Spawner &6&lChance:_&70.2%)'
+            - 'cmd:(/ss give %player% Creeper), chance:(0.2), display:(mob_spawner 1 &f&lCreeper_Spawner &6&lChance:_&70.2%)'
+            - 'cmd:(/ss give %player% IronGolem), chance:(0.2), display:(mob_spawner 1 &f&lIron_Golem_Spawner &6&lChance:_&70.2%)'
+            - 'cmd:(/give %player% 383:50 1), chance:(0.3), display:(383:50 1 &f&l1_Creeper_Egg &6&lChance:_&70.3%)'
+            - 'cmd:(/crate givekey %player% VoteCrate 2), chance:(1.2), display:(nether_star 2 &a&lVoteCrate &6&lChance:_&71.2%)'
+            - 'cmd:(/crate givekey %player% CommonCrate 1), chance:(0.9), display:(nether_star 1 &c&lCommonCrate &6&lChance:_&70.9%)'
+            - 'cmd:(/crate givekey %player% RareCrate 1), chance:(0.4), display:(nether_star 1 &6&lRareCrate &6&lChance:_&70.4%)'
+FCommonCrate:
+    type: CSGOKEYCRATE
+    displayName: '&c&lCommonCrate'
+    preview:
+        enabled: true
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&c&lCommonKey'
+        lore:
+            - '&7Usable at &b/warp Crate&7.'
+            - '&7Rewarded via &b/vote&7.'
+    effect:
+        onOpenEffects: 'firework, DRINK'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/eco give %player% 2000), chance:(4.5), display:(paper 1 &f&l$2000 &6&lChance:_&74.5%)'
+            - 'cmd:(/eco give %player% 3000), chance:(4.5), display:(paper 1 &f&l$3000 &6&lChance:_&74.5%)'
+            - 'cmd:(/eco give %player% 4000), chance:(4.5), display:(paper 1 &f&l$4000 &6&lChance:_&74.5%)'
+            - 'cmd:(/give %player% sulphur 64), chance:(4.5), display:(sulphur 64 &f&l32_Gunpowder &6&lChance:_&74.5%)'
+            - 'cmd:(/give %player% obsidian 64), chance:(4.5), display:(obsidian 64 &f&l32_Obsidian &6&lChance:_&74.5%)'
+            - 'cmd:(/give %player% tnt 64), chance:(4.5), display:(tnt 64 &f&l32_TNT &6&lChance:_&74.5%)'
+            - 'cmd:(/te add %player% 10), chance:(2.7), display:(snow_ball 1 &f&l10_Tokens &6&lChance:_&72.7%)'
+            - 'cmd:(/addcredits %player% 20), chance:(2.7), display:(magma_cream 1 &f&l20_McMMO_Credits &6&lChance:_&72.7%)'
+            - 'cmd:(/exp give %player% 800), chance:(5.4), display:(exp_bottle 1 &f&l800_Exp &6&lChance:_&75.4%)'
+            - 'cmd:(/give %player% diamond_helmet 1 enchant: protection:2), chance:(3.5), display:(diamond_helmet 1 &bDiamond_Helmet &6&lChance:_&73.5% 0:2)'
+            - 'cmd:(/give %player% diamond_chestplate 1 enchant: protection:2), chance:(3.5), display:(diamond_chestplate 1 &bDiamond_Chestplate &6&lChance:_&73.5% 0:2)'
+            - 'cmd:(/give %player% diamond_leggings 1 enchant: protection:2), chance:(3.5), display:(diamond_leggings 1 &bDiamond_Leggings &6&lChance:_&73.5% 0:2)'
+            - 'cmd:(/give %player% diamond_boots 1 enchant: protection:2), chance:(3.5), display:(diamond_boots 1 &bDiamond_Boots &6&lChance:_&73.5% 0:2)'
+            - 'cmd:(/give %player% diamond_sword 1 enchant: sharpness:2 Looting:1), chance:(3.5), display:(diamond_sword 1 &bDiamond_Sword &6&lChance:_&73.5% 16:2;21:1)'
+            - 'cmd:(/give %player% bow 1 enchant: power:2), chance:(3.5), display:(bow 1 &bBow &6&lChance:_&73.5% 48:2)'
+            - 'cmd:(/give %player% diamond_axe 1 enchant: efficiency:2 unbreaking:1), chance:(3.5), display:(diamond_axe 1 &bDiamond_Axe &6&lChance:_&73.5% 32:2;34:1)'
+            - 'cmd:(/give %player% diamond_pickaxe 1 enchant: efficiency:2 unbreaking:1), chance:(3.5), display:(diamond_pickaxe 1 &bDiamond_Pickaxe &6&lChance:_&73.5% 32:2;34:1)'
+            - 'cmd:(/give %player% diamond_shovel 1 enchant: efficiency:2 unbreaking:1), chance:(3.5), display:(diamond_spade 1 &bDiamond_Shovel &6&lChance:_&73.5% 32:2;34:1)'
+            - 'cmd:(/give %player% 322 8), chance:(2.7), display:(322 8 &bGolden_Apple &6&lChance:_&72.7%)'
+            - 'cmd:(/give %player% 322:1 2), chance:(1.3), display:(322:1 2 &dGolden_Apple &6&lChance:_&71.3%)'
+            - 'cmd:(/give %player% iron_block 8), chance:(1.8), display:(iron_block 8 &f&lx8_Iron_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% gold_block 8), chance:(1.8), display:(gold_block 8 &f&lx8_Gold_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% diamond_block 8), chance:(1.8), display:(diamond_block 8 &f&lx8_Diamond_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% emerald_block 8), chance:(1.8), display:(emerald_block 8 &f&lx8_Emerald_Block &6&lChance:_&71.8%)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: sharpness:2), chance:(3.6), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.6% 16:2)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: efficiency:2), chance:(3.6), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.6% 32:2)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: fortune:2), chance:(3.6), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.6% 35:2)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: unbreaking:2), chance:(3.6), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.6% 34:2)'
+            - 'cmd:(/give %player% Enchanted_book 1 enchant: looting:2), chance:(3.6), display:(Enchanted_book 1 &eEnchanted_Book &6&lChance:_&73.6% 21:2)'
+            - 'cmd:(/ss give %player% pig), chance:(0.4), display:(mob_spawner 1 &f&lPig_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% cow), chance:(0.4), display:(mob_spawner 1 &f&lCow_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Zombie), chance:(0.4), display:(mob_spawner 1 &f&lZombie_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Skeleton), chance:(0.4), display:(mob_spawner 1 &f&lSkeleton_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Witch), chance:(0.4), display:(mob_spawner 1 &f&lWitch_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Blaze), chance:(0.4), display:(mob_spawner 1 &f&lBlaze_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% ZombePigman), chance:(0.3), display:(mob_spawner 1 &f&lZombePigman_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Enderman), chance:(0.3), display:(mob_spawner 1 &f&lEnderman_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Creeper), chance:(0.3), display:(mob_spawner 1 &f&lCreeper_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% IronGolem), chance:(0.3), display:(mob_spawner 1 &f&lIron_Golem_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/give %player% 383:50 1), chance:(0.4), display:(383:50 1 &f&l1_Creeper_Egg &6&lChance:_&70.4%)'
+            - 'cmd:(/crate givekey %player% VoteCrate 2), chance:(0.4), display:(nether_star 2 &a&lVoteCrate &6&lChance:_&70.4%)'
+            - 'cmd:(/crate givekey %player% CommonCrate 2), chance:(0.2), display:(nether_star 2 &c&lCommonCrate &6&lChance:_&70.2%)'
+            - 'cmd:(/crate givekey %player% RareCrate 1), chance:(0.2), display:(nether_star 1 &6&lRareCrate &6&lChance:_&70.2%)'
+FRareCrate:
+    type: CSGOKEYCRATE
+    displayName: '&6&lRareCrate'
+    preview:
+        enabled: true
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&6&lRareKey'
+        lore:
+            - '&7Usable at &b/warp Crate&7.'
+            - '&7Rewarded via &b/vote&7.'
+    effect:
+        onOpenEffects: 'firework, DRINK'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/eco give %player% 25000), chance:(6), display:(paper 1 &f&l$25000 &6&lChance:_&76%)'
+            - 'cmd:(/eco give %player% 50000), chance:(5), display:(paper 1 &f&l$50000 &6&lChance:_&75%)'
+            - 'cmd:(/te add %player% 50), chance:(5), display:(snow_ball 1 &f&l50_Tokens &6&lChance:_&75%)'
+            - 'cmd:(/addcredits %player% 100), chance:(5), display:(magma_cream 1 &f&l100_McMMO_Credits &6&lChance:_&75%)'
+            - 'cmd:(/give %player% diamond_helmet 1 enchant: protection:4), chance:(6), display:(diamond_helmet 1 &bDiamond_Helmet &6&lChance:_&76% 0:4)'
+            - 'cmd:(/give %player% diamond_chestplate 1 enchant: protection:4), chance:(6), display:(diamond_chestplate 1 &bDiamond_Chestplate &6&lChance:_&76% 0:4)'
+            - 'cmd:(/give %player% diamond_leggings 1 enchant: protection:4), chance:(6), display:(diamond_leggings 1 &bDiamond_Leggings &6&lChance:_&76% 0:4)'
+            - 'cmd:(/give %player% diamond_boots 1 enchant: protection:4), chance:(6), display:(diamond_boots 1 &bDiamond_Boots &6&lChance:_&76% 0:4)'
+            - 'cmd:(/give %player% diamond_sword 1 enchant: sharpness:4 fire_aspect:2 Looting:2), chance:(5.5), display:(diamond_sword 1 &bDiamond_Sword &6&lChance:_&75.5% 16:4;20:2;21:2)'
+            - 'cmd:(/give %player% bow 1 enchant: power:4 Flame:1 Infinity:1), chance:(5.5), display:(bow 1 &bBow &6&lChance:_&73.5% 48:4;50:1;51:1)'
+            - 'cmd:(/give %player% diamond_axe 1 enchant: sharpness:3 fire_aspect:1 Looting:2), chance:(5.5), display:(diamond_axe 1 &bDiamond_Axe &6&lChance:_&75.5% 16:3;20:1;21:2)'
+            - 'cmd:(/give %player% diamond_pickaxe 1 enchant: efficiency:4 unbreaking:3 fortune:3), chance:(5.5), display:(diamond_pickaxe 1 &bDiamond_Pickaxe &6&lChance:_&75.5% 32:4;34:3;35:3)'
+            - 'cmd:(/give %player% diamond_shovel 1 enchant: efficiency:4 unbreaking:3 fortune:3), chance:(5.5), display:(diamond_spade 1 &bDiamond_Shovel &6&lChance:_&75.5% 32:4;34:3;35:3)'
+            - 'cmd:(/give %player% 322 32), chance:(5), display:(322 32 &bGolden_Apple &6&lChance:_&75%)'
+            - 'cmd:(/give %player% 322:1 6), chance:(3), display:(322:1 6 &dGolden_Apple &6&lChance:_&73%)'
+            - 'cmd:(/give %player% emerald_block 64), chance:(4), display:(emerald_block 64 &f&lx64_Emerald_Block &6&lChance:_&74%)'
+            - 'cmd:(/give %player% hopper 5), chance:(4), display:(hopper 5 &f&l5_Hopper &6&lChance:_&74%)'
+            - 'cmd:(/ss give %player% cow), chance:(0.4), display:(mob_spawner 1 &f&lCow_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Zombie), chance:(0.4), display:(mob_spawner 1 &f&lZombie_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Skeleton), chance:(0.4), display:(mob_spawner 1 &f&lSkeleton_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Witch), chance:(0.4), display:(mob_spawner 1 &f&lWitch_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% Blaze), chance:(0.4), display:(mob_spawner 1 &f&lBlaze_Spawner &6&lChance:_&70.4%)'
+            - 'cmd:(/ss give %player% ZombePigman), chance:(0.3), display:(mob_spawner 1 &f&lZombePigman_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Enderman), chance:(0.3), display:(mob_spawner 1 &f&lEnderman_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% Creeper), chance:(0.3), display:(mob_spawner 1 &f&lCreeper_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/ss give %player% IronGolem), chance:(0.3), display:(mob_spawner 1 &f&lIron_Golem_Spawner &6&lChance:_&70.3%)'
+            - 'cmd:(/give %player% 383:50 2), chance:(2), display:(383:50 2 &f&l2_Creeper_Egg &6&lChance:_&72%)'
+            - 'cmd:(/give %player% beacon 1), chance:(1), display:(beacon 1 &f&l1_Beacon &6&lChance:_&71%)'
+            - 'cmd:(/crate givekey %player% VoteCrate 2), chance:(1), display:(nether_star 2 &a&lVoteCrate &6&lChance:_&71%)'
+            - 'cmd:(/crate givekey %player% CommonCrate 2), chance:(1), display:(nether_star 2 &c&lCommonCrate &6&lChance:_&71%)'
+            - 'cmd:(/crate givekey %player% RareCrate 2), chance:(1), display:(nether_star 2 &6&lRareCrate &6&lChance:_&71%)'
