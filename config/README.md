@@ -15,6 +15,6 @@ Here you can get premaid configuration that are
 set for the players to be drag and drop on to
 there servers!
 
-|       Names      |       Topic      |
-|:----------------:|:----------------:|
-|   Multy Crates   |  Up to 8 Crates  |
+|       Names      |       Topic      |       Creator     |
+|:----------------:|:----------------:|:-----------------:|
+|   Multy Crates   |  Up to 8 Crates  |      ProfCube     |
