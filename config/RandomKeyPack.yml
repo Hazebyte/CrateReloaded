@@ -1,0 +1,58 @@
+#
+# Randome Key Pack
+#   Requires Latest
+#  Version of CrateReloaded
+#
+# Created by ProfCube 
+#
+
+RandomKeyPack:
+    type: MYSTERYCRATE
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: '&eYou have opened the &6&lRandomKeyPack &eand received a random Key!'
+        broadcast: '%player% &ehas just opened a &6&lRandomKeyPack&e!'
+    item:
+        item: 342
+        enchantment: '300:1'
+        name: '&6&lRandomKeyPack'
+        lore:
+            - '&7Right-click in had to reveal one'
+            - '&7of the random crate key.'
+            - ''
+            - '&6&lx &aVote Key'
+            - '&6&lx &eCommon Key'
+            - '&6&lx &bRare Key'
+            - '&6&lx &cEpic Key'
+            - '&6&lx &dMythical Key'
+            - '&6&lx &5Legendary Key'
+            - '&6&lx &fEnchantmentBook Key'
+            - '&6&lx &9CustomTag Key'
+            - ''
+            - '&7More can be bought @ &e&nstore.webpage.com'
+    effect:
+        onOpenEffects: 'happyVillager, DRINK'
+        dormantEffects: ''
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)
+            - 'cmd:(/cr givekey %player% Vote 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)
+            - 'cmd:(/cr givekey %player% Common 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.
+            - 'cmd:(/cr givekey %player% Rare 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)            
+            - 'cmd:(/cr givekey %player% Epic 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)            
+            - 'cmd:(/cr givekey %player% Mythical 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)            
+            - 'cmd:(/cr givekey %player% Legendary 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)            
+            - 'cmd:(/cr givekey %player% EnchamtmentBook 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)           
+            - 'cmd:(/cr givekey %player% CustomTag 1), chance:(0.5), noduplicate:()'
+           #- 'cmd:(/cr give [player] [crate name] [amount]	Gives the player specified amount of crates.)            
