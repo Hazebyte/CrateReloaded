@@ -1,0 +1,66 @@
+#
+# Mystery Mob Spawner
+#   Requires Silk Spawner
+#
+# Created by ProfCube 
+#
+
+MMS:
+    type: MYSTERYCRATE
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: ''
+        broadcast: ''
+    item:
+        item: 52
+        enchantment: '300:1'
+        name: '&6&lMysteryMobSpawner'
+        lore:
+            - '&7Right-click in had to reveal one'
+            - '&7of the following mob spawner types:'
+            - ''
+            - '&6&lx &7Pig'
+            - '&6&lx &7Cow'
+            - '&6&lx &7Sheep'
+            - '&6&lx &7Chicken'
+            - '&6&lx &7Wolf'
+            - '&6&lx &7Mooshroom'
+            - '&6&lx &7Ocelot'
+            - '&6&lx &eIronGolem'
+            - '&6&lx &eWitch'
+            - '&6&lx &eCreeper'
+            - '&6&lx &eSkeleton'
+            - '&6&lx &eSpider'
+            - '&6&lx &eZombie'
+            - '&6&lx &eZombiePigman'
+            - '&6&lx &eEndermand'
+            - '&6&lx &eBlaze'
+            - '&6&lx &eMagmaCube'
+            - ''
+            - '&7More can be bought @ &e&nstore.webpage.com'
+    effect:
+        onOpenEffects: 'happyVillager, DRINK'
+        dormantEffects: ''
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/ss give %player% Pig), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Cow), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Sheep), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Chicken), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Wolf), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Mooshroom), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Ocelot), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% IronGolem), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Witch), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Creeper), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Skeleton), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Spider), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Zombie), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% ZombePigman), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Enderman), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% Blaze), chance:(0.5), noduplicate:()'
+            - 'cmd:(/ss give %player% MagmaCube), chance:(0.5), noduplicate:()'
