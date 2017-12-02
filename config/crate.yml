@@ -1,0 +1,186 @@
+############################################
+# +---------------------------------------+#
+# |         Config Revision 16            |#
+# +---------------------------------------+#
+############################################
+
+FoodieChest:
+    type: SUPPLYCRATE
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: '%prefix%You have opened a &c[&6Foodie &eChest&c] &f#124'
+        broadcast: ''
+    item:
+        name: '&c[&6Foodie &eChest&c] &f#124'
+        lore:
+            - '&7Mmmm, something smells good.'
+            - '&8Place the chest down to obtain great rewards!'
+    effect:
+        onOpenEffects: 'happyVillager, BAT_TAKEOFF, WOOD_CLICK'
+        dormantEffects: 'DISABLED FOR NON-KEY CRATES'
+    reward:
+        minimumRewards: 7
+        maximumRewards: 12
+        rewards:
+            - 'cmd:(/heal %player%), chance:(100), noduplicate:()'
+            - 'item:(cake 1 &dLegendary_Cake), chance:(1), noduplicate:()'
+            - 'item:(golden_apple 1), chance:(1), noduplicate:()'
+            - 'item:(cookie 1), chance:(1.5), noduplicate:()'
+            - 'item:(COOKED_BEEF 1), chance:(1.5), noduplicate:()'
+            - 'item:(COOKED_CHICKEN 1), chance:(1.5), noduplicate:()'
+            - 'item:(RAW_FISH:1 1), chance:(3)'
+            - 'item:(RAW_FISH:2 1), chance:(3)'
+            - 'item:(RAW_FISH:3 1), chance:(3)'
+            - 'item:(rotten_flesh 1), chance:(3)'
+FoodiePack:
+    type: MYSTERYCRATE
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: '%prefix%You have opened a &c[&6Foodie &ePack&c] &f#125'
+        broadcast: ''
+    item:
+        item: POTION:1
+        enchantment: '300:1'
+        name: '&c[&6Foodie &ePack&c] &f#125'
+        lore:
+            - '&7Mmmm, something smells good.'
+            - '&8Right click to recieve a pack of food!'
+    effect:
+        onOpenEffects: 'happyVillager, DRINK'
+        dormantEffects: ''
+    reward:
+        minimumRewards: 3
+        maximumRewards: 3
+        rewards:
+            - 'cmd:(/heal %player%), chance:(100), noduplicate:()'
+            - 'item:(cake 1 &dLegendary_Cake), chance:(1), noduplicate:()'
+            - 'item:(golden_apple 1), chance:(1), noduplicate:()'
+            - 'item:(cookie 1), chance:(1.5), noduplicate:()'
+            - 'item:(COOKED_BEEF 1), chance:(1.5), noduplicate:()'
+            - 'item:(COOKED_CHICKEN 1), chance:(1.5), noduplicate:()'
+            - 'item:(RAW_FISH:1 1), chance:(3)'
+            - 'item:(RAW_FISH:2 1), chance:(3)'
+            - 'item:(RAW_FISH:3 1), chance:(3)'
+            - 'item:(rotten_flesh 1), chance:(3)'
+FoodieKey:
+    type: KEYCRATE
+    animation: 'none'
+    displayName: '&c[&6Foodie Crate] &f#127'
+    holographic:
+        - '&c[&6Foodie Crate] &f#127'
+    preview:
+        enabled: true 
+        rows: 1
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: '%prefix%You have opened a &c[&6Foodie &eCrate&c] &f#127'
+        broadcast: ''
+    key:
+        item: 'Tripwire_Hook'
+        enchantment: '300:1'
+        name: '&c[&6Foodie &ePack&c] &f#127'
+        lore:
+            - '&8Right click a key chest to obtain rewards!'
+    effect:
+        onOpenEffects: 'happyVillager, BAT_TAKEOFF'
+        dormantEffects: ''
+    reward:
+        minimumRewards: 3
+        maximumRewards: 3
+        rewards:
+            - 'item:(cake 1 &dLegendary_Cake), chance:(1), noduplicate:()'
+            - 'item:(golden_apple 1), chance:(1), noduplicate:()'
+            - 'item:(cookie 1), chance:(1.5), noduplicate:()'
+            - 'item:(COOKED_BEEF 1), chance:(1.5), noduplicate:()'
+            - 'item:(COOKED_CHICKEN 1), chance:(1.5), noduplicate:()'
+            - 'item:(RAW_FISH:1 1), chance:(3)'
+            - 'item:(RAW_FISH:2 1), chance:(3)'
+            - 'item:(RAW_FISH:3 1), chance:(3)'
+            - 'item:(rotten_flesh 1), chance:(3)'
+RouletteKey:
+    type: KEYCRATE
+    animation: "ROULETTE"
+    displayName: '&c[&0Mystery Crate&c] &8#128'
+    displayItem: 'chest 1 %cratename%'
+    holographic:
+        - '&c[&0Mystery Crate&c] &8#128'
+    preview:
+        enabled: true
+        rows: 4
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: '%prefix%You have opened a &c[&0Mystery Crate&c] &8#128'
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&c[&6Mystery &eKey&c] &f#128_ARCHON'
+        lore:
+            - '&8Right click a key chest to obtain rewards!'
+    effect:
+        onOpenEffects: 'firework, BAT_TAKEOFF'
+        dormantEffects: 'happyVillager'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/give %player% bedrock 16), chance:(10), display:(bedrock 16 &a16_Bedrock! &f%chance%)'
+            - 'cmd:(/give %player% 373:8267 4), chance:(15), display:(373:8267 4 &a4_Potion_of_Leap! &f%chance%)'
+            - 'cmd:(/give %player% 377 16), chance:(35), display:(377 16 &a16_Blaze_Powder! &f%chance%)'
+            - 'cmd:(/give %player% 322:1 32), chance:(3), display:(322:1 32 &a32_Golden_Apples! &f%chance%)'
+            - 'cmd:(/give %player% 421 16), chance:(30), display:(421 16 &a16_Nametags! &f%chance%)'
+            - 'cmd:(/give %player% 403 1), chance:(25), display:(403 1 &aEnchanted_Book! &f%chance%)'
+            - 'cmd:(/eco give %player% 1000), chance:(15), display:(paper 1 &a$1000 &f%chance%)'
+            - 'cmd:(/eco give %player% 5000), chance:(10), display:(paper 5 &a$5000 &f%chance%)'
+            - 'cmd:(/eco give %player% 10000), chance:(10), display:(paper 10 &a$10000 &f%chance%)'
+            - 'cmd:(/eco give %player% 15000), chance:(5), display:(paper 15 &a$15000 &f%chance%)'
+CSGOKey:
+    type: KEYCRATE
+    animation: 'CSGO'
+    displayName: '&c[&0Mystery Crate&c] &8#129'
+    displayItem: 'chest 1 %cratename%'
+    holographic:
+        - '&c[&0Mystery Crate&c] &8#129'
+    preview:
+        enabled: true
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        onOpen: '%prefix%You have opened a &c[&0Mystery Crate&c] &8#129'
+        broadcast: ''
+    key:
+        item: 'NETHER_STAR'
+        enchantment: '300:1'
+        name: '&c[&6Mystery &eKey&c] &f#129_CSGO'
+        lore:
+            - '&8Right click a key chest to obtain rewards!'
+    effect:
+        onOpenEffects: 'firework, DRINK'
+        dormantEffects: 'happyVillager'
+        dormantRoulette: 'WOOD_CLICK'
+        onRouletteEnd: 'BAT_TAKEOFF'
+    reward:
+        minimumRewards: 1
+        maximumRewards: 1
+        rewards:
+            - 'cmd:(/give %player% bedrock 16), chance:(10), display:(bedrock 16 &a16_Bedrock! &f%chance%)'
+            - 'cmd:(/give %player% 373:8267 4), chance:(15), display:(373:8267 4 &a4_Potion_of_Leap! &f%chance%)'
+            - 'cmd:(/give %player% 377 16), chance:(35), display:(377 16 &a16_Blaze_Powder! &f%chance%)'
+            - 'cmd:(/give %player% 322:1 32), chance:(3), display:(322:1 32 &a32_Golden_Apples! &f%chance%)'
+            - 'cmd:(/give %player% 421 16), chance:(30), display:(421 16 &a16_Nametags! &f%chance%)'
+            - 'cmd:(/give %player% 403 1), chance:(25), display:(403 1 &aEnchanted_Book! &f%chance%)'
+            - 'cmd:(/eco give %player% 1000), chance:(15), display:(paper 1 &a$1000 &f%chance%)'
+            - 'cmd:(/eco give %player% 5000), chance:(10), display:(paper 5 &a$5000 &f%chance%)'
+            - 'cmd:(/eco give %player% 10000), chance:(10), display:(paper 10 &a$10000 &f%chance%)'
+            - 'cmd:(/eco give %player% 15000), chance:(5), display:(paper 15 &a$15000 &f%chance%)'
