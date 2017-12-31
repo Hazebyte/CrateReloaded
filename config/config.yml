@@ -1,7 +1,7 @@
 # ======================================================= #
 #                                                         #
 #                   CONFIG.YML                            #
-#                   Revision-09                           #
+#                   Revision-10                           #
 #                                                         #
 # ======================================================= #
 
@@ -30,40 +30,37 @@ logger: false
 #  NOTE:                                                  #
 #  You do not configure rewards here. Please go to        #
 #     plugins/CrateReloaded/crate.yml to do that.         #
+#                                                         #
+###########################################################
 
-display:
-  # Number of decimals in which chances are arranged.
-  # i.e. 3.14 = #.##
-  chance-format: '#'
-
-usage:
-  # Time required for an crate to be reset so that it
-  #   can be used again
-  cooldown: 1
-
-preview-menu:
-    name: 'Crates'
-    buttons-enabled: true
-    next-button: '262 1 &aNext_Page &eClick_to_enter_the_next_page.'
-    close-button: '2259 1 &4Close!'
-    back-button: '355 1 &4&lGo_back! &eGo_back_to_previous_page.'
-
-pushback:
-    enabled: true
-    modifiers:
-        x: 1.0
-        y: 1.0
-        z: 1.0
-
-glass-name: ''
-roulette:
-    length: 5
-csgo:
-    length: 6
-    topPrizeDisplay: 'REDSTONE_TORCH_ON 1 &6Prize!'
-    botPrizeDisplay: 'REDSTONE_TORCH_ON 1 &6Prize!'
-
-holographic-offset:
-    x: 0.0
-    y: -0.5
-    z: 0.0
+crate:
+    # Number of decimals in which chances are arranged.
+    # i.e. 3.14 = #.##
+    chance-format: '#'
+    # Time interval between actions performed on Crate events
+    cooldown: 1
+    animation:
+        glass-name: ''
+        length:
+            roulette: 5
+            csgo: 6
+            wheel: 0
+    # Animation and Preview Menu Settings
+    menu: 
+        name: 'Crates'
+        buttons-enabled: true
+        next-button: '262 1 &aNext_Page &eClick_to_enter_the_next_page.'
+        close-button: '2259 1 &4Close!'
+        back-button: '355 1 &4&lGo_back! &eGo_back_to_previous_page.'
+        top-prize-display: '76 1 &6Prize!'
+        bot-prize-display: '76 1 &6Prize!'
+    pushback:
+        enabled: true
+        modifiers:
+            x: 1.0
+            y: 1.0
+            z: 1.0
+    holographic:
+        x: 0.0
+        y: -0.5
+        z: 0.0
