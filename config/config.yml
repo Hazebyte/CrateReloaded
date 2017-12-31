@@ -34,7 +34,7 @@ logger: false
 display:
   # Number of decimals in which chances are arranged.
   # i.e. 3.14 = #.##
-  chanceFormat: '#'
+  chance-format: '#'
 
 usage:
   # Time required for an crate to be reset so that it
@@ -55,7 +55,7 @@ pushback:
         y: 1.0
         z: 1.0
 
-glassName: ''
+glass-name: ''
 roulette:
     length: 5
 csgo:
