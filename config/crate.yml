@@ -15,31 +15,31 @@ FoodChest:
         on-open: '%prefix%You have opened a &c[&6Foodie &eChest&c] &f#124'
         broadcast: ''
     effect:
-        on-open-effects: 'happyVillager, BAT_TAKEOFF, WOOD_CLICK'
-        dormant-effects: '-- Available only crates that may be set to a block --'
+        1:
+          class: AtomEffect
     reward:
         minimum-rewards: 8
         maximum-rewards: 15
         rewards:
             # Always heals the player to full
-            - 'no-duplicate:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
             # Resupply food
-            - 'no-duplicate:(),     chance:(1)          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
-            - 'no-duplicate:(),     chance:(1)          item:(260 1)'                               # Apple
-            - 'no-duplicate:(),     chance:(1)          item:(322 1)'                               # Golden Apple
-            - 'no-duplicate:(),     chance:(1)          item:(357 1)'                               # Cookie
-            - 'no-duplicate:(),     chance:(1)          item:(297 1)'                               # Bread
-            - 'no-duplicate:(),     chance:(1)          item:(355 1)'                               # Milk
-            - 'no-duplicate:(),     chance:(1)          item:(350 1)'                               # Cooked Fish
-            - 'no-duplicate:(),     chance:(1)          item:(349 1)'                               # Raw Fish
-            - 'no-duplicate:(),     chance:(1)          item:(364 1)'                               # Steak
-            - 'no-duplicate:(),     chance:(1)          item:(365 1)'                               # Raw Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(366 1)'                               # Cooked Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(367 1)'                               # Flesh
+            - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
+            - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
+            - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
+            - 'unique:(),     chance:(1),          item:(357 1)'                               # Cookie
+            - 'unique:(),     chance:(1),          item:(297 1)'                               # Bread
+            - 'unique:(),     chance:(1),          item:(355 1)'                               # Milk
+            - 'unique:(),     chance:(1),          item:(350 1)'                               # Cooked Fish
+            - 'unique:(),     chance:(1),          item:(349 1)'                               # Raw Fish
+            - 'unique:(),     chance:(1),          item:(364 1)'                               # Steak
+            - 'unique:(),     chance:(1),          item:(365 1)'                               # Raw Chicken
+            - 'unique:(),     chance:(1),          item:(366 1)'                               # Cooked Chicken
+            - 'unique:(),     chance:(1),          item:(367 1)'                               # Flesh
 # -------------------------------------------------------------------------------------------------------------------
 FoodPack:
     type: MYSTERYCRATE # Right, or left click to receive rewards
-    item: '373:1 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.\n&8Right_click_to_recieve_a_pack_of_food! glow:true'
+    item: '373:1 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.\n&8Right_click_to_receive_a_pack_of_food! glow:true'
     buy:
         enabled: false
         cost: 0
@@ -47,143 +47,147 @@ FoodPack:
         on-open: '%prefix%You have opened a &c[&6Foodie &ePack&c] &f#125'
         broadcast: ''
     effect:
-        on-open-effects: 'happyVillager, DRINK'
-        dormant-effects: ''
+        1:
+          class: HeartEffect
     reward:
         minimum-rewards: 3
         maximum-rewards: 3
         rewards:
             # Always heals the player to full
-            - 'no-duplicate:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
             # Resupply food
-            - 'no-duplicate:(),     chance:(1)          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
-            - 'no-duplicate:(),     chance:(1)          item:(260 1)'                               # Apple
-            - 'no-duplicate:(),     chance:(1)          item:(322 1)'                               # Golden Apple
-            - 'no-duplicate:(),     chance:(1)          item:(357 1)'                               # Cookie
-            - 'no-duplicate:(),     chance:(1)          item:(297 1)'                               # Bread
-            - 'no-duplicate:(),     chance:(1)          item:(355 1)'                               # Milk
-            - 'no-duplicate:(),     chance:(1)          item:(350 1)'                               # Cooked Fish
-            - 'no-duplicate:(),     chance:(1)          item:(349 1)'                               # Raw Fish
-            - 'no-duplicate:(),     chance:(1)          item:(364 1)'                               # Steak
-            - 'no-duplicate:(),     chance:(1)          item:(365 1)'                               # Raw Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(366 1)'                               # Cooked Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(367 1)'                               # Flesh
+            - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
+            - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
+            - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
+            - 'unique:(),     chance:(1),          item:(357 1)'                               # Cookie
+            - 'unique:(),     chance:(1),          item:(297 1)'                               # Bread
+            - 'unique:(),     chance:(1),          item:(355 1)'                               # Milk
+            - 'unique:(),     chance:(1),          item:(350 1)'                               # Cooked Fish
+            - 'unique:(),     chance:(1),          item:(349 1)'                               # Raw Fish
+            - 'unique:(),     chance:(1),          item:(364 1)'                               # Steak
+            - 'unique:(),     chance:(1),          item:(365 1)'                               # Raw Chicken
+            - 'unique:(),     chance:(1),          item:(366 1)'                               # Cooked Chicken
+            - 'unique:(),     chance:(1),          item:(367 1)'                               # Flesh
 # -------------------------------------------------------------------------------------------------------------------
 FoodKey:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_recieve_a_pack_of_food! glow:true'
+    item: '399 1 name:&c[&6Foodie_Crate]_&f#1 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
     animation: 'none'
-    display-name: '&c[&6Foodie Crate] &f#127'
+    display-name: '&c[&6Foodie Crate] &f#1'
     holographic:
-        - '&c[&6Foodie Crate] &f#127'
+        - '{crate}'
     preview:
-        enabled: true 
+        enabled: true
         rows: 4
     buy:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a &c[&6Foodie &eCrate&c] &f#127'
+        on-open: '%prefix%You have opened a {crate}'
         broadcast: ''
     effect:
-        on-open-effects: 'happyVillager, BAT_TAKEOFF'
-        dormant-effects: ''
+        1:
+          class: Star
+          category: PERSISTENT
+          particles: 5
     reward:
         minimum-rewards: 3
         maximum-rewards: 3
         rewards:
             # Always heals the player to full
-            - 'no-duplicate:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
             # Resupply food
-            - 'no-duplicate:(),     chance:(1)          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
-            - 'no-duplicate:(),     chance:(1)          item:(260 1)'                               # Apple
-            - 'no-duplicate:(),     chance:(1)          item:(322 1)'                               # Golden Apple
-            - 'no-duplicate:(),     chance:(1)          item:(357 1)'                               # Cookie
-            - 'no-duplicate:(),     chance:(1)          item:(297 1)'                               # Bread
-            - 'no-duplicate:(),     chance:(1)          item:(355 1)'                               # Milk
-            - 'no-duplicate:(),     chance:(1)          item:(350 1)'                               # Cooked Fish
-            - 'no-duplicate:(),     chance:(1)          item:(349 1)'                               # Raw Fish
-            - 'no-duplicate:(),     chance:(1)          item:(364 1)'                               # Steak
-            - 'no-duplicate:(),     chance:(1)          item:(365 1)'                               # Raw Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(366 1)'                               # Cooked Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(367 1)'                               # Flesh
+            - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
+            - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
+            - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
+            - 'unique:(),     chance:(1),          item:(357 1)'                               # Cookie
+            - 'unique:(),     chance:(1),          item:(297 1)'                               # Bread
+            - 'unique:(),     chance:(1),          item:(355 1)'                               # Milk
+            - 'unique:(),     chance:(1),          item:(350 1)'                               # Cooked Fish
+            - 'unique:(),     chance:(1),          item:(349 1)'                               # Raw Fish
+            - 'unique:(),     chance:(1),          item:(364 1)'                               # Steak
+            - 'unique:(),     chance:(1),          item:(365 1)'                               # Raw Chicken
+            - 'unique:(),     chance:(1),          item:(366 1)'                               # Cooked Chicken
+            - 'unique:(),     chance:(1),          item:(367 1)'                               # Flesh
 # -------------------------------------------------------------------------------------------------------------------
 # An example of a key crate with animations (Roulette)
 FoodKeyT2:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_recieve_a_pack_of_food! glow:true'
+    item: '399 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_recieve_a_pack_of_food! glow:true'
     animation: 'ROULETTE'
-    display-name: '&c[&6Foodie Crate] &f#127'
+    display-name: '&c[&6Foodie Crate] &f#2'
     holographic:
-        - '&c[&6Foodie Crate] &f#127'
+        - '{crate}'
     preview:
-        enabled: true 
+        enabled: true
         rows: 4
     buy:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a &c[&6Foodie &eCrate&c] &f#127'
+        on-open: '%prefix%You have opened a {crate}'
         broadcast: ''
     effect:
-        on-open-effects: 'happyVillager, BAT_TAKEOFF'
-        dormant-effects: ''
+        1:
+          class: HeartEffect
     reward:
         minimum-rewards: 3
         maximum-rewards: 3
         rewards:
             # Always heals the player to full
-            - 'no-duplicate:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
             # Resupply food
-            - 'no-duplicate:(),     chance:(1)          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
-            - 'no-duplicate:(),     chance:(1)          item:(260 1)'                               # Apple
-            - 'no-duplicate:(),     chance:(1)          item:(322 1)'                               # Golden Apple
-            - 'no-duplicate:(),     chance:(1)          item:(357 1)'                               # Cookie
-            - 'no-duplicate:(),     chance:(1)          item:(297 1)'                               # Bread
-            - 'no-duplicate:(),     chance:(1)          item:(355 1)'                               # Milk
-            - 'no-duplicate:(),     chance:(1)          item:(350 1)'                               # Cooked Fish
-            - 'no-duplicate:(),     chance:(1)          item:(349 1)'                               # Raw Fish
-            - 'no-duplicate:(),     chance:(1)          item:(364 1)'                               # Steak
-            - 'no-duplicate:(),     chance:(1)          item:(365 1)'                               # Raw Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(366 1)'                               # Cooked Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(367 1)'                               # Flesh
+            - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
+            - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
+            - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
+            - 'unique:(),     chance:(1),          item:(357 1)'                               # Cookie
+            - 'unique:(),     chance:(1),          item:(297 1)'                               # Bread
+            - 'unique:(),     chance:(1),          item:(355 1)'                               # Milk
+            - 'unique:(),     chance:(1),          item:(350 1)'                               # Cooked Fish
+            - 'unique:(),     chance:(1),          item:(349 1)'                               # Raw Fish
+            - 'unique:(),     chance:(1),          item:(364 1)'                               # Steak
+            - 'unique:(),     chance:(1),          item:(365 1)'                               # Raw Chicken
+            - 'unique:(),     chance:(1),          item:(366 1)'                               # Cooked Chicken
+            - 'unique:(),     chance:(1),          item:(367 1)'                               # Flesh
 # -------------------------------------------------------------------------------------------------------------------
 # An example of a key crate with animations (CSGO)
 FoodKeyT3:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_recieve_a_pack_of_food! glow:true'
+    item: '399 1 name:&c[&6Foodie_&ePack&c]_&f#3 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_recieve_a_pack_of_food! glow:true'
     animation: 'CSGO'
-    display-name: '&c[&6Foodie Crate] &f#127'
+    display-name: '&c[&6Foodie Crate] &f#3'
     holographic:
-        - '&c[&6Foodie Crate] &f#127'
+        - '{crate}'
     preview:
-        enabled: true 
+        enabled: true
         rows: 4
     buy:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a &c[&6Foodie &eCrate&c] &f#127'
+        on-open: '%prefix%You have opened a {crate}'
         broadcast: ''
     effect:
-        on-open-effects: 'happyVillager, BAT_TAKEOFF'
-        dormant-effects: ''
+        1:
+          class: HeartEffect
+          category: PERSISTENT
     reward:
         minimum-rewards: 3
         maximum-rewards: 3
         rewards:
             # Always heals the player to full
-            - 'no-duplicate:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
             # Resupply food
-            - 'no-duplicate:(),     chance:(1)          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
-            - 'no-duplicate:(),     chance:(1)          item:(260 1)'                               # Apple
-            - 'no-duplicate:(),     chance:(1)          item:(322 1)'                               # Golden Apple
-            - 'no-duplicate:(),     chance:(1)          item:(357 1)'                               # Cookie
-            - 'no-duplicate:(),     chance:(1)          item:(297 1)'                               # Bread
-            - 'no-duplicate:(),     chance:(1)          item:(355 1)'                               # Milk
-            - 'no-duplicate:(),     chance:(1)          item:(350 1)'                               # Cooked Fish
-            - 'no-duplicate:(),     chance:(1)          item:(349 1)'                               # Raw Fish
-            - 'no-duplicate:(),     chance:(1)          item:(364 1)'                               # Steak
-            - 'no-duplicate:(),     chance:(1)          item:(365 1)'                               # Raw Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(366 1)'                               # Cooked Chicken
-            - 'no-duplicate:(),     chance:(1)          item:(367 1)'                               # Flesh
+            - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
+            - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
+            - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
+            - 'unique:(),     chance:(1),          item:(357 1)'                               # Cookie
+            - 'unique:(),     chance:(1),          item:(297 1)'                               # Bread
+            - 'unique:(),     chance:(1),          item:(355 1)'                               # Milk
+            - 'unique:(),     chance:(1),          item:(350 1)'                               # Cooked Fish
+            - 'unique:(),     chance:(1),          item:(349 1)'                               # Raw Fish
+            - 'unique:(),     chance:(1),          item:(364 1)'                               # Steak
+            - 'unique:(),     chance:(1),          item:(365 1)'                               # Raw Chicken
+            - 'unique:(),     chance:(1),          item:(366 1)'                               # Cooked Chicken
+            - 'unique:(),     chance:(1),          item:(367 1)'                               # Flesh
+
