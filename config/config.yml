@@ -1,66 +1,95 @@
 # ======================================================= #
 #                                                         #
 #                   CONFIG.YML                            #
-#                   Revision-10                           #
-#                                                         #
-# ======================================================= #
-
-# ======================================================= #
-#                                                         #
-#  A D M I N I S T R A T I O N                            #
-#                                                         #
-# ======================================================= #
-
-# Affix placed before the stem of messages
-prefix: '&7[&6Crates&6] &f'
-
-# Parameter that defines the plugin's language, and region.
-# Check the folder (lang)
-locale: en
-
-# Systematic recording of events
-logger: false
-
-# ======================================================= #
-#                                                         #
-#  G E N E R A L   C R A T E   S E T T I N G S            #
+#                   FOR 2.0                               #
 #                                                         #
 # ======================================================= #
 
 #  NOTE:                                                  #
 #  You do not configure rewards here. Please go to        #
 #     plugins/CrateReloaded/crate.yml to do that.         #
-#                                                         #
-###########################################################
+# ======================================================= #
+#
+# Affix placed before the stem of messages
+prefix: '&7[&6Crates&6] &f'
 
+# Defines the plugin's language, and region.
+locale: en
+
+# Systematic recording of events
+logger: false
+
+# Decimal format that determines the number of decimals
+# i.e. 3.14 = #.##, 2.5 = #.# 
+decimal-format: '#'
+
+# How long a player has to wait between actions
+cooldown: 1
+
+# Creative Control
+# Prevents players from duplicating keys with creative gamemode.
+creative-control: true
+
+# Crate Settings
 crate:
-    # Number of decimals in which chances are arranged.
-    # i.e. 3.14 = #.##
-    chance-format: '#'
-    # Time interval between actions performed on Crate events
-    cooldown: 1
-    animation:
-        glass-name: ''
-        length:
-            roulette: 5
-            csgo: 6
-            wheel: 0
-    # Animation and Preview Menu Settings
-    menu: 
-        name: 'Crates'
-        buttons-enabled: true
-        next-button: '262 1 &aNext_Page &eClick_to_enter_the_next_page.'
-        close-button: '2259 1 &4Close!'
-        back-button: '355 1 &4&lGo_back! &eGo_back_to_previous_page.'
-        top-prize-display: '76 1 &6Prize!'
-        bot-prize-display: '76 1 &6Prize!'
-    pushback:
-        enabled: true
-        modifiers:
-            x: 1.0
-            y: 1.0
-            z: 1.0
-    holographic:
-        x: 0.0
-        y: -0.5
-        z: 0.0
+  # Glass Name 
+  # Shown during an animation
+  glass: 'SPINNING'
+
+  # Default Menu Name
+  menu: 'Menu'
+
+  # Are players allowed to put crates into crafting containers
+  craft: false
+
+  # Animation Exiting
+  # Allows players to exit animations that have not yet been completed
+  peri-exit: false
+
+  # Length of CSGO animation
+  csgo: 6
+
+  # Length of roulette animation
+  roulette: 5
+
+  # Length of wheel animation
+  wheel: 8
+
+  # Trigger Buttons
+  buttons:
+    enabled: true
+
+    # Next Button
+    # It is used to turn the virtual inventory page
+    next: '262 1 &aNext_Page &eClick_to_enter_the_next_page.'
+
+    # Close Button
+    # It is used to close the inventory
+    close: '2259 1 &4Close!'
+
+    # Next Button
+    back: '355 1 &4&lGo_back &eGo_back_to_previous_page.'
+
+    # CSGO Display Buttons
+    # Used for display only, and does not trigger any actions
+    csgo-top: '76 1 &6Prize!'
+    csgo-bot: '76 1 &6Prize!'
+
+  # Pushback Settings
+  pushback:
+    enabled: true
+
+    # Modifier
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  
+  # Hologram Settings
+  hologram:
+
+    # Modifier
+    # Holograms are set to be centered, one block above the target location
+    x: 0.0
+    y: 0.0
+    z: 0.0
+
