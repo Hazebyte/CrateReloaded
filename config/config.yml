@@ -20,7 +20,7 @@ locale: en
 logger: false
 
 # Decimal format that determines the number of decimals
-# i.e. 3.14 = #.##, 2.5 = #.# 
+# i.e. 3.14 = #.##, 2.5 = #.#
 decimal-format: '#'
 
 # How long a player has to wait between actions
@@ -32,7 +32,15 @@ creative-control: true
 
 # Crate Settings
 crate:
-  # Glass Name 
+
+  # Comparison Level
+  # Compares two items and determines if it is a crate
+  # 0 - Basic (Name, Type, Lore)
+  # 1 - Normal (Setting 0 + Enchants, Flags)
+  # 2 - Strict (Setting 1 + Custom NBT) . . . Note: Old keys will not work if this option is selected.
+  compare: 0
+
+  # Glass Name
   # Shown during an animation
   glass: 'SPINNING'
 
@@ -61,19 +69,19 @@ crate:
 
     # Next Button
     # It is used to turn the virtual inventory page
-    next: '262 1 &aNext_Page &eClick_to_enter_the_next_page.'
+    next: '262 1 name:&aNext_Page lore:&eClick_to_enter_the_next_page.'
 
     # Close Button
     # It is used to close the inventory
-    close: '2259 1 &4Close!'
+    close: '2259 1 name:&4Close!'
 
     # Next Button
-    back: '355 1 &4&lGo_back &eGo_back_to_previous_page.'
+    back: '355 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
 
     # CSGO Display Buttons
     # Used for display only, and does not trigger any actions
-    csgo-top: '76 1 &6Prize!'
-    csgo-bot: '76 1 &6Prize!'
+    csgo-top: '76 1 name:&6Prize!'
+    csgo-bot: '76 1 name:&6Prize!'
 
   # Pushback Settings
   pushback:
@@ -83,7 +91,7 @@ crate:
     x: 1.0
     y: 1.0
     z: 1.0
-  
+
   # Hologram Settings
   hologram:
 
