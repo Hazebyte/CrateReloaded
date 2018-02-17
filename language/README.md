@@ -11,3 +11,4 @@ CrateReloaded supports different languages with UTF encoding.
 * **Sr_Aldeano** Spanish
 * **Einwegrasierer** German
 * **ProfCube** Japanese
+* **XXLuigiMario** Catalan
