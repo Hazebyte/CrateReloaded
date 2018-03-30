@@ -16,8 +16,7 @@ The purpose of this repository, as of right now, is to keep track of issues as w
 ## More Information
 * [Premium](https://www.spigotmc.org/resources/mystery-crate-cratereloaded-for-the-finest-servers.3663/)
 * [Free](https://www.spigotmc.org/resources/mystery-crate-cratereloaded.861/)
-* [Documentation Page](https://hazebyte.github.io/Documentation/#/)
+* [Documentation](https://hazebyte.github.io/Documentation/#/)
 
 ## Related Repositories
-* [Documentation](https://github.com/Hazebyte/Documentation)
 * [API](https://github.com/Hazebyte/CrateReloadedAPI)
