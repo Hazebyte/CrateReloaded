@@ -1,19 +1,16 @@
 <!-- docs/_sidebar.md -->
 
-- Getting Started
-  - [Installation](installation.md)
-  - [Commands and Permissions](commands-permissions.md)
-- Customization
-  - [Configuration](configuration.md)
-    - [Config](config.md)
-    - [Crate](crate.md)
-    - [Template](template.md)
-  - [NPC](npc.md)
-  - [Effects](effects.md)
-  - [Translating](translating.md)
-- Reference
-  - [Particle/Sound Effects](particle-sound.md)
-  - [Enchantments](enchantments.md)
-  - [Variables](variables.md)
-  - [FAQ](faq.md)
+- [Getting Started](getting-started/installation.md)
+  - [Installation](getting-started/installation.md)
+  - [Commands and Permissions](getting-started/commands-permissions.md)
+- [Customization](config/general.md)
+  - [Configuration](config/general.md)
+  - [NPC](config/npc.md)
+  - [Effects](config/effects.md)
+  - [Translating](config/translating.md)
+- [Reference](reference/particle-sound.md)
+  - [Particle/Sound Effects](reference/particle-sound.md)
+  - [Enchantments](reference/enchantments.md)
+  - [Variables](reference/variables.md)
+  - [FAQ](reference/faq.md)
 - [Contribution/Dedication](contribution.md)
