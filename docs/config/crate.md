@@ -1,3 +1,4 @@
+
 # Configuration
 
 * [config.yml](config/config.md)
@@ -9,15 +10,15 @@
 
 * Unlimited crates and rewards
 * Multi-world support
-* Scrolling Animations
+* Animations
 * Preview Menu
-* Messaging
+* Message System
 * Particle Effects
 * Rewards support items and commands
 
-### Type
+### Crate Types
 
-Types define the unique characteristic and interactions that activate a crate. These are the following types...
+The type of crate defines the unique interaction with the player when the crate is activated. These are the following types...
 
 | **Type** | **Animation Support** | **Description**                                                                       | **Activation**                                                                                                                  |
 | -------- | --------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,39 +27,43 @@ Types define the unique characteristic and interactions that activate a crate. T
 | KEY      | Yes                   | Crate that is preset to a block. This block acts as a hub for users to interact with. | Right or left click a preset block with the crate in-hand. Left click is set to preview while right click is to open the crate. |
 
 ### The Physical Crate or Key
-
-Crates and keys are physical items in Minecraft. These physical items are what players use to interact and activate rewards.
-Read more about the [item parsing](#item-parser)
+Crates and keys are physical items in Minecraft. These physical items are what players use to interact and activate rewards. Each crate or key-crate has its own item or key, respectively. 
 
 ```YML
 FoodKey:
     ...
-    item: '131 1 name:&c[&6Foodie_&eKey&c]_&f#124 lore:&7Mmmm,_something_smells_good.\n&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
+    item: 'tripwire_hook 1 name:&c[&6Foodie_&eKey&c]_&f#124 lore:&7Mmmm,_something_smells_good.\n&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
     ...
 ```
 
-### Animation
+!> This plugin uses the EssentialsX item format. For more information about item parsing,  [click here](#item-parser).
 
-Crates with animation support allow for custom GUI animations.
+### Animations
 
-| **Animation** |
-| ------------- |
-| ROULETTE      |
-| CSGO          |
-| REVERSE_CSGO  |
-| WHEEL         |
-| REVERSE_WHEEL |
+Some crates support different animations, which appear in a GUI when the crate is activated. 
 
-End animations are ran immediately after the main animation. These typically showoff what
-the players won.
+> **Active Animations** run while the reward is being selected on the player's screen
 
-| **End Animation** |
-| ----------------- |
-| BLANK             |
-| RANDOM            |
+> **Ending Animations** occur after the player's reward has been selected - this animation plays immediately after the Active animation ends
 
-### Holographic
+<table>
+<tr><th> Animations </th></tr>
+<td>
 
+| **Active**    | **Ending** |
+| ------------- | ---------- |
+| ROULETTE      | BLANK      |
+| CSGO          | RANDOM     |
+| REVERSE_CSGO  |            |
+| WHEEL         |            |
+| REVERSE_WHEEL |            |
+
+</table>
+
+
+### Crate Hologram
+
+This creates a hologram which hovers above the block location or NPC which the crate is set. 
 ```YML
 FoodKeyT2:
     ...
@@ -69,9 +74,14 @@ FoodKeyT2:
     ...
 ```
 
+
+!> For holograms to work, you must have [HolographicDisplays](https://dev.bukkit.org/projects/holographic-displays) installed on your server
+
+
+
 ### Preview
 
-Previews are automatically generated with tags from rewards. It may be toggled in the config.
+**Crate Previews** allow players to see the rewards within a crate. Previews are automatically generated based off tags from rewards. It may be toggled in the config.
 
 ```YAML
   FoodKey:
@@ -82,14 +92,22 @@ Previews are automatically generated with tags from rewards. It may be toggled i
     ...
 ```
 
+
 ### Item Parser
+
+The **Item Parser** is how the plugin figures out what item to take or replace. Follow the template below to use for your crates. You can find some examples by scrolling down.
+
 
 **Template**
 
-```yml
-display:(itemID:durability amount [OPTIONS])
-display:(itemID:durability amount name:myName lore:lore1|lore2 skull:base64 color:r,g,b effect:haste power:1 duration:30 splash:true unbreakable:true glow:true hide:true)
+```YML
+display:(material:durability amount [OPTIONS])
 ```
+```YML
+display:(material:durability amount name:myName lore:lore1|lore2 skull:base64 color:r,g,b effect:haste power:1 duration:30 splash:true unbreakable:true glow:true hide:true)
+```
+
+>For simplicity, we use a near identical version of [EssentialsX](https://www.spigotmc.org/resources/essentialsx.9089/) item parser
 
 **List of options**
 
@@ -109,20 +127,22 @@ display:(itemID:durability amount name:myName lore:lore1|lore2 skull:base64 colo
 
 #### Examples
 
-_Potion_
+_Potion:_
 
 ```yml
-display:(373 1 name:Potion lore:Test effect:haste power:3 duration:180)'
+display:(potion 1 name:Potion lore:Test effect:haste power:3 duration:180)'
 ```
 
-_Enchanted Sword with unbreakable and hidden attributes_
+_Enchanted Sword with unbreakable and hidden attributes:_
 
 ```yml
 display:(diamond_sword 1 17:1 18:1 unbreakable:true hide:true)
 ```
 
-[_Minecraft Head_](https://github.com/Hazebyte/CrateReloaded/issues/97)
-
+[_Minecraft Head:_](https://github.com/Hazebyte/CrateReloaded/issues/97)
+```yml
+display:(skull:3 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE1ZGNiMmRhMDJjZjczNDgyOWUxZTI3M2UzMDI1NjE3ZDgwNzE1MTZmOTUzMjUxYjUyNTQ1ZGE4ZDNlOGRiOCJ9fX0)
+```
 ### Effects
 
 Effects are ran under a given condition or category. The manifestation of the effect is given by
@@ -185,7 +205,7 @@ by setting a minimum and maximum number of rewards.
 Tags are used to identify the important values set in the config that is passed to the plugin.
 A list of tags include...
 
-| **Tag**    | **Limit ** | **Description**                                                      |
+| **Tag**    | **Limit** | **Description**                                                      |
 | ---------- | ---------- | -------------------------------------------------------------------- |
 | item       | ∞          | Represents an item                                                   |
 | cmd        | ∞          | Represents a command                                                 |
