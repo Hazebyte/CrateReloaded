@@ -19,10 +19,10 @@
 
 Types define the unique characteristic and interactions that activate a crate. These are the following types...
 
-| **Type** | **Animation Support** | **Description**                                                                       | **Activation**                                                                                                               |
-| -------- | --------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| SUPPLY   | No                    | Placeable crate that acts as a minecraft chest                                        | Placing down a chest                                                                                                         |
-| MYSTERY  | Yes                   | Crate that is activated by any type of click | Right or left click with the crate in-hand                                                                                   |
+| **Type** | **Animation Support** | **Description**                                                                       | **Activation**                                                                                                                  |
+| -------- | --------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| SUPPLY   | No                    | Placeable crate that acts as a minecraft chest                                        | Placing down a chest                                                                                                            |
+| MYSTERY  | Yes                   | Crate that is activated by any type of click                                          | Right or left click with the crate in-hand                                                                                      |
 | KEY      | Yes                   | Crate that is preset to a block. This block acts as a hub for users to interact with. | Right or left click a preset block with the crate in-hand. Left click is set to preview while right click is to open the crate. |
 
 ### The Physical Crate or Key
@@ -48,6 +48,9 @@ Crates with animation support allow for custom GUI animations.
 | REVERSE_CSGO  |
 | WHEEL         |
 | REVERSE_WHEEL |
+
+End animations are ran immediately after the main animation. These typically showoff what
+the players won.
 
 | **End Animation** |
 | ----------------- |
@@ -104,33 +107,172 @@ display:(itemID:durability amount name:myName lore:lore1|lore2 skull:base64 colo
 | glow        | Boolean            |
 | hide        | Boolean            |
 
-**Examples**
+#### Examples
 
-*Potion*
+_Potion_
+
 ```yml
 display:(373 1 name:Potion lore:Test effect:haste power:3 duration:180)'
 ```
 
-*Enchanted Sword with unbreakable and hidden attributes*
+_Enchanted Sword with unbreakable and hidden attributes_
+
 ```yml
 display:(diamond_sword 1 17:1 18:1 unbreakable:true hide:true)
 ```
 
-[*Minecraft Head*](https://github.com/Hazebyte/CrateReloaded/issues/97)
+[_Minecraft Head_](https://github.com/Hazebyte/CrateReloaded/issues/97)
 
 ### Effects
 
+Effects are ran under a given condition or category. The manifestation of the effect is given by
+the class.
+
+```yml
+  FoodKey:
+    effect:
+        1:
+          class: Heart
+          category: PERSISTENT
+          particle: FLAME
+```
+
+> [List of classes/particles](reference/particles)
+
+#### Categories
+
+| **Category** | **Description**                                          |
+| ------------ | -------------------------------------------------------- |
+| OPEN         | Animation that is run once when the crate is is opened   |
+| PERSISTENT   | Animation that constantly runs around a crate            |
+| ANIMATION    | Animation that is ran when it is undergoing an animation |
+| END          | Animation that is ran once the animation finishes        |
+
+##### Examples
+
+A star that appears when a player opens a crate.
+
+```yml
+    effect:
+        1:
+          class: Star
+          category: OPEN
+          particle: FLAME
+```
+
+todo Sounds
+
 ### Rewards
+
+Each individual crate support it's own set of rewards. Crates may give out a random amount between two numbers
+by setting a minimum and maximum number of rewards.
+
+> Crates with animations default and support one reward.
+
+> Always ensure that the number of minimum rewards is greater than or equal to the number of rewards available.
+
+```YML
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            # Always heals the player to full
+            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
+```
 
 #### Tag
 
-##### Items
+Tags are used to identify the important values set in the config that is passed to the plugin.
+A list of tags include...
+
+| **Tag**    | **Limit ** | **Description**                                                      |
+| ---------- | ---------- | -------------------------------------------------------------------- |
+| item       | ∞          | Represents an item                                                   |
+| cmd        | ∞          | Represents a command                                                 |
+| chance     | 1          | Represents the weighted chance                                       |
+| display    | 1          | Represents a display item                                            |
+| broadcast  | 1          | String that is broadcasted when this reward is given                 |
+| append     | 1          | String that appends to the crate's broadcast message                 |
+| open       | 1          | String that is shown to the player when one opens the crate          |
+| unique     | 1          | Reward that is only given once in a single crate probability roll    |
+| permission | ∞          | Reward that is given only if the player does not have the permission |
+| always     | 1          | Reward that is always given regardless of the probability.           |
+
+Tags start with the name and have a colon and parenthesis to represent intake value `e.g. unique:()`
+
+##### [Items](#item-parser)
 
 ##### Commands
 
+```YML
+    cmd:(/heal %player)
+```
+
 ##### Chance
 
-##### Unique vs Permission
+```YML
+    chance:(10)
+```
+
+###### How does the chance system work?
+
+The chance system is based off weights. While the config states that it is a chance, this is misleading
+and actually represents a weight. Explanation is through an example.
+
+> For this example, we choose convenient numbers where the summation adds up to 100. 
+The total does not have to add up to 100.
+
+```YML
+    - 'item:(dirt 1),       chance:(50)'
+    - 'item:(stone 1),      chance:(20)'
+    - 'item:(iron_ingot 1), chance:(15)'
+    - 'item:(gold_ingot 1), chance:(10)'
+    - 'item:(diamond 1),    chance:(5)'
+```
+
+Each reward is calculated to a percentage based on it's weight.
+* The **total weight** is **100 = (50 + 20 + 15 + 10 + 5)**.
+* **Reward Percentage** = (**weight / total weight**) * 100%.
+
+```YML
+    - 'item:(dirt 1),       chance:(50)' # (50 / 100) * 100% = 50%
+    - 'item:(stone 1),      chance:(20)' # (20 / 100) * 100% = 20%
+    - 'item:(iron_ingot 1), chance:(15)' # (15 / 100) * 100% = 15%
+    - 'item:(gold_ingot 1), chance:(10)' # (10 / 100) * 100% = 10%
+    - 'item:(diamond 1),    chance:(5)'  # (5 / 100) * 100% = 5%
+```
+
+##### Unique
+
+Rewards that have the `unique` tag are given once per opening.
+
+In the example below, the crate will give the player a heal, diamond, and iron with no duplicates.
+```YML
+    reward:
+        minimum-rewards: 3
+        maximum-rewards: 3
+        rewards:
+            # Always heals the player to full
+            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      item:(diamond 1)'
+            - 'unique:(),     chance:(1000),      item:(iron 1)'
+```
+
+##### Always
+
+Rewards that have the `always` tag are given regardless of any other reward.
+
+This crate will give the player a heal and either an diamond or iron depending on the roll.
+```YML
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            # Always heals the player to full
+            - 'always:(),     chance:(1),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      item:(diamond 1)'
+            - 'unique:(),     chance:(1000),      item:(iron 1)'
+```
 
 ## Template
 
