@@ -15,10 +15,10 @@
 * Message System
 * Particle Effects
 * Rewards support items and commands
-<br></br>
+
 ### Crate Types
 
-The type of crate defines the unique interaction with the player when the crate is activated. These are the following types..
+The type of crate defines the unique interaction with the player when the crate is activated. These are the following types...
 
 | **Type** | **Animation Support** | **Description**                                                                       | **Activation**                                                                                                                  |
 | -------- | --------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,12 +26,8 @@ The type of crate defines the unique interaction with the player when the crate 
 | MYSTERY  | Yes                   | Crate that is activated by any type of click                                          | Right or left click with the crate in-hand                                                                                      |
 | KEY      | Yes                   | Crate that is preset to a block. This block acts as a hub for users to interact with. | Right or left click a preset block with the crate in-hand. Left click is set to preview while right click is to open the crate. |
 
-<br></br>
 ### The Physical Crate or Key
-
 Crates and keys are physical items in Minecraft. These physical items are what players use to interact and activate rewards. Each crate or key-crate has its own item or key, respectively. 
-
-
 
 ```YML
 FoodKey:
@@ -40,9 +36,8 @@ FoodKey:
     ...
 ```
 
-><span style="color:red">**NOTE:** </span>This plugin uses the EssentialsX item format. For more information about item parsing,  [click here](#item-parser).
+!> This plugin uses the EssentialsX item format. For more information about item parsing,  [click here](#item-parser).
 
-<br></br>
 ### Animations
 
 Some crates support different animations, which appear in a GUI when the crate is activated. 
@@ -65,7 +60,7 @@ Some crates support different animations, which appear in a GUI when the crate i
 
 </table>
 
-<br></br>
+
 ### Crate Hologram
 
 This creates a hologram which hovers above the block location or NPC which the crate is set. 
@@ -80,10 +75,10 @@ FoodKeyT2:
 ```
 
 
-><span style="color:red">**NOTE:** </span>For holograms to work, you must have [HolographicDisplays](https://dev.bukkit.org/projects/holographic-displays) installed on your server
+!> For holograms to work, you must have [HolographicDisplays](https://dev.bukkit.org/projects/holographic-displays) installed on your server
 
 
-<br></br>
+
 ### Preview
 
 **Crate Previews** allow players to see the rewards within a crate. Previews are automatically generated based off tags from rewards. It may be toggled in the config.
@@ -96,7 +91,7 @@ FoodKeyT2:
         rows: 4
     ...
 ```
-<br></br>
+
 
 ### Item Parser
 
