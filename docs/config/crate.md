@@ -1,4 +1,3 @@
-
 # Configuration
 
 * [config.yml](config/config.md)
@@ -27,7 +26,8 @@ The type of crate defines the unique interaction with the player when the crate 
 | KEY      | Yes                   | Crate that is preset to a block. This block acts as a hub for users to interact with. | Right or left click a preset block with the crate in-hand. Left click is set to preview while right click is to open the crate. |
 
 ### The Physical Crate or Key
-Crates and keys are physical items in Minecraft. These physical items are what players use to interact and activate rewards. Each crate or key-crate has its own item or key, respectively. 
+
+Crates and keys are physical items in Minecraft. These physical items are what players use to interact and activate rewards. Each crate or key-crate has its own item or key, respectively.
 
 ```YML
 FoodKey:
@@ -36,34 +36,30 @@ FoodKey:
     ...
 ```
 
-!> This plugin uses the EssentialsX item format. For more information about item parsing,  [click here](#item-parser).
+!> This plugin uses the EssentialsX item format. For more information about item parsing, [click here](#item-parser).
 
 ### Animations
 
-Some crates support different animations, which appear in a GUI when the crate is activated. 
+Some crates support different animations, which appear in a GUI when the crate is activated.
 
 > **Active Animations** run while the reward is being selected on the player's screen
 
 > **Ending Animations** occur after the player's reward has been selected - this animation plays immediately after the Active animation ends
 
-<table>
-<tr><th> Animations </th></tr>
-<td>
-
 | **Active**    | **Ending** |
 | ------------- | ---------- |
 | ROULETTE      | BLANK      |
 | CSGO          | RANDOM     |
-| REVERSE_CSGO  |            |
-| WHEEL         |            |
-| REVERSE_WHEEL |            |
+| REVERSE_CSGO  |
+| WHEEL         |
+| REVERSE_WHEEL |
 
 </table>
 
-
 ### Crate Hologram
 
-This creates a hologram which hovers above the block location or NPC which the crate is set. 
+This creates a hologram which hovers above the block location or NPC which the crate is set.
+
 ```YML
 FoodKeyT2:
     ...
@@ -74,10 +70,7 @@ FoodKeyT2:
     ...
 ```
 
-
 !> For holograms to work, you must have [HolographicDisplays](https://dev.bukkit.org/projects/holographic-displays) installed on your server
-
-
 
 ### Preview
 
@@ -92,22 +85,21 @@ FoodKeyT2:
     ...
 ```
 
-
 ### Item Parser
 
 The **Item Parser** is how the plugin figures out what item to take or replace. Follow the template below to use for your crates. You can find some examples by scrolling down.
-
 
 **Template**
 
 ```YML
 display:(material:durability amount [OPTIONS])
 ```
+
 ```YML
 display:(material:durability amount name:myName lore:lore1|lore2 skull:base64 color:r,g,b effect:haste power:1 duration:30 splash:true unbreakable:true glow:true hide:true)
 ```
 
->For simplicity, we use a near identical version of [EssentialsX](https://www.spigotmc.org/resources/essentialsx.9089/) item parser
+> For simplicity, we use a near identical version of [EssentialsX](https://www.spigotmc.org/resources/essentialsx.9089/) item parser
 
 **List of options**
 
@@ -140,9 +132,11 @@ display:(diamond_sword 1 17:1 18:1 unbreakable:true hide:true)
 ```
 
 [_Minecraft Head:_](https://github.com/Hazebyte/CrateReloaded/issues/97)
+
 ```yml
 display:(skull:3 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE1ZGNiMmRhMDJjZjczNDgyOWUxZTI3M2UzMDI1NjE3ZDgwNzE1MTZmOTUzMjUxYjUyNTQ1ZGE4ZDNlOGRiOCJ9fX0)
 ```
+
 ### Effects
 
 Effects are ran under a given condition or category. The manifestation of the effect is given by
@@ -206,17 +200,17 @@ Tags are used to identify the important values set in the config that is passed 
 A list of tags include...
 
 | **Tag**    | **Limit** | **Description**                                                      |
-| ---------- | ---------- | -------------------------------------------------------------------- |
-| item       | ∞          | Represents an item                                                   |
-| cmd        | ∞          | Represents a command                                                 |
-| chance     | 1          | Represents the weighted chance                                       |
-| display    | 1          | Represents a display item                                            |
-| broadcast  | 1          | String that is broadcasted when this reward is given                 |
-| append     | 1          | String that appends to the crate's broadcast message                 |
-| open       | 1          | String that is shown to the player when one opens the crate          |
-| unique     | 1          | Reward that is only given once in a single crate probability roll    |
-| permission | ∞          | Reward that is given only if the player does not have the permission |
-| always     | 1          | Reward that is always given regardless of the probability.           |
+| ---------- | --------- | -------------------------------------------------------------------- |
+| item       | ∞         | Represents an item                                                   |
+| cmd        | ∞         | Represents a command                                                 |
+| chance     | 1         | Represents the weighted chance                                       |
+| display    | 1         | Represents a display item                                            |
+| broadcast  | 1         | String that is broadcasted when this reward is given                 |
+| append     | 1         | String that appends to the crate's broadcast message                 |
+| open       | 1         | String that is shown to the player when one opens the crate          |
+| unique     | 1         | Reward that is only given once in a single crate probability roll    |
+| permission | ∞         | Reward that is given only if the player does not have the permission |
+| always     | 1         | Reward that is always given regardless of the probability.           |
 
 Tags start with the name and have a colon and parenthesis to represent intake value `e.g. unique:()`
 
@@ -239,8 +233,8 @@ Tags start with the name and have a colon and parenthesis to represent intake va
 The chance system is based off weights. While the config states that it is a chance, this is misleading
 and actually represents a weight. Explanation is through an example.
 
-> For this example, we choose convenient numbers where the summation adds up to 100. 
-The total does not have to add up to 100.
+> For this example, we choose convenient numbers where the summation adds up to 100.
+> The total does not have to add up to 100.
 
 ```YML
     - 'item:(dirt 1),       chance:(50)'
@@ -251,8 +245,9 @@ The total does not have to add up to 100.
 ```
 
 Each reward is calculated to a percentage based on it's weight.
+
 * The **total weight** is **100 = (50 + 20 + 15 + 10 + 5)**.
-* **Reward Percentage** = (**weight / total weight**) * 100%.
+* **Reward Percentage** = (**weight / total weight**) \* 100%.
 
 ```YML
     - 'item:(dirt 1),       chance:(50)' # (50 / 100) * 100% = 50%
@@ -267,6 +262,7 @@ Each reward is calculated to a percentage based on it's weight.
 Rewards that have the `unique` tag are given once per opening.
 
 In the example below, the crate will give the player a heal, diamond, and iron with no duplicates.
+
 ```YML
     reward:
         minimum-rewards: 3
@@ -283,6 +279,7 @@ In the example below, the crate will give the player a heal, diamond, and iron w
 Rewards that have the `always` tag are given regardless of any other reward.
 
 This crate will give the player a heal and either an diamond or iron depending on the roll.
+
 ```YML
     reward:
         minimum-rewards: 1
