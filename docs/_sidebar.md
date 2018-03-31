@@ -2,7 +2,7 @@
 
 - [Getting Started](getting-started/installation.md)
   - [Installation](getting-started/installation.md)
-  - [Commands and Permissions](getting-started/commands-permissions.md)
+  - [Commands and Permissions](getting-started/commands.md)
 - [Customization](config/general.md)
   - [Configuration](config/general.md)
   - [NPC](config/npc.md)

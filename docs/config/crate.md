@@ -144,11 +144,13 @@ the class.
 
 ```yml
   FoodKey:
+    ...
     effect:
         1:
           class: Heart
           category: PERSISTENT
           particle: FLAME
+    ...
 ```
 
 > [List of classes/particles](reference/particles)
