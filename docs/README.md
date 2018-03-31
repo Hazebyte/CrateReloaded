@@ -1,13 +1,15 @@
-### CrateReloaded
+### About 
 
-Crate Reloaded is an plugin that allows you to create Crates to give great rewards and prizes! Crate Reloaded is fully customizable and features five types of crates...
+CrateReloaded is an plugin that allows you to create crates to give rewards and prizes!
+Crates are fully customizable and several activation types in addition to animations.
 
 - Supply
 - Mystery
-- Menu
 - Key
+
 - Roulette
 - CS:GO
+- Wheel
 
 ### Features
 
