@@ -15,7 +15,8 @@ For the supporters, thank you for purchasing coffee for the nights of developmen
 * Thanks to **Koz** for creating the video.
 * Thank you **Brandon** and **Reef** for testing CrateReloaded in its initial phases.
 * Thank you **AndyJake** for providing plugin support.
-* And members of the Spigot Community for their support
+* That one guy **Loggarific** is cool to... Only on Thursdays though!
+* And members of the Spigot Community for their support.
 
 ## Community
 Finally, without the community, the plugin wouldn't have been possible. Thank you to...
