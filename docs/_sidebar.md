@@ -8,7 +8,7 @@
   - [NPC](config/npc.md)
   - [Effects](config/effects.md)
   - [Translating](config/translating.md)
-- [Reference](reference/particle-sound.md)
+- [Reference](reference/particles.md)
   - [Particles](reference/particles.md)
   - [Sounds](reference/sounds.md)
   - [Enchantments](reference/enchantments.md)
