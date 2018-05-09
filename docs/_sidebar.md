@@ -13,5 +13,6 @@
   - [Sounds](reference/sounds.md)
   - [Enchantments](reference/enchantments.md)
   - [Variables](reference/variables.md)
+  - [Config Template](reference/configs.md)
   - [FAQ](reference/faq.md)
 - [Contribution/Dedication](contribution.md)

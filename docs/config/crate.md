@@ -2,8 +2,6 @@
 
 * [config.yml](config/config.md)
 * **[crate.yml](config/crate.md)**
-* block.yml
-* npc.yml
 
 ## Features
 
@@ -291,10 +289,4 @@ This crate will give the player a heal and either an diamond or iron depending o
             - 'always:(),     chance:(1),      cmd:(/heal %player%)'
             - 'unique:(),     chance:(1000),      item:(diamond 1)'
             - 'unique:(),     chance:(1000),      item:(iron 1)'
-```
-
-## Template
-
-```yaml
-{{CRATE}}
 ```
