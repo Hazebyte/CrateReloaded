@@ -27,5 +27,4 @@ When translating, use the same...
 
 ### Validate an existing translation
 
-Translations are available from the community. Within github, please comment or suggest a pull
-request if a translation is wrong.
+Within github, please comment or suggest a pull request if a translation is wrong.
