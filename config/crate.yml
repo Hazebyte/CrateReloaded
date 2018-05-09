@@ -7,12 +7,12 @@
 # -------------------------------------------------------------------------------------------------------------------
 FoodChest:
     type: SUPPLYCRATE # Place a chest down, and the chest will be filled with items
-    item: '54 1 name:&c[&6Foodie_&eChest&c]_&f#124 lore:&7Mmmm,_something_smells_good.\n&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
+    item: '54 1 name:&c[&6Foodie_&eChest&c]_&f#124 lore:&7Mmmm,_something_smells_good.|&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
     buy:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a &c[&6Foodie &eChest&c] &f#124'
+        open: '{p}You have opened a &c[&6Foodie &eChest&c] &f#124'
         broadcast: ''
     effect:
         1:
@@ -21,9 +21,7 @@ FoodChest:
         minimum-rewards: 8
         maximum-rewards: 15
         rewards:
-            # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
-            # Resupply food
+            - 'always:(),     cmd:(/head {player})'
             - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
             - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
             - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
@@ -39,12 +37,13 @@ FoodChest:
 # -------------------------------------------------------------------------------------------------------------------
 FoodPack:
     type: MYSTERYCRATE # Right, or left click to receive rewards
-    item: '373:1 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.\n&8Right_click_to_receive_a_pack_of_food! glow:true'
+    item: '373:1 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.|&8Right_click_to_receive_a_pack_of_food! glow:true'
+    confirm: false
     buy:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a &c[&6Foodie &ePack&c] &f#125'
+        open: '{p}You have opened a &c[&6Foodie &ePack&c] &f#125'
         broadcast: ''
     effect:
         1:
@@ -53,9 +52,7 @@ FoodPack:
         minimum-rewards: 3
         maximum-rewards: 3
         rewards:
-            # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
-            # Resupply food
+            - 'always:(),     cmd:(/heal {player})'
             - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
             - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
             - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
@@ -71,9 +68,10 @@ FoodPack:
 # -------------------------------------------------------------------------------------------------------------------
 FoodKey:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_Crate]_&f#1 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    item: '399 1 name:&c[&6Foodie_Key&c]_&f#1 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    confirm: true
     animation: 'none'
-    display-name: '&c[&6Foodie Crate] &f#1'
+    display-name: '&c[&6Foodie Key&c] &f#1'
     holographic:
         - '{crate}'
     preview:
@@ -83,7 +81,7 @@ FoodKey:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a {crate}'
+        open: '{p}You have opened a {crate}'
         broadcast: ''
     effect:
         1:
@@ -94,9 +92,7 @@ FoodKey:
         minimum-rewards: 3
         maximum-rewards: 3
         rewards:
-            # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
-            # Resupply food
+            - 'always:(),     cmd:(/heal {player})'
             - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
             - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
             - 'unique:(),     chance:(1),          item:(322 1)'                               # Golden Apple
@@ -113,9 +109,10 @@ FoodKey:
 # An example of a key crate with animations (Roulette)
 FoodKeyT2:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_recieve_a_pack_of_food! glow:true'
+    item: '399 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    confirm: true
     animation: 'ROULETTE'
-    display-name: '&c[&6Foodie Crate] &f#2'
+    display-name: '&c[&6Foodie Crate&c] &f#2'
     holographic:
         - '{crate}'
     preview:
@@ -125,17 +122,15 @@ FoodKeyT2:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a {crate}'
+        open: '{p}You have opened a {crate}'
         broadcast: ''
     effect:
         1:
           class: HeartEffect
     reward:
-        minimum-rewards: 3
-        maximum-rewards: 3
+        minimum-rewards: 1
+        maximum-rewards: 1
         rewards:
-            # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
             # Resupply food
             - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
             - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
@@ -153,9 +148,10 @@ FoodKeyT2:
 # An example of a key crate with animations (CSGO)
 FoodKeyT3:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_&ePack&c]_&f#3 lore:&7Mmmm,_something_smells_good.\n&8Right_click_a_chest_to_recieve_a_pack_of_food! glow:true'
+    item: '399 1 name:&c[&6Foodie_&eKey&c]_&f#3 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    confirm: true
     animation: 'CSGO'
-    display-name: '&c[&6Foodie Crate] &f#3'
+    display-name: '&c[&6Foodie Key&c] &f#3'
     holographic:
         - '{crate}'
     preview:
@@ -165,18 +161,16 @@ FoodKeyT3:
         enabled: false
         cost: 0
     message:
-        on-open: '%prefix%You have opened a {crate}'
+        open: '{p}You have opened a {crate}'
         broadcast: ''
     effect:
         1:
           class: HeartEffect
           category: PERSISTENT
     reward:
-        minimum-rewards: 3
-        maximum-rewards: 3
+        minimum-rewards: 1
+        maximum-rewards: 1
         rewards:
-            # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
             # Resupply food
             - 'unique:(),     chance:(1),          item:(354 1 name:&fThe_cake_is_a_lie!)'     # Cake
             - 'unique:(),     chance:(1),          item:(260 1)'                               # Apple
@@ -190,4 +184,3 @@ FoodKeyT3:
             - 'unique:(),     chance:(1),          item:(365 1)'                               # Raw Chicken
             - 'unique:(),     chance:(1),          item:(366 1)'                               # Cooked Chicken
             - 'unique:(),     chance:(1),          item:(367 1)'                               # Flesh
-
