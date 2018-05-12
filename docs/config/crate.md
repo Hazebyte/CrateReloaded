@@ -227,6 +227,12 @@ Any command may be specified here. Commands are run through the console.
     cmd:(heal %player%)      # They also don't have to :)
 ```
 
+You may also specify multiple commands per line.
+
+```YML
+    cmd:(/heal %player%), cmd:(tell %player% You're awesome!)
+```
+
 ##### Chance
 
 ```YML
@@ -260,6 +266,34 @@ Each reward is calculated to a percentage based on its weight.
     - 'item:(iron_ingot 1), chance:(15)' # (15 / 100) * 100% = 15%
     - 'item:(gold_ingot 1), chance:(10)' # (10 / 100) * 100% = 10%
     - 'item:(diamond 1),    chance:(5)'  # (5 / 100) * 100% = 5%
+```
+
+##### Permission
+
+Rewards that have the `permission` tag are given only if the player does not
+have the permission.
+
+In the following example, the following reward will execute the command to give
+the player the permission if and only if the user does not have the permission `user.vip`.
+
+```YML
+    reward:
+        rewards:
+            - 'permission:(user.vip), cmd:(pex add %player% user.vip)'
+```
+
+!> In the case that the player has all permissions in a crate or is an operator,
+the plugin will not take a key and return a message for the player.
+
+###### Fallback Rewards
+
+If the player has all permissions in a crate or is an operator, you may provide a fallback reward.
+
+```YML
+    reward:
+        rewards:
+            - 'permission:(user.vip), cmd:(pex add %player% user.vip)'
+            - 'cmd:(tell %player% You have won all the rewards)'
 ```
 
 ##### Unique
