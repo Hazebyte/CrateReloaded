@@ -282,12 +282,12 @@ the player the permission if and only if the user does not have the permission `
             - 'permission:(user.vip), cmd:(pex add %player% user.vip)'
 ```
 
-!> In the case that the player has all permissions in a crate or is an operator,
-the plugin will not take a key and return a message for the player.
+!> In the case that there are no fallback rewards, and the player has all permissions or is an operator, the plugin will not take a key. An error message will be sent to the player.
 
 ###### Fallback Rewards
 
-If the player has all permissions in a crate or is an operator, you may provide a fallback reward.
+If the player has every permissions for each reward in a crate or is an operator, you may provide a fallback reward. Otherwise, an error message
+will be sent to the player.
 
 ```YML
     reward:
