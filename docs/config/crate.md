@@ -220,7 +220,7 @@ Click [here](#item-parser) to read more about item parsing.
 
 ##### Commands
 
-Any command may be specified here. Commands are run through the console.
+Any command may be specified here. Commands are executed through the console.
 
 ```YML
     cmd:(/heal %player%)     # Commands may start with '/'
