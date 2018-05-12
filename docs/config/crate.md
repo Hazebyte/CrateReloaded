@@ -19,7 +19,7 @@ The type of crate defines the unique interaction with the player when the crate 
 
 | **Type** | **Animation Support** | **Description**                                                                       | **Activation**                                                                                                                  |
 | -------- | --------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| SUPPLY   | No                    | Placeable crate that acts as a minecraft chest                                        | Placing down a chest                                                                                                            |
+| SUPPLY   | No                    | Placeable crate that acts as a Minecraft chest                                        | Placing down a chest                                                                                                            |
 | MYSTERY  | Yes                   | Crate that is activated by any type of click                                          | Right or left click with the crate in-hand                                                                                      |
 | KEY      | Yes                   | Crate that is preset to a block. This block acts as a hub for users to interact with. | Right or left click a preset block with the crate in-hand. Left click is set to preview while right click is to open the crate. |
 
@@ -72,7 +72,7 @@ FoodKeyT2:
 
 ### Preview
 
-**Crate Previews** allow players to see the rewards within a crate. Previews are automatically generated based off tags from rewards. It may be toggled in the config.
+**Crate Previews** allow players to see the rewards in a crate. Previews are automatically generated based off tags from rewards. It may be toggled in the config.
 
 ```YAML
   FoodKey:
@@ -137,7 +137,7 @@ display:(skull:3 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJ
 
 ### Effects
 
-Effects are ran under a given condition or category. The manifestation of the effect is given by
+Effects are run under a given condition or category. The manifestation of the effect is given by
 the class.
 
 ```yml
@@ -157,10 +157,10 @@ the class.
 
 | **Category** | **Description**                                          |
 | ------------ | -------------------------------------------------------- |
-| OPEN         | Animation that is run once when the crate is is opened   |
+| OPEN         | Animation that is run once when the crate is opened      |
 | PERSISTENT   | Animation that constantly runs around a crate            |
-| ANIMATION    | Animation that is ran when it is undergoing an animation |
-| END          | Animation that is ran once the animation finishes        |
+| ANIMATION    | Animation that is run when it is undergoing an animation |
+| END          | Animation that is run once the animation finishes        |
 
 ##### Examples
 
@@ -178,8 +178,8 @@ todo Sounds
 
 ### Rewards
 
-Each individual crate support it's own set of rewards. Crates may give out a random amount between two numbers
-by setting a minimum and maximum number of rewards.
+Each individual crate supports its own set of rewards. Crates may give out a random amount between two numbers
+by setting a minimum and a maximum number of rewards.
 
 > Crates with animations default and support one reward.
 
@@ -214,12 +214,17 @@ A list of tags include...
 
 Tags start with the name and have a colon and parenthesis to represent intake value `e.g. unique:()`
 
-##### [Items](#item-parser)
+##### Items
+
+Click [here](#item-parser) to read more about item parsing.
 
 ##### Commands
 
+Any command may be specified here. Commands are run through the console.
+
 ```YML
-    cmd:(/heal %player)
+    cmd:(/heal %player%)     # Commands may start with '/'
+    cmd:(heal %player%)      # They also don't have to :)
 ```
 
 ##### Chance
@@ -230,8 +235,8 @@ Tags start with the name and have a colon and parenthesis to represent intake va
 
 ###### How does the chance system work?
 
-The chance system is based off weights. While the config states that it is a chance, this is misleading
-and actually represents a weight. Explanation is through an example.
+The chance system is based on weights. While the config states that it is a chance, this is misleading
+and actually represents a weight. The explanation is through an example.
 
 > For this example, we choose convenient numbers where the summation adds up to 100.
 > The total does not have to add up to 100.
@@ -244,7 +249,7 @@ and actually represents a weight. Explanation is through an example.
     - 'item:(diamond 1),    chance:(5)'
 ```
 
-Each reward is calculated to a percentage based on it's weight.
+Each reward is calculated to a percentage based on its weight.
 
 * The **total weight** is **100 = (50 + 20 + 15 + 10 + 5)**.
 * **Reward Percentage** = (**weight / total weight**) \* 100%.
@@ -278,7 +283,7 @@ In the example below, the crate will give the player a heal, diamond, and iron w
 
 Rewards that have the `always` tag are given regardless of any other reward.
 
-This crate will give the player a heal and either an diamond or iron depending on the roll.
+This crate will give the player a heal and either a diamond or iron depending on the roll.
 
 ```YML
     reward:
