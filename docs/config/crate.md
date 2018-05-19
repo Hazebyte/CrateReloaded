@@ -235,9 +235,14 @@ You may also specify multiple commands per line.
 
 ##### Chance
 
+Each reward is expected to have a chance.
+
 ```YML
     chance:(10)
 ```
+
+!> If no chance is specified, the plugin will spit a soft error. The chance will default to zero and may
+still appear in preview systems but won't be included in reward rolls.
 
 ###### How does the chance system work?
 
@@ -282,25 +287,28 @@ the player the permission if and only if the user does not have the permission `
             - 'permission:(user.vip), cmd:(pex add %player% user.vip)'
 ```
 
-!> In the case that there are no fallback rewards, and the player has all permissions or is an operator, the plugin will not take a key. An error message will be sent to the player.
+!> Be sure to include fallback rewards. The plugin handles if there are no rewards
+however you are encouraged catch and handle the situation.
 
 ###### Fallback Rewards
 
-If the player has every permissions for each reward in a crate or is an operator, you may provide a fallback reward. Otherwise, an error message
-will be sent to the player.
+If the player is an operator or the permission of each reward in a crate, the plugin will not take a key
+and tell the player that there are no rewards. A fallback reward may be provided as such...
+
+If the player has the permission `user.vip`, the player will simply receive a message.
 
 ```YML
     reward:
         rewards:
-            - 'permission:(user.vip), cmd:(pex add %player% user.vip)'
-            - 'cmd:(tell %player% You have won all the rewards)'
+            - 'permission:(user.vip), cmd:(pex add %player% user.vip), chance:(100)'
+            - 'cmd:(tell %player% You have won all the rewards), chance:(1)'
 ```
 
 ##### Unique
 
 Rewards that have the `unique` tag are given once per opening.
 
-In the example below, the crate will give the player a heal, diamond, and iron with no duplicates.
+With total of *3* prizes, the crate will give the player each reward, *a heal, diamond, and iron*, once.
 
 ```YML
     reward:
@@ -317,7 +325,7 @@ In the example below, the crate will give the player a heal, diamond, and iron w
 
 Rewards that have the `always` tag are given regardless of any other reward.
 
-This crate will give the player a heal and either a diamond or iron depending on the roll.
+The crate will always give the player *a heal* and either *a diamond or a iron* depending on their luck!
 
 ```YML
     reward:
