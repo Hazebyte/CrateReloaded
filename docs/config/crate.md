@@ -333,7 +333,9 @@ The crate will always give the player *a heal* and either *a diamond or a iron* 
         maximum-rewards: 1
         rewards:
             # Always heals the player to full
-            - 'always:(),     chance:(1),      cmd:(/heal %player%)'
+            - 'always:(),                         cmd:(/heal %player%)'
             - 'unique:(),     chance:(1000),      item:(diamond 1)'
             - 'unique:(),     chance:(1000),      item:(iron 1)'
 ```
+
+?> The chance tag for rewards that have the `always` tag is optional.
