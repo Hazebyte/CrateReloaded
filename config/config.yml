@@ -69,19 +69,25 @@ crate:
 
     # Next Button
     # It is used to turn the virtual inventory page
-    next: '262 1 name:&aNext_Page lore:&eClick_to_enter_the_next_page.'
+    next: 'ARROW 1 name:&aNext_Page lore:&eClick_to_enter_the_next_page.'
 
     # Close Button
     # It is used to close the inventory
-    close: '2259 1 name:&4Close!'
+    close: 'GOLD_RECORD 1 name:&4Close!'
 
     # Next Button
-    back: '355 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
+    back: 'BED 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
+
+    # Confirmation Menu Buttons
+    # Each crate may have an individualized button defined in the crate.yml
+    # If no buttons are defined, default buttons will be used
+    accept: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+    decline: 'STAINED_GLASS_PANE:14 1 name:&4No'
 
     # CSGO Display Buttons
     # Used for display only, and does not trigger any actions
-    csgo-top: '76 1 name:&6Prize!'
-    csgo-bot: '76 1 name:&6Prize!'
+    csgo-top: 'REDSTONE_TORCH 1 name:&6Prize!'
+    csgo-bot: 'REDSTONE_TORCH 1 name:&6Prize!'
 
   # Pushback Settings
   pushback:

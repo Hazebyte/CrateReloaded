@@ -7,7 +7,7 @@
 # -------------------------------------------------------------------------------------------------------------------
 FoodChest:
     type: SUPPLYCRATE # Place a chest down, and the chest will be filled with items
-    item: '54 1 name:&c[&6Foodie_&eChest&c]_&f#124 lore:&7Mmmm,_something_smells_good.|&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
+    item: 'CHEST 1 name:&c[&6Foodie_&eChest&c]_&f#124 lore:&7Mmmm,_something_smells_good.|&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
     buy:
         enabled: false
         cost: 0
@@ -42,11 +42,11 @@ FoodChest:
 # -------------------------------------------------------------------------------------------------------------------
 FoodPack:
     type: MYSTERYCRATE # Right, or left click to receive rewards
-    item: '373:1 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.|&8Right_click_to_receive_a_pack_of_food! glow:true'
+    item: 'minecart 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.|&8Right_click_to_receive_a_pack_of_food! glow:true'
     confirmation:
         enabled: true
-        accept-button: '160:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: '160:14 1 name:&4No'
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
     buy:
         enabled: false
         cost: 0
@@ -81,7 +81,7 @@ FoodPack:
 # -------------------------------------------------------------------------------------------------------------------
 FoodKey:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_Key&c]_&f#1 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_Key&c]_&f#1 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
     animation: 'none'
     display-name: '&c[&6Foodie Key&c] &f#1'
     holographic:
@@ -89,11 +89,11 @@ FoodKey:
         - '{lore:1}'
     confirmation:
         enabled: true
-        accept-button: '160:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: '160:14 1 name:&4No'
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
     preview:
         enabled: true
-        rows: 4
+        rows: 2
     buy:
         enabled: false
         cost: 0
@@ -131,7 +131,7 @@ FoodKey:
 # An example of a key crate with animations (Roulette)
 FoodKeyT2:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
     animation: 'ROULETTE'
     display-name: '&c[&6Foodie Crate&c] &f#2'
     holographic:
@@ -139,11 +139,11 @@ FoodKeyT2:
         - '{lore:1}'
     confirmation:
         enabled: true
-        accept-button: '160:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: '160:14 1 name:&4No'
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
     preview:
         enabled: true
-        rows: 4
+        rows: 2
     buy:
         enabled: false
         cost: 0
@@ -179,7 +179,7 @@ FoodKeyT2:
 # An example of a key crate with animations (CSGO)
 FoodKeyT3:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: '399 1 name:&c[&6Foodie_&eKey&c]_&f#3 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#3 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
     animation: 'CSGO'
     display-name: '&c[&6Foodie Key&c] &f#3'
     holographic:
@@ -187,11 +187,11 @@ FoodKeyT3:
         - '{lore:1}'
     confirmation:
         enabled: true
-        accept-button: '160:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: '160:14 1 name:&4No'
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
     preview:
         enabled: true
-        rows: 4
+        rows: 2
     buy:
         enabled: false
         cost: 0
