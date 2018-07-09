@@ -1,69 +1,109 @@
 # ======================================================= #
 #                                                         #
 #                   CONFIG.YML                            #
-#                   Revision-09                           #
-#                                                         #
-# ======================================================= #
-
-# ======================================================= #
-#                                                         #
-#  A D M I N I S T R A T I O N                            #
-#                                                         #
-# ======================================================= #
-
-# Affix placed before the stem of messages
-prefix: '&7[&6Crates&6] &f'
-
-# Parameter that defines the plugin's language, and region.
-# Check the folder (lang)
-locale: en
-
-# Systematic recording of events
-logger: false
-
-# ======================================================= #
-#                                                         #
-#  G E N E R A L   C R A T E   S E T T I N G S            #
+#                   FOR 2.0                               #
 #                                                         #
 # ======================================================= #
 
 #  NOTE:                                                  #
 #  You do not configure rewards here. Please go to        #
 #     plugins/CrateReloaded/crate.yml to do that.         #
+# ======================================================= #
+#
+# Affix placed before the stem of messages
+prefix: '&8[&6Crates&8] &f'
 
-display:
-  # Number of decimals in which chances are arranged.
-  # i.e. 3.14 = #.##
-  chanceFormat: '#'
+# Defines the plugin's language, and region.
+locale: en
 
-usage:
-  # Time required for an crate to be reset so that it
-  #   can be used again
-  cooldown: 1
+# Systematic recording of events
+logger: false
 
-preview-menu:
-    name: 'Crates'
-    buttons-enabled: true
-    next-button: '262 1 &aNext_Page &eClick_to_enter_the_next_page.'
-    close-button: '2259 1 &4Close!'
-    back-button: '355 1 &4&lGo_back! &eGo_back_to_previous_page.'
+# Decimal format that determines the number of decimals
+# i.e. 3.14 = #.##, 2.5 = #.#
+decimal-format: '#'
 
-pushback:
+# How long a player has to wait between actions
+cooldown: 1.0
+
+# Creative Control
+# Prevents players from duplicating keys with creative gamemode.
+creative-control: true
+
+# Crate Settings
+crate:
+
+  # Comparison Level
+  # Compares two items and determines if it is a crate
+  # 0 - Basic (Name, Type, Lore)
+  # 1 - Normal (Setting 0 + Enchants, Flags)
+  # 2 - Strict (Setting 1 + Custom NBT) . . . Note: Old keys will not work if this option is selected.
+  compare: 0
+
+  # Display Item
+  # Shown during an animation
+  display: ''
+
+  # Default Menu Name
+  menu: 'Menu'
+
+  # Are players allowed to put crates into crafting containers
+  craft: false
+
+  # Animation Exiting
+  # Allows players to exit animations that have not yet been completed
+  peri-exit: false
+
+  # Length of CSGO animation
+  csgo: 6
+
+  # Length of roulette animation
+  roulette: 5
+
+  # Length of wheel animation
+  wheel: 8
+
+  # Trigger Buttons
+  buttons:
     enabled: true
-    modifiers:
-        x: 1.0
-        y: 1.0
-        z: 1.0
 
-glassName: ''
-roulette:
-    length: 5
-csgo:
-    length: 6
-    topPrizeDisplay: 'REDSTONE_TORCH_ON 1 &6Prize!'
-    botPrizeDisplay: 'REDSTONE_TORCH_ON 1 &6Prize!'
+    # Next Button
+    # It is used to turn the virtual inventory page
+    next: 'ARROW 1 name:&aNext_Page lore:&eClick_to_enter_the_next_page.'
 
-holographic-offset:
+    # Close Button
+    # It is used to close the inventory
+    close: 'GOLD_RECORD 1 name:&4Close!'
+
+    # Next Button
+    back: 'BED 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
+
+    # Confirmation Menu Buttons
+    # Each crate may have an individualized button defined in the crate.yml
+    # If no buttons are defined, default buttons will be used
+    accept: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+    decline: 'STAINED_GLASS_PANE:14 1 name:&4No'
+
+    # CSGO Display Buttons
+    # Used for display only, and does not trigger any actions
+    csgo-top: 'REDSTONE_TORCH 1 name:&6Prize!'
+    csgo-bot: 'REDSTONE_TORCH 1 name:&6Prize!'
+
+  # Pushback Settings
+  pushback:
+    enabled: true
+
+    # Modifier
+    x: 1.0
+    y: 1.0
+    z: 1.0
+
+  # Hologram Settings
+  hologram:
+
+    # Modifier
+    # Holograms are set to be centered, one block above the target location
     x: 0.0
-    y: -0.5
+    y: 0.0
     z: 0.0
+

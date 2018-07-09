@@ -1,186 +1,227 @@
 ############################################
 # +---------------------------------------+#
-# |         Config Revision 16            |#
+# |         Config Revision 17            |#
 # +---------------------------------------+#
 ############################################
 
-FoodieChest:
-    type: SUPPLYCRATE
+# -------------------------------------------------------------------------------------------------------------------
+FoodChest:
+    type: SUPPLYCRATE # Place a chest down, and the chest will be filled with items
+    item: 'CHEST 1 name:&c[&6Foodie_&eChest&c]_&f#124 lore:&7Mmmm,_something_smells_good.|&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
     buy:
         enabled: false
         cost: 0
     message:
-        onOpen: '%prefix%You have opened a &c[&6Foodie &eChest&c] &f#124'
+        open: '{p}You have opened a &c[&6Foodie &eChest&c] &f#124'
         broadcast: ''
-    item:
-        name: '&c[&6Foodie &eChest&c] &f#124'
-        lore:
-            - '&7Mmmm, something smells good.'
-            - '&8Place the chest down to obtain great rewards!'
     effect:
-        onOpenEffects: 'happyVillager, BAT_TAKEOFF, WOOD_CLICK'
-        dormantEffects: 'DISABLED FOR NON-KEY CRATES'
+        1:
+          class: AtomEffect
     reward:
-        minimumRewards: 7
-        maximumRewards: 12
+        minimum-rewards: 8
+        maximum-rewards: 15
         rewards:
-            - 'cmd:(/heal %player%), chance:(100), noduplicate:()'
-            - 'item:(cake 1 &dLegendary_Cake), chance:(1), noduplicate:()'
-            - 'item:(golden_apple 1), chance:(1), noduplicate:()'
-            - 'item:(cookie 1), chance:(1.5), noduplicate:()'
-            - 'item:(COOKED_BEEF 1), chance:(1.5), noduplicate:()'
-            - 'item:(COOKED_CHICKEN 1), chance:(1.5), noduplicate:()'
-            - 'item:(RAW_FISH:1 1), chance:(3)'
-            - 'item:(RAW_FISH:2 1), chance:(3)'
-            - 'item:(RAW_FISH:3 1), chance:(3)'
-            - 'item:(rotten_flesh 1), chance:(3)'
-FoodiePack:
-    type: MYSTERYCRATE
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(log 1)'
+            - 'unique:(),     chance:(1),          item:(web 1)'
+            - 'unique:(),     chance:(1),          item:(pork 1)'
+            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+# -------------------------------------------------------------------------------------------------------------------
+FoodPack:
+    type: MYSTERYCRATE # Right, or left click to receive rewards
+    item: 'minecart 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.|&8Right_click_to_receive_a_pack_of_food! glow:true'
+    confirmation:
+        enabled: true
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
     buy:
         enabled: false
         cost: 0
     message:
-        onOpen: '%prefix%You have opened a &c[&6Foodie &ePack&c] &f#125'
+        open: '{p}You have opened a &c[&6Foodie &ePack&c] &f#125'
         broadcast: ''
-    item:
-        item: POTION:1
-        enchantment: '300:1'
-        name: '&c[&6Foodie &ePack&c] &f#125'
-        lore:
-            - '&7Mmmm, something smells good.'
-            - '&8Right click to recieve a pack of food!'
     effect:
-        onOpenEffects: 'happyVillager, DRINK'
-        dormantEffects: ''
+        1:
+          class: HeartEffect
     reward:
-        minimumRewards: 3
-        maximumRewards: 3
+        minimum-rewards: 3
+        maximum-rewards: 3
         rewards:
-            - 'cmd:(/heal %player%), chance:(100), noduplicate:()'
-            - 'item:(cake 1 &dLegendary_Cake), chance:(1), noduplicate:()'
-            - 'item:(golden_apple 1), chance:(1), noduplicate:()'
-            - 'item:(cookie 1), chance:(1.5), noduplicate:()'
-            - 'item:(COOKED_BEEF 1), chance:(1.5), noduplicate:()'
-            - 'item:(COOKED_CHICKEN 1), chance:(1.5), noduplicate:()'
-            - 'item:(RAW_FISH:1 1), chance:(3)'
-            - 'item:(RAW_FISH:2 1), chance:(3)'
-            - 'item:(RAW_FISH:3 1), chance:(3)'
-            - 'item:(rotten_flesh 1), chance:(3)'
-FoodieKey:
-    type: KEYCRATE
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(log 1)'
+            - 'unique:(),     chance:(1),          item:(web 1)'
+            - 'unique:(),     chance:(1),          item:(pork 1)'
+            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+# -------------------------------------------------------------------------------------------------------------------
+FoodKey:
+    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_Key&c]_&f#1 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
     animation: 'none'
-    displayName: '&c[&6Foodie Crate] &f#127'
+    display-name: '&c[&6Foodie Key&c] &f#1'
     holographic:
-        - '&c[&6Foodie Crate] &f#127'
-    preview:
-        enabled: true 
-        rows: 1
-    buy:
-        enabled: false
-        cost: 0
-    message:
-        onOpen: '%prefix%You have opened a &c[&6Foodie &eCrate&c] &f#127'
-        broadcast: ''
-    key:
-        item: 'Tripwire_Hook'
-        enchantment: '300:1'
-        name: '&c[&6Foodie &ePack&c] &f#127'
-        lore:
-            - '&8Right click a key chest to obtain rewards!'
-    effect:
-        onOpenEffects: 'happyVillager, BAT_TAKEOFF'
-        dormantEffects: ''
-    reward:
-        minimumRewards: 3
-        maximumRewards: 3
-        rewards:
-            - 'item:(cake 1 &dLegendary_Cake), chance:(1), noduplicate:()'
-            - 'item:(golden_apple 1), chance:(1), noduplicate:()'
-            - 'item:(cookie 1), chance:(1.5), noduplicate:()'
-            - 'item:(COOKED_BEEF 1), chance:(1.5), noduplicate:()'
-            - 'item:(COOKED_CHICKEN 1), chance:(1.5), noduplicate:()'
-            - 'item:(RAW_FISH:1 1), chance:(3)'
-            - 'item:(RAW_FISH:2 1), chance:(3)'
-            - 'item:(RAW_FISH:3 1), chance:(3)'
-            - 'item:(rotten_flesh 1), chance:(3)'
-RouletteKey:
-    type: KEYCRATE
-    animation: "ROULETTE"
-    displayName: '&c[&0Mystery Crate&c] &8#128'
-    displayItem: 'chest 1 %cratename%'
-    holographic:
-        - '&c[&0Mystery Crate&c] &8#128'
+        - '{crate-name}'
+        - '{lore:1}'
+    confirmation:
+        enabled: true
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
     preview:
         enabled: true
-        rows: 4
+        rows: 2
     buy:
         enabled: false
         cost: 0
     message:
-        onOpen: '%prefix%You have opened a &c[&0Mystery Crate&c] &8#128'
+        open: '{p}You have opened a {crate}'
         broadcast: ''
-    key:
-        item: 'NETHER_STAR'
-        enchantment: '300:1'
-        name: '&c[&6Mystery &eKey&c] &f#128_ARCHON'
-        lore:
-            - '&8Right click a key chest to obtain rewards!'
     effect:
-        onOpenEffects: 'firework, BAT_TAKEOFF'
-        dormantEffects: 'happyVillager'
-        dormantRoulette: 'WOOD_CLICK'
-        onRouletteEnd: 'BAT_TAKEOFF'
+        1:
+          class: Star
+          category: PERSISTENT
+          particles: 5
     reward:
-        minimumRewards: 1
-        maximumRewards: 1
+        minimum-rewards: 3
+        maximum-rewards: 3
         rewards:
-            - 'cmd:(/give %player% bedrock 16), chance:(10), display:(bedrock 16 &a16_Bedrock! &f%chance%)'
-            - 'cmd:(/give %player% 373:8267 4), chance:(15), display:(373:8267 4 &a4_Potion_of_Leap! &f%chance%)'
-            - 'cmd:(/give %player% 377 16), chance:(35), display:(377 16 &a16_Blaze_Powder! &f%chance%)'
-            - 'cmd:(/give %player% 322:1 32), chance:(3), display:(322:1 32 &a32_Golden_Apples! &f%chance%)'
-            - 'cmd:(/give %player% 421 16), chance:(30), display:(421 16 &a16_Nametags! &f%chance%)'
-            - 'cmd:(/give %player% 403 1), chance:(25), display:(403 1 &aEnchanted_Book! &f%chance%)'
-            - 'cmd:(/eco give %player% 1000), chance:(15), display:(paper 1 &a$1000 &f%chance%)'
-            - 'cmd:(/eco give %player% 5000), chance:(10), display:(paper 5 &a$5000 &f%chance%)'
-            - 'cmd:(/eco give %player% 10000), chance:(10), display:(paper 10 &a$10000 &f%chance%)'
-            - 'cmd:(/eco give %player% 15000), chance:(5), display:(paper 15 &a$15000 &f%chance%)'
-CSGOKey:
-    type: KEYCRATE
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(log 1)'
+            - 'unique:(),     chance:(1),          item:(web 1)'
+            - 'unique:(),     chance:(1),          item:(pork 1)'
+            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+# -------------------------------------------------------------------------------------------------------------------
+# An example of a key crate with animations (Roulette)
+FoodKeyT2:
+    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    animation: 'ROULETTE'
+    display-name: '&c[&6Foodie Crate&c] &f#2'
+    holographic:
+        - '{crate-name}'
+        - '{lore:1}'
+    confirmation:
+        enabled: true
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
+    preview:
+        enabled: true
+        rows: 2
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '{p}You have opened a {crate}'
+        broadcast: ''
+    effect:
+        1:
+          class: HeartEffect
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(log 1)'
+            - 'unique:(),     chance:(1),          item:(web 1)'
+            - 'unique:(),     chance:(1),          item:(pork 1)'
+            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+# -------------------------------------------------------------------------------------------------------------------
+# An example of a key crate with animations (CSGO)
+FoodKeyT3:
+    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#3 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
     animation: 'CSGO'
-    displayName: '&c[&0Mystery Crate&c] &8#129'
-    displayItem: 'chest 1 %cratename%'
+    display-name: '&c[&6Foodie Key&c] &f#3'
     holographic:
-        - '&c[&0Mystery Crate&c] &8#129'
+        - '{crate-name}'
+        - '{lore:1}'
+    confirmation:
+        enabled: true
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
     preview:
         enabled: true
+        rows: 2
     buy:
         enabled: false
         cost: 0
     message:
-        onOpen: '%prefix%You have opened a &c[&0Mystery Crate&c] &8#129'
+        open: '{p}You have opened a {crate}'
         broadcast: ''
-    key:
-        item: 'NETHER_STAR'
-        enchantment: '300:1'
-        name: '&c[&6Mystery &eKey&c] &f#129_CSGO'
-        lore:
-            - '&8Right click a key chest to obtain rewards!'
     effect:
-        onOpenEffects: 'firework, DRINK'
-        dormantEffects: 'happyVillager'
-        dormantRoulette: 'WOOD_CLICK'
-        onRouletteEnd: 'BAT_TAKEOFF'
+        1:
+          class: HeartEffect
+          category: PERSISTENT
     reward:
-        minimumRewards: 1
-        maximumRewards: 1
+        minimum-rewards: 1
+        maximum-rewards: 1
         rewards:
-            - 'cmd:(/give %player% bedrock 16), chance:(10), display:(bedrock 16 &a16_Bedrock! &f%chance%)'
-            - 'cmd:(/give %player% 373:8267 4), chance:(15), display:(373:8267 4 &a4_Potion_of_Leap! &f%chance%)'
-            - 'cmd:(/give %player% 377 16), chance:(35), display:(377 16 &a16_Blaze_Powder! &f%chance%)'
-            - 'cmd:(/give %player% 322:1 32), chance:(3), display:(322:1 32 &a32_Golden_Apples! &f%chance%)'
-            - 'cmd:(/give %player% 421 16), chance:(30), display:(421 16 &a16_Nametags! &f%chance%)'
-            - 'cmd:(/give %player% 403 1), chance:(25), display:(403 1 &aEnchanted_Book! &f%chance%)'
-            - 'cmd:(/eco give %player% 1000), chance:(15), display:(paper 1 &a$1000 &f%chance%)'
-            - 'cmd:(/eco give %player% 5000), chance:(10), display:(paper 5 &a$5000 &f%chance%)'
-            - 'cmd:(/eco give %player% 10000), chance:(10), display:(paper 10 &a$10000 &f%chance%)'
-            - 'cmd:(/eco give %player% 15000), chance:(5), display:(paper 15 &a$15000 &f%chance%)'
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(log 1)'
+            - 'unique:(),     chance:(1),          item:(web 1)'
+            - 'unique:(),     chance:(1),          item:(pork 1)'
+            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+
