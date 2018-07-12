@@ -86,8 +86,8 @@ crate:
 
     # CSGO Display Buttons
     # Used for display only, and does not trigger any actions
-    csgo-top: 'REDSTONE_TORCH 1 name:&6Prize!'
-    csgo-bot: 'REDSTONE_TORCH 1 name:&6Prize!'
+    csgo-top: 'REDSTONE_TORCH_ON 1 name:&6Prize!'
+    csgo-bot: 'REDSTONE_TORCH_ON 1 name:&6Prize!'
 
   # Pushback Settings
   pushback:
