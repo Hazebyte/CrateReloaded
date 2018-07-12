@@ -17,6 +17,11 @@ FoodChest:
     effect:
         1:
           class: AtomEffect
+          radius: 1
+          iterations: 30
+        2:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
     reward:
         minimum-rewards: 8
         maximum-rewards: 15
@@ -56,6 +61,9 @@ FoodPack:
     effect:
         1:
           class: HeartEffect
+        2:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
     reward:
         minimum-rewards: 3
         maximum-rewards: 3
@@ -104,7 +112,12 @@ FoodKey:
         1:
           class: Star
           category: PERSISTENT
-          particles: 5
+          innerRadius: 0.3f
+          spikeHeight: 1.25f
+        2:
+          class: Sound
+          category: OPEN
+          sound: ENTITY_BAT_TAKEOFF
     reward:
         minimum-rewards: 3
         maximum-rewards: 3
@@ -152,7 +165,18 @@ FoodKeyT2:
         broadcast: ''
     effect:
         1:
-          class: HeartEffect
+          class: Star
+          category: PERSISTENT
+          innerRadius: 0.3f
+          spikeHeight: 1.25f
+        2:
+          class: Sound
+          category: ANIMATION
+          sound: BLOCK_WOOD_PLACE
+        3:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+          CATEGORY: END
     reward:
         minimum-rewards: 1
         maximum-rewards: 1
@@ -200,8 +224,18 @@ FoodKeyT3:
         broadcast: ''
     effect:
         1:
-          class: HeartEffect
+          class: Star
           category: PERSISTENT
+          innerRadius: 0.3f
+          spikeHeight: 1.25f
+        2:
+          class: Sound
+          category: ANIMATION
+          sound: BLOCK_WOOD_PLACE
+        3:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+          CATEGORY: END
     reward:
         minimum-rewards: 1
         maximum-rewards: 1
