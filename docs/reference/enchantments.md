@@ -1,5 +1,7 @@
 # Enchantment
-CrateReloaded supports enchantments such as **glow**, and others to get your crates shining!
+
+The plugin supports custom enchantments. A full list of 
+updated enchantments may be found [here](https://minecraft.gamepedia.com/Enchanting).
 
 ID | Enchantment Name
 ---|------------------

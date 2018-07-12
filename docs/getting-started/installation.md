@@ -9,17 +9,19 @@ At this current moment, we do not support Sponge.
 [Spigot - Premium](https://www.spigotmc.org/resources/.3663/),
 [Bukkit](http://dev.bukkit.org/bukkit-plugins/crate-reloaded/)**
 
-?> CrateReloaded has optional dependencies to improve ease-of-use. 
+?> CrateReloaded has optional dependencies to improve ease-of-use.
 
 ### Optional
 
-1. ** Vault **
-2. ** Essentials **
-3. ** Citizens **
+1. [**Vault**](https://www.spigotmc.org/resources/vault.34315/)
+2. **Essentials** or [**EssentialsX**](https://www.spigotmc.org/resources/essentialsx.9089/)
+3. [**HolographicDisplays**](https://dev.bukkit.org/projects/holographic-displays)
+4. [**CrateReloadedNPC**]()
+   * Depends on [**Citizens**](https://www.spigotmc.org/resources/citizens.13811/)
 
-## Installation
+## Plugin Install
 
 1. In your server folder, create a `plugins` folder if one does not exist.
-2. Drag and drop the `CrateReloaded.jar` into your plugin's folder.
+2. Drag and drop the `CrateReloaded.jar` and any optional plugin into your `plugins` folder.
 3. Start up the server.
 4. Awesome! You can now start customizing the plugin!

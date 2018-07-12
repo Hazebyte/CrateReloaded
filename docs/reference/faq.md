@@ -3,7 +3,7 @@
 **Why are players unable to open set crates in certain locations?**
 
 ```
-Certain protection capabilities interfere with our plugin's events.
+Certain protection capabilities interfere with our plugin's event handling. 
 
 Solution:
 Check the default minecraft spawn protection in server.properties.

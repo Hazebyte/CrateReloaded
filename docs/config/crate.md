@@ -1,27 +1,35 @@
 # Configuration
 
-* [config.yml](config/config.md)
-* **[crate.yml](config/crate.md)**
+This page will explain each section key of the default crate.yml.
+
+- [config.yml](config/config.md)
+- **[crate.yml](config/crate.md)**
 
 ## Features
 
-* Unlimited crates and rewards
-* Multi-world support
-* Animations
-* Preview Menu
-* Message System
-* Particle Effects
-* Rewards support items and commands
+- Unlimited crates and rewards
+- Multi-world support
+- Animations
+- Preview Menu
+- Message System
+- Particle Effects
+- Rewards support items and commands
 
 ### Crate Types
 
+```YML
+FoodKey:
+    type: KEYCRATE
+    ...
+```
+
 The type of crate defines the unique interaction with the player when the crate is activated. These are the following types...
 
-| **Type** | **Animation Support** | **Description**                                                                       | **Activation**                                                                                                                  |
-| -------- | --------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| SUPPLY   | No                    | Placeable crate that acts as a Minecraft chest                                        | Placing down a chest                                                                                                            |
-| MYSTERY  | Yes                   | Crate that is activated by any type of click                                          | Right or left click with the crate in-hand                                                                                      |
-| KEY      | Yes                   | Crate that is preset to a block. This block acts as a hub for users to interact with. | Right or left click a preset block with the crate in-hand. Left click is set to preview while right click is to open the crate. |
+| **Type** | **Support for Animation** | **Description**                                                                       | **Activation**                                                                                                                  |
+| -------- | ------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| SUPPLY   | No                        | Placeable crate that acts as a Minecraft chest                                        | Placing down a chest                                                                                                            |
+| MYSTERY  | Yes                       | Crate that is activated by any type of click                                          | Right or left click with the crate in-hand                                                                                      |
+| KEY      | Yes                       | Crate that is preset to a block. This block acts as a hub for users to interact with. | Right or left click a preset block with the crate in-hand. Left click is set to preview while right click is to open the crate. |
 
 ### The Physical Crate or Key
 
@@ -38,10 +46,16 @@ FoodKey:
 
 ### Animations
 
-Some crates support different animations, which appear in a GUI when the crate is activated.
+Some crates types support different animations, which appear in a GUI when the crate is activated.
+
+```YML
+FoodKey:
+    ...
+    animation: 'none'
+    ...
+```
 
 > **Active Animations** run while the reward is being selected on the player's screen
-
 > **Ending Animations** occur after the player's reward has been selected - this animation plays immediately after the Active animation ends
 
 | **Active**    | **Ending** |
@@ -56,10 +70,10 @@ Some crates support different animations, which appear in a GUI when the crate i
 
 ### Crate Hologram
 
-This creates a hologram which hovers above the block location or NPC which the crate is set.
+This creates a hologram which hovers above the block or NPC location in which the crate is set.
 
 ```YML
-FoodKeyT2:
+FoodKey:
     ...
     holographic:
         - 'Lines'
@@ -70,9 +84,27 @@ FoodKeyT2:
 
 !> For holograms to work, you must have [HolographicDisplays](https://dev.bukkit.org/projects/holographic-displays) installed on your server
 
+### Confirmation
+
+The confirmation menu allows users to verify the usage before activating a crate. This may be
+toggled on a per-crate basis.
+
+```YML
+FoodKey:
+    ...
+    confirmation:
+        enabled: true
+        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
+    ...
+```
+
 ### Preview
 
-**Crate Previews** allow players to see the rewards in a crate. Previews are automatically generated based off tags from rewards. It may be toggled in the config.
+The **preview** feature allows players to see the rewards in a crate.
+Previews are automatically generated based off item or display tags from rewards.
+The plugin will automatically resize and offer pagination if there isn't enough slots.
+The menu may be toggled in the config.
 
 ```YAML
   FoodKey:
@@ -137,44 +169,40 @@ display:(skull:3 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJ
 
 ### Effects
 
-Effects are run under a given condition or category. The manifestation of the effect is given by
-the class.
-
-```yml
-  FoodKey:
-    ...
-    effect:
-        1:
-          class: Heart
-          category: PERSISTENT
-          particle: FLAME
-    ...
-```
+This section defines the effects and sonuds that the crate may have.
+Effects are run under a given condition or notably, the category.
+The manifestation of the effect is given by the class.
 
 > [List of classes/particles](reference/particles)
 
 #### Categories
 
-| **Category** | **Description**                                          |
-| ------------ | -------------------------------------------------------- |
-| OPEN         | Animation that is run once when the crate is opened      |
-| PERSISTENT   | Animation that constantly runs around a crate            |
-| ANIMATION    | Animation that is run when it is undergoing an animation |
-| END          | Animation that is run once the animation finishes        |
-
-##### Examples
-
-A star that appears when a player opens a crate.
+| **Category** | **Description**                     |
+| ------------ | ----------------------------------- |
+| OPEN         | Runs upon crate opening             |
+| PERSISTENT   | Runs indefinitely                   |
+| ANIMATION    | Runs every tick of an animation     |
+| END          | Runs upon finishing of an animation |
 
 ```yml
+  FoodKeyT3:
+    ...
     effect:
         1:
-          class: Star
-          category: OPEN
-          particle: FLAME
+          class: Star           # Manifestation
+          category: PERSISTENT  # When does this activate?
+          innerRadius: 0.3f     # Optional attributes
+          spikeHeight: 1.25f
+        2:
+          class: Sound
+          category: ANIMATION
+          sound: BLOCK_WOOD_PLACE
+        3:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+          CATEGORY: END
+    ...
 ```
-
-todo Sounds
 
 ### Rewards
 
@@ -191,7 +219,7 @@ by setting a minimum and a maximum number of rewards.
         maximum-rewards: 1
         rewards:
             # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      cmd:(/heal {player})'
 ```
 
 #### Tag
@@ -203,7 +231,7 @@ A list of tags include...
 | ---------- | --------- | -------------------------------------------------------------------- |
 | item       | ∞         | Represents an item                                                   |
 | cmd        | ∞         | Represents a command                                                 |
-| chance     | 1         | Represents the weighted chance                                       |
+| chance     | 1         | Represents the raw weighted chance                                   |
 | display    | 1         | Represents a display item                                            |
 | broadcast  | 1         | String that is broadcasted when this reward is given                 |
 | append     | 1         | String that appends to the crate's broadcast message                 |
@@ -223,14 +251,14 @@ Click [here](#item-parser) to read more about item parsing.
 Any command may be specified here. Commands are executed through the console.
 
 ```YML
-    cmd:(/heal %player%)     # Commands may start with '/'
-    cmd:(heal %player%)      # They also don't have to :)
+    cmd:(/heal {player})     # Commands may start with '/'
+    cmd:(heal {player})      # They also don't have to :)
 ```
 
 You may also specify multiple commands per line.
 
 ```YML
-    cmd:(/heal %player%), cmd:(tell %player% You're awesome!)
+    cmd:(/heal {player}), cmd:(tell {player} You're awesome!)
 ```
 
 ##### Chance
@@ -262,8 +290,8 @@ and actually represents a weight. The explanation is through an example.
 
 Each reward is calculated to a percentage based on its weight.
 
-* The **total weight** is **100 = (50 + 20 + 15 + 10 + 5)**.
-* **Reward Percentage** = (**weight / total weight**) \* 100%.
+- The **total weight** is **100 = (50 + 20 + 15 + 10 + 5)**.
+- **Reward Percentage** = (**weight / total weight**) \* 100%.
 
 ```YML
     - 'item:(dirt 1),       chance:(50)' # (50 / 100) * 100% = 50%
@@ -284,15 +312,15 @@ the player the permission if and only if the user does not have the permission `
 ```YML
     reward:
         rewards:
-            - 'permission:(user.vip), cmd:(pex add %player% user.vip)'
+            - 'permission:(user.vip), cmd:(pex add {player} user.vip)'
 ```
 
-!> Be sure to include fallback rewards. The plugin handles if there are no rewards
+!> Be sure to include fallback rewards if a player has all permission-based rewards. The plugin handles if there are no rewards
 however you are encouraged catch and handle the situation.
 
 ###### Fallback Rewards
 
-If the player is an operator or the permission of each reward in a crate, the plugin will not take a key
+If the player is an operator or has permission of each reward in a crate, the plugin will not take a key
 and tell the player that there are no rewards. A fallback reward may be provided as such...
 
 If the player has the permission `user.vip`, the player will simply receive a message.
@@ -300,15 +328,19 @@ If the player has the permission `user.vip`, the player will simply receive a me
 ```YML
     reward:
         rewards:
-            - 'permission:(user.vip), cmd:(pex add %player% user.vip), chance:(100)'
-            - 'cmd:(tell %player% You have won all the rewards), chance:(1)'
+            - 'permission:(user.vip), cmd:(pex add {player} user.vip), chance:(100)'
+            - 'cmd:(tell {player} You have won all the rewards), chance:(1)'
 ```
 
 ##### Unique
 
-Rewards that have the `unique` tag are given once per opening.
+Rewards that have the `unique` tag are given once every opening. This means that players may
+receive the same reward if they use the same crate or key multiple times.
 
-With total of *3* prizes, the crate will give the player each reward, *a heal, diamond, and iron*, once.
+!> If you are looking to give a reward once, look at permission based rewards.
+
+In the following example: With total of _3_ prizes,
+this crate will give the player each reward, _a heal, diamond, and iron_, once.
 
 ```YML
     reward:
@@ -316,7 +348,7 @@ With total of *3* prizes, the crate will give the player each reward, *a heal, d
         maximum-rewards: 3
         rewards:
             # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal %player%)'
+            - 'unique:(),     chance:(1000),      cmd:(/heal {player})'
             - 'unique:(),     chance:(1000),      item:(diamond 1)'
             - 'unique:(),     chance:(1000),      item:(iron 1)'
 ```
@@ -325,7 +357,7 @@ With total of *3* prizes, the crate will give the player each reward, *a heal, d
 
 Rewards that have the `always` tag are given regardless of any other reward.
 
-The crate will always give the player *a heal* and either *a diamond or a iron* depending on their luck!
+The crate will always give the player _a heal_ and either _a diamond or a iron_ depending on their luck!
 
 ```YML
     reward:
@@ -333,7 +365,7 @@ The crate will always give the player *a heal* and either *a diamond or a iron* 
         maximum-rewards: 1
         rewards:
             # Always heals the player to full
-            - 'always:(),                         cmd:(/heal %player%)'
+            - 'always:(),                         cmd:(/heal {player})'
             - 'unique:(),     chance:(1000),      item:(diamond 1)'
             - 'unique:(),     chance:(1000),      item:(iron 1)'
 ```

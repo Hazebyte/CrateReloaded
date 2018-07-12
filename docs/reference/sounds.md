@@ -1,9 +1,6 @@
 # Sounds
 
-[Spigot 1.9+](#_19)
-[Spigot 1.8-](#_18-)
-
-## 1.9+
+# 1.9 and higher
 
 ```
 AMBIENT_CAVE
@@ -451,7 +448,7 @@ WEATHER_RAIN
 WEATHER_RAIN_ABOVE
 ```
 
-# 1.8-
+# 1.8 and lower
 
 ```
 AMBIENCE_CAVE

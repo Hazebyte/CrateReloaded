@@ -1,6 +1,6 @@
 # Translating
 
-Inside the config folder, you may change the locale setting. If this option is not set, the plugin
+In the config.yml, you may change the locale setting. If this option is not set, the plugin
 will default to english.
 
 ## Custom Messages
@@ -17,10 +17,10 @@ If the message is not found, the plugin will return an missing message key to th
 
 > [Available Locale](https://github.com/Hazebyte/CrateReloaded/tree/master/language)
 
-We are looking for new translations for the plugin. If you have translated the langauge file,
+We are looking for new translations for the plugin. If you have translated the language file,
 feel free to submit a pull request or contact the author via Spigot to have the translation added.
 
-When translating, use the same...
+When translating, try to use the same...
 
 * Capitalization
 * Tone
