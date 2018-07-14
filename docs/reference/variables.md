@@ -14,3 +14,4 @@ The plugin allows placeholders that dynamically generate text.
 | {type}       |       | Type name                     |
 | {cost}       |       | Crate cost                    |
 | {reward}     |       | Reward String                 |
+| {chance}     |       | Weighted chance               |
