@@ -17,6 +17,12 @@ For the supporters, thank you for purchasing coffee for the nights of developmen
 * Thank you **AndyJake** for providing plugin support.
 * And members of the Spigot Community for their support
 
+## Testers
+* mibby
+* XXLuigiMario
+* Flavour
+* ToXiicalhebest
+
 ## Community
 Finally, without the community, the plugin wouldn't have been possible. Thank you to...
 
