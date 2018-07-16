@@ -11,7 +11,7 @@
 # ======================================================= #
 #
 # Affix placed before the stem of messages
-prefix: '&8[&6Crates&8] &f'
+prefix: '&8[&6Crates&8]&f'
 
 # Defines the plugin's language, and region.
 locale: en
