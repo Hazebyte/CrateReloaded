@@ -15,4 +15,4 @@
 | **/cr set**      | `<crate>`                                    | cr.block.set    | Configures a block to handle crates                  |
 | **/cr remove**   | `<crate>`                                    | cr.block.remove | Removes the capability to handle crates from a block |
 
-?> Arguments with carrots `<>` represent a required parameter. `()` have default fields.
+?> Arguments with carrots `<>` represent a required parameter. `()` are optional parameters with default fields.
