@@ -140,6 +140,7 @@ display:(material:durability amount name:myName lore:lore1|lore2 skull:base64 co
 | lore        | String             |
 | skull       | String(Base64)     |
 | color       | String(R,G,B)      |
+| flag        | String(Enum)       |
 | effect      | String             |
 | power       | Integer            |
 | duration    | Integer            |
@@ -159,7 +160,7 @@ display:(potion 1 name:Potion lore:Test effect:haste power:3 duration:180)'
 _Enchanted Sword with unbreakable and hidden attributes:_
 
 ```yml
-display:(diamond_sword 1 17:1 18:1 unbreakable:true hide:true)
+display:(diamond_sword 1 17:1 18:1 unbreakable:true flag:HIDE_UNBREAKABLE)
 ```
 
 [_Minecraft Head:_](https://github.com/Hazebyte/CrateReloaded/issues/97)
