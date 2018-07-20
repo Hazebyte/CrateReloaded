@@ -83,7 +83,7 @@ crate:
 
     # Close Button
     # It is used to close the inventory
-    close: 'GOLD_RECORD 1 name:&4Close!'
+    close: 'GOLD_RECORD 1 name:&4Close! flag:HIDE_POTION_EFFECTS'
 
     # Next Button
     back: 'BED 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
