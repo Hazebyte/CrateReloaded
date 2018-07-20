@@ -51,7 +51,8 @@ Some crates types support different animations, which appear in a GUI when the c
 ```YML
 FoodKey:
     ...
-    animation: 'none'
+    animation: 'NONE'
+    end-animation: 'BLANK'
     ...
 ```
 
