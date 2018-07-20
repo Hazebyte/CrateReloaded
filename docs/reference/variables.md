@@ -15,3 +15,4 @@ The plugin allows placeholders that dynamically generate text.
 | {cost}       |       | Crate cost                    |
 | {reward}     |       | Reward String                 |
 | {chance}     |       | Weighted chance               |
+| {random:#,#} |       | Random number [min, max]      |
