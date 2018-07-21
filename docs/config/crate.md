@@ -186,6 +186,13 @@ _Flags_
 display:(GOLD_RECORD 1 name:&4Close! flag:HIDE_POTION_EFFECTS)
 ```
 
+_Leather Armor Dye_
+
+```yml
+display:(leather_chestplate 1 color:0,0,0)
+display:(leather_leggings 1 color:255,255,255)
+```
+
 ### Effects
 
 This section defines the effects and sonuds that the crate may have.
