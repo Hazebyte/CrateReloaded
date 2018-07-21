@@ -138,6 +138,7 @@ display:(material:durability amount name:myName lore:lore1|lore2 skull:base64 co
 | ----------- | ------------------ |
 | name        | String             |
 | lore        | String             |
+| player      | String(Name)       |
 | skull       | String(Base64)     |
 | color       | String(R,G,B)      |
 | flag        | String(Enum)       |
@@ -167,6 +168,22 @@ display:(diamond_sword 1 17:1 18:1 unbreakable:true flag:HIDE_UNBREAKABLE)
 
 ```yml
 display:(skull:3 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE1ZGNiMmRhMDJjZjczNDgyOWUxZTI3M2UzMDI1NjE3ZDgwNzE1MTZmOTUzMjUxYjUyNTQ1ZGE4ZDNlOGRiOCJ9fX0)
+display:(skull:3 1 name:&aNotch player:notch)
+```
+
+_Flags_
+
+| **Name**              |
+| --------------------- |
+| HIDE_ENCHANTS         |
+| HIDE_ATTRIBUTES       |
+| HIDE_UNBREAKABLE      |
+| HIDE_DESTROYS         |
+| HIDE_PLACED_ON        |
+| HIDE_POTION_EFFECTS   |
+
+```yml
+display:(GOLD_RECORD 1 name:&4Close! flag:HIDE_POTION_EFFECTS)
 ```
 
 ### Effects
