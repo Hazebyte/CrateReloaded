@@ -1,7 +1,7 @@
 
 (function (win) {
-    const GIT_CONFIG_URL = 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/config/2.0.0/config/config.yml'
-    const GIT_CRATE_URL = 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/config/2.0.0/config/crate.yml'
+    const GIT_CONFIG_URL = 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/master/config/config.yml'
+    const GIT_CRATE_URL = 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/master/config/crate.yml'
 
     const configData = getConfig().then(data => data)
     const crateData = getCrate().then(data => data)
