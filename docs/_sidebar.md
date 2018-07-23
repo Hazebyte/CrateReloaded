@@ -14,6 +14,7 @@
   - [Enchantments](reference/enchantments.md)
   - [Variables](reference/variables.md)
   - [Config Template](reference/configs.md)
+  - [Screenshots](reference/screenshots.md)
   - [1.X to 2.X](reference/update.md)
   - [FAQ](reference/faq.md)
 - [**Contribution/Dedication**](contribution.md)
