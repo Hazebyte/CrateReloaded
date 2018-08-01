@@ -261,7 +261,7 @@ A list of tags include...
 | display    | 1         | Represents a display item                                            |
 | broadcast  | 1         | String that is broadcasted when this reward is given                 |
 | append     | 1         | String that appends to the crate's broadcast message                 |
-| open       | 1         | String that is shown to the player when one opens the crate          |
+| msg        | 1         | String that is shown to the player when one opens the crate          |
 | unique     | 1         | Reward that is only given once in a single crate probability roll    |
 | permission | ∞         | Reward that is given only if the player does not have the permission |
 | always     | 1         | Reward that is always given regardless of the probability.           |
