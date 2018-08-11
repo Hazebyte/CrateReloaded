@@ -195,40 +195,11 @@ display:(leather_leggings 1 color:255,255,255)
 
 ### Effects
 
-This section defines the effects and sonuds that the crate may have.
-Effects are run under a given condition or notably, the category.
-The manifestation of the effect is given by the class.
+This section defines the effects and sounds that the crate may have.
+Effects are run under a given condition or notably, the `category`.
+The manifestation of the effect is given by the `class`.
 
-> [List of classes/particles](reference/particles)
-
-#### Categories
-
-| **Category** | **Description**                     |
-| ------------ | ----------------------------------- |
-| OPEN         | Runs upon crate opening             |
-| PERSISTENT   | Runs indefinitely                   |
-| ANIMATION    | Runs every tick of an animation     |
-| END          | Runs upon finishing of an animation |
-
-```yml
-  FoodKeyT3:
-    ...
-    effect:
-        1:
-          class: Star           # Manifestation
-          category: PERSISTENT  # When does this activate?
-          innerRadius: 0.3f     # Optional attributes
-          spikeHeight: 1.25f
-        2:
-          class: Sound
-          category: ANIMATION
-          sound: BLOCK_WOOD_PLACE
-        3:
-          class: Sound
-          sound: ENTITY_BAT_TAKEOFF
-          CATEGORY: END
-    ...
-```
+For more information, click [here](config/effects.md)
 
 ### Rewards
 
@@ -236,7 +207,6 @@ Each individual crate supports its own set of rewards. Crates may give out a ran
 by setting a minimum and a maximum number of rewards.
 
 > Crates with animations default and support one reward.
-
 > Always ensure that the number of minimum rewards is greater than or equal to the number of rewards available.
 
 ```YML

@@ -1,8 +1,10 @@
 # Sounds
 
-# 1.9 and higher
+For usage, view [effects](config/effects.md)
 
-```
+## Minecraft 1.9+
+
+```YML
 AMBIENT_CAVE
 BLOCK_ANVIL_BREAK
 BLOCK_ANVIL_DESTROY
@@ -448,9 +450,9 @@ WEATHER_RAIN
 WEATHER_RAIN_ABOVE
 ```
 
-# 1.8 and lower
+## Minecraft 1.8-
 
-```
+```YML
 AMBIENCE_CAVE
 AMBIENCE_RAIN
 AMBIENCE_THUNDER
