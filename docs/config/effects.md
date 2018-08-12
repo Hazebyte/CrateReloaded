@@ -58,6 +58,7 @@ Jump
 Line
 Love
 Music
+Modified
 Original
 Plot
 Shield
@@ -75,7 +76,7 @@ Warp
 Wave
 ```
 
-> todo verify effect list
+> todo Verify List of Effects
 
 ## Categories
 
@@ -86,7 +87,7 @@ Wave
 | ANIMATION    | Runs every tick of an animation     |
 | END          | Runs upon finishing of an animation |
 
-## Primary
+## Reference and Examples
 
 ### Original
 
@@ -97,6 +98,7 @@ Wave
           particle: VILLAGER_HAPPY
           radius: 0.8
           particles: 10
+          period: 1
 ```
 
 ### Firework
@@ -110,6 +112,19 @@ Wave
           color2: ORANGE
           color3: BLACK
           fadeColor: BLACK
+          trail: true
+          radius: 0.5D
+          power: 1
+```
+
+#### Firework Types
+
+```YML
+BALL
+BALL_LARGE
+STAR
+BURST
+CREEPER
 ```
 
 ### Sound
@@ -122,3 +137,6 @@ Wave
           soundVolume: 100
           soundPitch: 1
 ```
+
+## FAQ
+
