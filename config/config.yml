@@ -35,6 +35,8 @@ claim:
   menu: 'Claim'
   # Remind users that they have rewards to claim
   reminder:
+    # Send a message to the player upon joining the server
+    join: true
     # Send a message to the player in an interval
     timer: true
     # Interval in seconds
