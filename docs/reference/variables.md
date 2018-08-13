@@ -7,6 +7,7 @@ The plugin allows placeholders that dynamically generate text.
 | {prefix}             | {p}   | Plugin's prefix                       |
 | {list}               |       | List of crates                        |
 | {player}             |       | Player's name                         |
+| {player-name}        |       | Player's display name                 |
 | {crate}              |       | Crate's identifier                    |
 | {crate-name}         |       | Crate's display name                  |
 | {item}               |       | The item's name                       |
