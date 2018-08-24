@@ -1,261 +1,120 @@
-############################################
-# +---------------------------------------+#
-# |         Config Revision 17            |#
-# +---------------------------------------+#
-############################################
+# ======================================================= #
+#                                                         #
+#                   CONFIG.YML                            #
+#                   FOR 2.0                               #
+#                                                         #
+# ======================================================= #
 
-# -------------------------------------------------------------------------------------------------------------------
-FoodChest:
-    type: SUPPLYCRATE # Place a chest down, and the chest will be filled with items
-    item: 'CHEST 1 name:&c[&6Foodie_&eChest&c]_&f#124 lore:&7Mmmm,_something_smells_good.|&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
-    buy:
-        enabled: false
-        cost: 0
-    message:
-        open: '{p}You have opened a &c[&6Foodie &eChest&c] &f#124'
-        broadcast: ''
-    effect:
-        1:
-          class: AtomEffect
-          radius: 1
-          iterations: 30
-        2:
-          class: Sound
-          sound: ENTITY_BAT_TAKEOFF
-    reward:
-        minimum-rewards: 8
-        maximum-rewards: 15
-        rewards:
-            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
-            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
-            - 'unique:(),     chance:(1),          item:(apple 1)'
-            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
-            - 'unique:(),     chance:(1),          item:(bone 1)'
-            - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
-            - 'unique:(),     chance:(1),          item:(ice 1)'
-            - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
-            - 'unique:(),     chance:(1),          item:(dirt 1)'
-            - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
-            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
-# -------------------------------------------------------------------------------------------------------------------
-FoodPack:
-    type: MYSTERYCRATE # Right, or left click to receive rewards
-    item: 'minecart 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.|&8Right_click_to_receive_a_pack_of_food! glow:true'
-    confirmation:
-        enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
-    buy:
-        enabled: false
-        cost: 0
-    message:
-        open: '{p}You have opened a &c[&6Foodie &ePack&c] &f#125'
-        broadcast: ''
-    effect:
-        1:
-          class: HeartEffect
-        2:
-          class: Sound
-          sound: ENTITY_BAT_TAKEOFF
-    reward:
-        minimum-rewards: 3
-        maximum-rewards: 3
-        rewards:
-            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
-            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
-            - 'unique:(),     chance:(1),          item:(apple 1)'
-            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
-            - 'unique:(),     chance:(1),          item:(bone 1)'
-            - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
-            - 'unique:(),     chance:(1),          item:(ice 1)'
-            - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
-            - 'unique:(),     chance:(1),          item:(dirt 1)'
-            - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
-            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
-# -------------------------------------------------------------------------------------------------------------------
-FoodKey:
-    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: 'NETHER_STAR 1 name:&c[&6Foodie_Key&c]_&f#1 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
-    animation: 'none'
-    display-name: '&c[&6Foodie Key&c] &f#1'
-    holographic:
-        - '{crate-name}'
-        - '{lore:1}'
-    confirmation:
-        enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
-    preview:
-        enabled: true
-        rows: 2
-    buy:
-        enabled: false
-        cost: 0
-    message:
-        open: '{p}You have opened a {crate}'
-        broadcast: ''
-    effect:
-        1:
-          class: Star
-          category: PERSISTENT
-          innerRadius: 0.3f
-          spikeHeight: 1.25f
-        2:
-          class: Sound
-          category: OPEN
-          sound: ENTITY_BAT_TAKEOFF
-    reward:
-        minimum-rewards: 3
-        maximum-rewards: 3
-        rewards:
-            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
-            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
-            - 'unique:(),     chance:(1),          item:(apple 1)'
-            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
-            - 'unique:(),     chance:(1),          item:(bone 1)'
-            - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
-            - 'unique:(),     chance:(1),          item:(ice 1)'
-            - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
-            - 'unique:(),     chance:(1),          item:(dirt 1)'
-            - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
-            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
-# -------------------------------------------------------------------------------------------------------------------
-# An example of a key crate with animations (Roulette)
-FoodKeyT2:
-    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
-    animation: 'ROULETTE'
-    display-name: '&c[&6Foodie Crate&c] &f#2'
-    holographic:
-        - '{crate-name}'
-        - '{lore:1}'
-    confirmation:
-        enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
-    preview:
-        enabled: true
-        rows: 2
-    buy:
-        enabled: false
-        cost: 0
-    message:
-        open: '{p}You have opened a {crate}'
-        broadcast: ''
-    effect:
-        1:
-          class: Star
-          category: PERSISTENT
-          innerRadius: 0.3f
-          spikeHeight: 1.25f
-        2:
-          class: Sound
-          category: ANIMATION
-          sound: BLOCK_WOOD_PLACE
-        3:
-          class: Sound
-          sound: ENTITY_BAT_TAKEOFF
-          CATEGORY: END
-    reward:
-        minimum-rewards: 1
-        maximum-rewards: 1
-        rewards:
-            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
-            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
-            - 'unique:(),     chance:(1),          item:(apple 1)'
-            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
-            - 'unique:(),     chance:(1),          item:(bone 1)'
-            - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
-            - 'unique:(),     chance:(1),          item:(ice 1)'
-            - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
-            - 'unique:(),     chance:(1),          item:(dirt 1)'
-            - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
-            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
-# -------------------------------------------------------------------------------------------------------------------
-# An example of a key crate with animations (CSGO)
-FoodKeyT3:
-    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
-    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#3 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
-    animation: 'CSGO'
-    display-name: '&c[&6Foodie Key&c] &f#3'
-    holographic:
-        - '{crate-name}'
-        - '{lore:1}'
-    confirmation:
-        enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
-    preview:
-        enabled: true
-        rows: 2
-    buy:
-        enabled: false
-        cost: 0
-    message:
-        open: '{p}You have opened a {crate}'
-        broadcast: ''
-    effect:
-        1:
-          class: Star
-          category: PERSISTENT
-          innerRadius: 0.3f
-          spikeHeight: 1.25f
-        2:
-          class: Sound
-          category: ANIMATION
-          sound: BLOCK_WOOD_PLACE
-        3:
-          class: Sound
-          sound: ENTITY_BAT_TAKEOFF
-          CATEGORY: END
-    reward:
-        minimum-rewards: 1
-        maximum-rewards: 1
-        rewards:
-            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
-            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
-            - 'unique:(),     chance:(1),          item:(apple 1)'
-            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
-            - 'unique:(),     chance:(1),          item:(bone 1)'
-            - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
-            - 'unique:(),     chance:(1),          item:(ice 1)'
-            - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
-            - 'unique:(),     chance:(1),          item:(dirt 1)'
-            - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
-            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+#  NOTE:                                                  #
+#  You do not configure rewards here. Please go to        #
+#     plugins/CrateReloaded/crate.yml to do that.         #
+# ======================================================= #
+#
+# Affix placed before the stem of messages
+prefix: '&8[&bCrates&8]&e'
 
+# Defines the plugin's language, and region.
+locale: en
+
+# Systematic recording of events
+logger: false
+
+# Decimal format that determines the number of decimals
+# i.e. 3.14 = #.##, 2.5 = #.#
+decimal-format: '#'
+
+# How long a player has to wait between actions
+cooldown: 1.0
+
+# Creative Control
+# Prevents players from duplicating keys with creative gamemode.
+creative-control: true
+
+# Claim
+claim:
+  menu: 'Claim'
+  # Remind users that they have rewards to claim
+  reminder:
+    # Send a message to the player upon joining the server
+    join: true
+    # Send a message to the player in an interval
+    timer: true
+    # Interval in seconds
+    period: 900
+
+# Crate Settings
+crate:
+
+  # Comparison Level
+  # Compares two items and determines if it is a crate
+  # 0 - Basic (Name, Type, Lore)
+  # 1 - Normal (Setting 0 + Enchants, Flags)
+  # 2 - Strict (Setting 1 + Custom NBT) . . . Note: Old keys will not work if this option is selected.
+  compare: 0
+
+  # Display Item
+  # Shown during an animation
+  display: ''
+
+  # Default Menu Name
+  menu: 'Menu'
+
+  # Are players allowed to put crates into crafting containers
+  craft: false
+
+  # Animation Exiting
+  # Allows players to exit animations that have not yet been completed
+  peri-exit: false
+
+  # Length of CSGO animation
+  csgo: 6
+
+  # Length of roulette animation
+  roulette: 5
+
+  # Length of wheel animation
+  wheel: 8
+
+  # Trigger Buttons
+  buttons:
+    enabled: true
+
+    # Next Button
+    # It is used to turn the virtual inventory page
+    next: 'ARROW 1 name:&aNext_Page lore:&eClick_to_enter_the_next_page.'
+
+    # Close Button
+    # It is used to close the inventory
+    close: 'MUSIC_DISC_11 1 name:&4Close! flag:HIDE_POTION_EFFECTS'
+
+    # Next Button
+    back: 'RED_BED 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
+
+    # Confirmation Menu Buttons
+    # Each crate may have an individualized button defined in the crate.yml
+    # If no buttons are defined, default buttons will be used
+    accept: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+    decline: 'RED_STAINED_GLASS_PANE 1 name:&4No'
+
+    # CSGO Display Buttons
+    # Used for display only, and does not trigger any actions
+    csgo-top: 'REDSTONE_TORCH 1 name:&6Prize!'
+    csgo-bot: 'REDSTONE_TORCH 1 name:&6Prize!'
+
+  # Pushback Settings
+  pushback:
+    enabled: true
+
+    # Modifier
+    x: 1.0
+    y: 1.0
+    z: 1.0
+
+  # Hologram Settings
+  hologram:
+
+    # Modifier
+    # Holograms are set to be centered, one block above the target location
+    x: 0.0
+    y: 0.0
+    z: 0.0
