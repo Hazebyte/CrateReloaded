@@ -103,14 +103,16 @@ Wave
 
 ### Firework
 
+Firework colors are in RGB.
+
 ```YML
         1:
           class: Firework
           category: OPEN
           fireworkType: BALL
-          color: RED
-          color2: ORANGE
-          color3: BLACK
+          color: 00ff40 # Light Green
+          color2: 8000ff # Purple
+          color3: ff0000 # Red
           fadeColor: BLACK
           trail: true
           radius: 0.5D
@@ -139,4 +141,3 @@ CREEPER
 ```
 
 ## FAQ
-
