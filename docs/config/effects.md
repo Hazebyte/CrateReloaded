@@ -141,3 +141,25 @@ CREEPER
 ```
 
 ## FAQ
+
+**How do I turn down the number of particles for an effect?**
+
+Most effects support a particle setting:
+
+```YML
+        1:
+          class: Original
+          particle: VILLAGER_HAPPY
+          particles: 10 # *Here!*
+```
+
+**The effect is too large. How would I decrease the size of the effect?**
+
+Some effects support a radius setting:
+
+```YML
+        1:
+          class: Original
+          particle: VILLAGER_HAPPY
+          radius: 0.8 # *Here!*
+```
