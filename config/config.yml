@@ -85,21 +85,21 @@ crate:
 
     # Close Button
     # It is used to close the inventory
-    close: 'GOLD_RECORD 1 name:&4Close! flag:HIDE_POTION_EFFECTS'
+    close: 'MUSIC_DISC_11 1 name:&4Close! flag:HIDE_POTION_EFFECTS'
 
     # Next Button
-    back: 'BED 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
+    back: 'RED_BED 1 name:&4&lGo_back lore:&eGo_back_to_previous_page.'
 
     # Confirmation Menu Buttons
     # Each crate may have an individualized button defined in the crate.yml
     # If no buttons are defined, default buttons will be used
-    accept: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-    decline: 'STAINED_GLASS_PANE:14 1 name:&4No'
+    accept: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+    decline: 'RED_STAINED_GLASS_PANE 1 name:&4No'
 
     # CSGO Display Buttons
     # Used for display only, and does not trigger any actions
-    csgo-top: 'REDSTONE_TORCH_ON 1 name:&6Prize!'
-    csgo-bot: 'REDSTONE_TORCH_ON 1 name:&6Prize!'
+    csgo-top: 'REDSTONE_TORCH 1 name:&6Prize!'
+    csgo-bot: 'REDSTONE_TORCH 1 name:&6Prize!'
 
   # Pushback Settings
   pushback:
