@@ -32,26 +32,26 @@ FoodChest:
             - 'unique:(),     chance:(1),          item:(golden_apple 1)'
             - 'unique:(),     chance:(1),          item:(bone 1)'
             - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
             - 'unique:(),     chance:(1),          item:(ice 1)'
             - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
             - 'unique:(),     chance:(1),          item:(dirt 1)'
             - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
             - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
 # -------------------------------------------------------------------------------------------------------------------
 FoodPack:
     type: MYSTERYCRATE # Right, or left click to receive rewards
     item: 'minecart 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.|&8Right_click_to_receive_a_pack_of_food! glow:true'
     confirmation:
         enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
     buy:
         enabled: false
         cost: 0
@@ -74,18 +74,18 @@ FoodPack:
             - 'unique:(),     chance:(1),          item:(golden_apple 1)'
             - 'unique:(),     chance:(1),          item:(bone 1)'
             - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
             - 'unique:(),     chance:(1),          item:(ice 1)'
             - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
             - 'unique:(),     chance:(1),          item:(dirt 1)'
             - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
             - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
 # -------------------------------------------------------------------------------------------------------------------
 FoodKey:
     type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
@@ -97,8 +97,8 @@ FoodKey:
         - '{lore:1}'
     confirmation:
         enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
     preview:
         enabled: true
         rows: 2
@@ -110,10 +110,8 @@ FoodKey:
         broadcast: ''
     effect:
         1:
-          class: Star
+          class: Original
           category: PERSISTENT
-          innerRadius: 0.3f
-          spikeHeight: 1.25f
         2:
           class: Sound
           category: OPEN
@@ -128,18 +126,18 @@ FoodKey:
             - 'unique:(),     chance:(1),          item:(golden_apple 1)'
             - 'unique:(),     chance:(1),          item:(bone 1)'
             - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
             - 'unique:(),     chance:(1),          item:(ice 1)'
             - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
             - 'unique:(),     chance:(1),          item:(dirt 1)'
             - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
             - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
 # -------------------------------------------------------------------------------------------------------------------
 # An example of a key crate with animations (Roulette)
 FoodKeyT2:
@@ -152,8 +150,8 @@ FoodKeyT2:
         - '{lore:1}'
     confirmation:
         enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
     preview:
         enabled: true
         rows: 2
@@ -165,10 +163,8 @@ FoodKeyT2:
         broadcast: ''
     effect:
         1:
-          class: Star
+          class: Original
           category: PERSISTENT
-          innerRadius: 0.3f
-          spikeHeight: 1.25f
         2:
           class: Sound
           category: ANIMATION
@@ -187,18 +183,18 @@ FoodKeyT2:
             - 'unique:(),     chance:(1),          item:(golden_apple 1)'
             - 'unique:(),     chance:(1),          item:(bone 1)'
             - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
             - 'unique:(),     chance:(1),          item:(ice 1)'
             - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
             - 'unique:(),     chance:(1),          item:(dirt 1)'
             - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
             - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
 # -------------------------------------------------------------------------------------------------------------------
 # An example of a key crate with animations (CSGO)
 FoodKeyT3:
@@ -211,8 +207,8 @@ FoodKeyT3:
         - '{lore:1}'
     confirmation:
         enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
     preview:
         enabled: true
         rows: 2
@@ -224,10 +220,8 @@ FoodKeyT3:
         broadcast: ''
     effect:
         1:
-          class: Star
+          class: Original
           category: PERSISTENT
-          innerRadius: 0.3f
-          spikeHeight: 1.25f
         2:
           class: Sound
           category: ANIMATION
@@ -246,16 +240,16 @@ FoodKeyT3:
             - 'unique:(),     chance:(1),          item:(golden_apple 1)'
             - 'unique:(),     chance:(1),          item:(bone 1)'
             - 'unique:(),     chance:(1),          item:(bread 1)'
-            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
             - 'unique:(),     chance:(1),          item:(ice 1)'
             - 'unique:(),     chance:(1),          item:(snow 1)'
-            - 'unique:(),     chance:(1),          item:(melon_block 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
             - 'unique:(),     chance:(1),          item:(dirt 1)'
             - 'unique:(),     chance:(1),          item:(sand 1)'
-            - 'unique:(),     chance:(1),          item:(log 1)'
-            - 'unique:(),     chance:(1),          item:(web 1)'
-            - 'unique:(),     chance:(1),          item:(pork 1)'
-            - 'unique:(),     chance:(1),          item:(raw_beef 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
             - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
-            - 'unique:(),     chance:(1),          item:(mushroom_soup 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
 
