@@ -1,32 +1,36 @@
 # Enchantment
 
-The plugin supports custom enchantments. A full list of 
+The plugin supports custom enchantments. A full list of
 updated enchantments may be found [here](https://minecraft.gamepedia.com/Enchanting).
 
-ID | Enchantment Name
----|------------------
-0  | Protection
-1  | Fire Protection
-2  | Feather Falling
-3  | Blast Protection
-4  | Projectile Protection
-5  | Respiration
-6  | Aqua Affinity
-7  | Thorns
-8  | Depth Strider
-16 | Sharpness
-17 | Smite
-18 | Bane of Arthropods
-19 | Knockback
-20 | Fire Aspect
-21 | Looting
-32 | Efficiency
-33 | Silk Touch
-34 | Unbreaking
-35 | Fortune
-48 | Power
-49 | Punch
-50 | Flame
-51 | Infinity
-61 | Luck of the Sea
-62 | Lure
+| Name                     | Alternate Name           |
+| ------------------------ | ------------------------ |
+| environmental_protection | PROTECTION_ENVIRONMENTAL |
+| fire_protection          | PROTECTION_FIRE          |
+| fall_protection          | PROTECTION_FALL          |
+| explosion_protection     | PROTECTION_EXPLOSIONS    |
+| projectile_protection    | PROTECTION_PROJECTILE    |
+| oxygen                   | OXYGEN                   |
+| water_worker             | WATER_WORKER             |
+| thorns                   | THORNS                   |
+| depth_strider            | DEPTH_STRIDER            |
+| frost_walker             | FROST_WALKER             |
+| binding_curse            | BINDING_CURSE            |
+| sharpness                | DAMAGE_ALL               |
+| smite                    | DAMAGE_UNDEAD            |
+| bane_of_arthropods       | DAMAGE_ARTHROPODS        |
+| fire_aspect              | FIRE_ASPECT              |
+| looting                  | LOOT_BONUS_MOBS          |
+| sweeping_edge            | SWEEPING_EDGE            |
+| efficiency               | DIG_SPEED                |
+| silk_touch               | SILK_TOUCH               |
+| durability               | DURABILITY               |
+| fortune                  | LOOT_BONUS_BLOCKS        |
+| power                    | ARROW_DAMAGE             |
+| punch                    | ARROW_KNOCKBACK          |
+| flame                    | ARROW_FIRE               |
+| infinity                 | ARROW_INFINITE           |
+| luck                     | LUCK                     |
+| lure                     | LURE                     |
+| mending                  | MENDING                  |
+| vanishing_curse          | VANISHING_CURSE          |

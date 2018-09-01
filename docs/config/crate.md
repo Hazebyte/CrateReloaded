@@ -95,8 +95,8 @@ FoodKey:
     ...
     confirmation:
         enabled: true
-        accept-button: 'STAINED_GLASS_PANE:5 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
-        decline-button: 'STAINED_GLASS_PANE:14 1 name:&4No'
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
     ...
 ```
 
@@ -161,7 +161,7 @@ display:(potion 1 name:Potion lore:Test effect:haste power:3 duration:180)'
 _Enchanted Sword with unbreakable and hidden attributes:_
 
 ```yml
-display:(diamond_sword 1 17:1 18:1 unbreakable:true flag:HIDE_UNBREAKABLE)
+display:(diamond_sword 1 sharpness:1 knockback:1 unbreakable:true flag:HIDE_UNBREAKABLE)
 ```
 
 [_Minecraft Head:_](https://github.com/Hazebyte/CrateReloaded/issues/97)
