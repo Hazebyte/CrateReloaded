@@ -12,6 +12,7 @@
   - [Particles](reference/particles.md)
   - [Sounds](reference/sounds.md)
   - [Enchantments](reference/enchantments.md)
+  - [Potions](reference/potions.md)
   - [Variables](reference/variables.md)
   - [Config Template](reference/configs.md)
   - [Screenshots](reference/screenshots.md)
