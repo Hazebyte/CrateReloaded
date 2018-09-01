@@ -158,6 +158,12 @@ _Potion:_
 display:(potion 1 name:Potion lore:Test effect:haste power:3 duration:180)'
 ```
 
+_Potion with multiple effects:_
+
+```yml
+display:(potion 1 name:Potion lore:Test effect:haste power:3 duration:180 effect:jump_boost power:3 duration:180)'
+```
+
 _Enchanted Sword with unbreakable and hidden attributes:_
 
 ```yml
