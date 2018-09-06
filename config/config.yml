@@ -32,6 +32,10 @@ creative-control: true
 
 # Claim
 claim:
+  # The command prefix. DO NOT MODIFY.
+  # ONLY TO BE CHANGED IF PREFIX IS CONFLICTING
+  command: 'cr'
+  # Menu name
   menu: 'Claim'
   # Remind users that they have rewards to claim
   reminder:
