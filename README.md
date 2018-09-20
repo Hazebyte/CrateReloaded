@@ -20,3 +20,4 @@ The purpose of this repository, as of right now, is to keep track of issues as w
 
 ## Related Repositories
 * [API](https://github.com/Hazebyte/CrateReloadedAPI)
+* [NPC](https://github.com/Hazebyte/CrateReloadedNPC)
