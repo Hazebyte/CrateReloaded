@@ -7,29 +7,38 @@
 CrateReloaded has support for NPC crates. This feature hooks into the **Citizen** plugin to allow you to open a crate when you interact with a NPC.
 Therefore, you will need to have the **Citizen** plugin installed.
 
-## How can I create a NPC?
+## How do I create a NPC crate?
 
-NPC crates are amazing; it is no wonder why you are trying to create one. We have made it really simple for you to create a NPC crate.
+NPC crates are amazing; it is no wonder why you are trying to create one.
+We have made it really simple for you to create a NPC crate.
 We will show you how to create a NPC and hook it to a crate from scratch.
 
-1. Create the NPC
+![image](https://i.imgur.com/ZkKchJQ.gifV)
 
-?> **/npc create [npc name]**
+### Create the NPC
 
-2. Find the id of the NPC using 
+```
+/npc create <name>
+```
 
-?> **/npc list**
+And the NPC is created!
 
-3. Make the NPC open a crate using 
+### Hook the NPC to crates
 
-?> **/cr addnpc [id] [crate name]**
+First, find the ID of the NPC
 
-## How can I remove a NPC?
+```
+/npc list
+```
 
-There is a very simple process that can be utilized to remove a NPC crate.
+And finally, hook the NPC to crates!
 
-The command is: **/cr removenpc [npc id]**
+```
+/cnpc set <id> <crate>
+```
 
-Example
+## Unhook the NPC from crates
 
-?> /cr removenpc 99
+```
+/cnpc remove <id> <crate>
+```
