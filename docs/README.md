@@ -18,7 +18,9 @@ These specify a in-game GUI manipulation that displays the reward. [[...]](confi
 
 - Roulette
 - CS:GO
-- Wheel
+- Rectangle
+
+To see these animations, [click here!](reference/screenshots)
 
 ## Features
 
