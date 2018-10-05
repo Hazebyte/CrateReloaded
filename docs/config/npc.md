@@ -3,6 +3,8 @@
 CrateReloaded has support for NPC crates. This feature hooks into the **Citizen** plugin to allow you to open a crate when you interact with a NPC.
 Therefore, you will need to have the **Citizen** plugin installed. [For installation, click here!](getting-started/installation)
 
+!> This requires a free NPC add-on. Check #installation for the download.
+
 ![image](https://proxy.spigotmc.org/80982abba446a8540b6b0c1d67b6a7bc5c2db323?url=http%3A%2F%2Fi.imgur.com%2Fcjs3WD0.png)
 
 
