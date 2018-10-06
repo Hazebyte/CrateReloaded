@@ -1,3 +1,4 @@
+![image](https://proxy.spigotmc.org/1351e852c0277fcf6fb2816990f91df3ea90a4df?url=https%3A%2F%2Fi.imgur.com%2Fw9TWLiW.png)
 # CrateReloaded
 
 The purpose of this repository, as of right now, is to keep track of issues as well as features.
