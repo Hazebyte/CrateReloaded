@@ -2,6 +2,8 @@
 # CrateReloaded
 
 The purpose of this repository, as of right now, is to keep track of issues as well as features.
+Click the image below for our Discord channel for other support!
+[![discord](https://camo.githubusercontent.com/f858c72e48be080b0b4a6fc350d6e39f1cd2da13/68747470733a2f2f696d6775722e636f6d2f4d465252426e342e706e67)](https://discord.gg/0srgnnU1nbB8wMML)
 
 ## Goals
 * To create a sturdy, rewards system
