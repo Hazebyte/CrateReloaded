@@ -1,8 +1,10 @@
 ![image](https://proxy.spigotmc.org/1351e852c0277fcf6fb2816990f91df3ea90a4df?url=https%3A%2F%2Fi.imgur.com%2Fw9TWLiW.png)
+
 # CrateReloaded
 
 The purpose of this repository, as of right now, is to keep track of issues as well as features.
 Click the image below for our Discord channel for other support!
+
 [![discord](https://imgur.com/MFRRBn4.png)](https://discord.gg/0srgnnU1nbB8wMML)
 
 ## Goals
