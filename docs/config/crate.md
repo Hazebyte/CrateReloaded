@@ -173,8 +173,8 @@ display:(diamond_sword 1 sharpness:1 knockback:1 unbreakable:true flag:HIDE_UNBR
 [_Minecraft Head:_](https://github.com/Hazebyte/CrateReloaded/issues/97)
 
 ```yml
-display:(skull:3 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE1ZGNiMmRhMDJjZjczNDgyOWUxZTI3M2UzMDI1NjE3ZDgwNzE1MTZmOTUzMjUxYjUyNTQ1ZGE4ZDNlOGRiOCJ9fX0)
-display:(skull:3 1 name:&aNotch player:notch)
+display:(player_head 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE1ZGNiMmRhMDJjZjczNDgyOWUxZTI3M2UzMDI1NjE3ZDgwNzE1MTZmOTUzMjUxYjUyNTQ1ZGE4ZDNlOGRiOCJ9fX0)
+display:(player_head 1 name:&aNotch player:notch)
 ```
 
 _Flags_
