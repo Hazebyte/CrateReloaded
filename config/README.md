@@ -9,4 +9,4 @@ We have default configurations that may be referenced.
 
 ## Example Crate Configuration
 
-Head over to [crates](https://github.com/Hazebyte/CrateReloaded/tree/master/config/crate)
+Head over to [crates](http://crates.hazebyte.com/#/reference/configs)
