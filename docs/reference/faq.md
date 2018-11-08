@@ -34,3 +34,9 @@ this system.
 
 To activate this system, the player would simply type '/cr claim' ingame.
 ```
+
+**How do I change the number of decimals in the chance placeholder?**
+
+```
+Check config.yml for decimal format
+```
