@@ -3,6 +3,8 @@
 The plugin supports custom enchantments. A full list of
 updated enchantments may be found [here](https://minecraft.gamepedia.com/Enchanting).
 
+To find out how to apply enchantments, click [here](config/crate?id=examples)
+
 | Name                     | Alternate Name           |
 | ------------------------ | ------------------------ |
 | environmental_protection | PROTECTION_ENVIRONMENTAL |
