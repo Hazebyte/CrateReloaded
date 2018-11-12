@@ -37,6 +37,9 @@ claim:
   command: 'cr'
   # Menu name
   menu: 'Claim'
+  # If the inventory is full, let the claim manager handle it.
+  # Otherwise, it will drop to the ground.
+  handle-full-inventory: true
   # Remind users that they have rewards to claim
   reminder:
     # Send a message to the player upon joining the server
@@ -122,3 +125,4 @@ crate:
     x: 0.0
     y: 0.0
     z: 0.0
+
