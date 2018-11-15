@@ -14,6 +14,8 @@
 prefix: '&8[&bCrates&8]&e'
 
 # Defines the plugin's language, and region.
+# The link below provides a list of supported languages
+# https://github.com/Hazebyte/CrateReloaded/blob/master/language
 locale: en
 
 # Systematic recording of events

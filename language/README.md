@@ -1,8 +1,18 @@
-# CrateReloaded Language Files
+# Language Files
 
-CrateReloaded supports different languages with UTF encoding.
+CrateReloaded supports different languages with UTF-8 encoding.
 
 ## Credits
+
+2.X
+
+* **Will** English
+* **Nogapra** French
+* **Xion87** Italian
+
+---
+
+1.X
 
 * **Dinosaur** English
 * **Heroiik62** French
@@ -12,3 +22,4 @@ CrateReloaded supports different languages with UTF encoding.
 * **Einwegrasierer** German
 * **ProfCube** Japanese
 * **XXLuigiMario** Catalan
+
