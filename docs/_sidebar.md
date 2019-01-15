@@ -1,5 +1,7 @@
 <!-- docs/_sidebar.md -->
 
+- **Info**
+  - [**Contributions**](contribution.md)
 - **Getting Started**
   - [Installation](getting-started/installation.md)
   - [Commands and Permissions](getting-started/commands.md)
@@ -18,4 +20,5 @@
   - [Screenshots](reference/screenshots.md)
   - [1.X to 2.X](reference/update.md)
   - [FAQ](reference/faq.md)
-- [**Contribution/Dedication**](contribution.md)
+- **API**
+  - [Essentials](api/basic.md)
