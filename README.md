@@ -26,3 +26,7 @@ Click the image below for our Discord channel for other support!
 ## Related Repositories
 * [API](https://github.com/Hazebyte/CrateReloadedAPI)
 * [NPC](https://github.com/Hazebyte/CrateReloadedNPC)
+
+Community
+
+* [ShiftOpenKeys](https://github.com/Twi5TeD/ShiftOpenKeys)
