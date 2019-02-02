@@ -1,0 +1,34 @@
+M01_Consume:
+    type: MYSTERY
+    item: 'POTION 1 name:[???] lore:&fIs_this_mystery_water?||&l&eWinnings:||&f1x_Potion|&aFull_Health!|&dSpeed|&cPain|&fHaste|&4Death! hide:true glow:true'
+    animation: 'CSGO'
+    display-name: 'Drinking...'
+    confirmation:
+        enabled: true
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_take_a_drink.'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
+    message:
+        open: '{p} As you took a drink, you got {item}'
+        broadcast: ''
+    effect:
+        1:
+          class: Original
+          category: PERSISTENT
+        2:
+          class: Sound
+          category: ANIMATION
+          sound: BLOCK_WOOD_PLACE
+        3:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+          CATEGORY: END
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            - 'chance:(1), cmd:(/cr give to {player} M01_Consume 1), display:(POTION 1 name:&f1x_Potion effect:speed power:3 duration:180)'
+            - 'chance:(1), cmd:(/effect {player} 7), display:(POTION 1 name:&fUnexpected_Pain! effect:harm power:1 duration:180)'
+            - 'chance:(1), cmd:(/heal {player}), display:(POTION 1 name:&fFull_Health!! effect:heal power:3 duration:180)'
+            - 'chance:(1), cmd:(/effect {player} 1), display:(POTION 1 name:&fSpeed!! effect:speed power:3 duration:180)'
+            - 'chance:(1), cmd:(/effect {player} 3), display:(POTION 1 name:&fHaste!! effect:haste power:3 duration:180)'
+            - 'chance:(0.01), cmd:(/kill {player}), display:(POTION 1 name:&fx_x!! effect:harm power:3 duration:180)'

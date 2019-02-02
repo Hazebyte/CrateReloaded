@@ -1,0 +1,55 @@
+S01_Materials:
+    type: SUPPLY
+    item: 'CHEST 1 name:&c[&6Material_Chest&c] lore:&7Rarity:_&aCommon|&8Place_the_chest! glow:true'
+    message:
+        open: '{p}You have opened a {crate}'
+    effect:
+        1:
+          class: AtomEffect
+          radius: 1
+          iterations: 10
+        2:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+    reward:
+        minimum-rewards: 3
+        maximum-rewards: 7
+        rewards:
+            - 'unique:(), chance:(1), item:(stone {random:1,4})'
+            - 'unique:(), chance:(1), item:(granite {random:1,4})'
+            - 'unique:(), chance:(1), item:(grass_block {random:1,4})'
+            - 'unique:(), chance:(1), item:(glass {random:1,4})'
+            - 'unique:(), chance:(1), item:(sandstone {random:1,4})'
+            - 'unique:(), chance:(1), item:(jungle_wood {random:1,4})'
+            - 'unique:(), chance:(1), item:(oak_wood {random:1,4})'
+            
+S02_Tools:
+    type: SUPPLY
+    item: 'CHEST 1 name:&c[&6Tool_Chest&c] lore:&7Rarity:_&aCommon|&8Place_the_chest! glow:true'
+    message:
+        open: '{p}You have opened a {crate}'
+    effect:
+        1:
+          class: AtomEffect
+          radius: 1
+          iterations: 10
+        2:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 4
+        rewards:
+            - 'unique:(), chance:(10), item:(wood_axe 1)'
+            - 'unique:(), chance:(5), item:(iron_axe 1)'
+            - 'unique:(), chance:(1), item:(gold_axe 1)'
+            - 'unique:(), chance:(1), item:(diamond_axe 1)'
+            - 'unique:(), chance:(10), item:(wood_pickaxe 1)'
+            - 'unique:(), chance:(5), item:(iron_pickaxe 1)'
+            - 'unique:(), chance:(1), item:(gold_pickaxe 1)'
+            - 'unique:(), chance:(1), item:(diamond_pickaxe 1)'
+            - 'unique:(), chance:(10), item:(wood_hoe 1)'
+            - 'unique:(), chance:(5), item:(iron_hoe 1)'
+            - 'unique:(), chance:(1), item:(gold_hoe 1)'
+            - 'unique:(), chance:(1), item:(diamond_hoe 1)'
+            - 'unique:(), chance:(1), item:(wood_spade 1)'

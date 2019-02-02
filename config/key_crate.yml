@@ -1,0 +1,83 @@
+K01_Consume:
+    type: KEY
+    item: 'POTION 1 name:[???] lore:&fIs_this_mystery_water?|Take_this_to_a_bartender.||&l&eWinnings:||&f1x_Potion|&aFull_Health!|&dSpeed|&cPain|&fHaste|&4Death! hide:true glow:true'
+    animation: 'CSGO'
+    display-name: 'Drinking...'
+    preview:
+        enabled: false
+    confirmation:
+        enabled: true
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_take_a_drink.'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
+    message:
+        open: '{p} As you took a drink, you got {item}'
+        broadcast: ''
+    holographic:
+        - '[Bartender]'
+    effect:
+        1:
+          class: Original
+          category: PERSISTENT
+        2:
+          class: Sound
+          category: ANIMATION
+          sound: BLOCK_WOOD_PLACE
+        3:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+          CATEGORY: END
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            - 'chance:(1), cmd:(/cr give to {player} M01_Consume 1), display:(POTION 1 name:&f1x_Potion effect:speed power:3 duration:180)'
+            - 'chance:(1), cmd:(/effect {player} 7), display:(POTION 1 name:&fUnexpected_Pain! effect:harm power:1 duration:180)'
+            - 'chance:(1), cmd:(/heal {player}), display:(POTION 1 name:&fFull_Health!! effect:heal power:3 duration:180)'
+            - 'chance:(1), cmd:(/effect {player} 1), display:(POTION 1 name:&fSpeed!! effect:speed power:3 duration:180)'
+            - 'chance:(1), cmd:(/effect {player} 3), display:(POTION 1 name:&fHaste!! effect:haste power:3 duration:180)'
+            - 'chance:(0.01), cmd:(/kill {player}), display:(POTION 1 name:&fx_x!! effect:harm power:3 duration:180)'
+            
+K02_Diamond:
+    type: KEY
+    item: NETHER_STAR 1 name:&aDiamond_Key lore:&7Open_at_a_chest_or_npc
+    animation: ROULETTE
+    display-name: '&aDiamond Crate'
+    holographic:
+    - '{crate-name}'
+    preview:
+        enabled: true
+        rows: 1
+    effect:
+        '1':
+            class: Original
+            particle: SPELL_INSTANT
+            radius: 15.0
+            particles: 5
+            period: 10
+            category: PERSISTENT
+    reward:
+        rewards:
+        - 'chance:(1), item:(DIAMOND_HELMET 1 name:&f&lHelmet durability:2 oxygen:1)'
+        - 'chance:(1), item:(DIAMOND_CHESTPLATE 1 name:&f&lChestplate durability:2)'
+        - 'chance:(1), item:(DIAMOND_LEGGINGS 1 name:&f&lLeggings durability:4)'
+        - 'chance:(1), item:(DIAMOND_BOOTS 1 name:&f&lBoots durability:4)'
+        
+        - 'chance:(1), item:(DIAMOND_PICKAXE 1 name:&f&lPick durability:1)'
+        - 'chance:(1), item:(DIAMOND_AXE 1 name:&f&lAxe durability:1)'
+        - 'chance:(1), item:(DIAMOND_SHOVEL 1 name:&f&lShovel durability:1)'
+        - 'chance:(1), item:(DIAMOND_SWORD 1 name:&f&lSword durability:1)'
+        
+        - 'chance:(1), item:(DIAMOND_PICKAXE 1 name:&f&lPick lore:&7Rank:_&fA durability:4)'
+        - 'chance:(1), item:(DIAMOND_AXE 1 name:&f&lAxe lore:&7Rank:_&fA durability:4)'
+        - 'chance:(1), item:(DIAMOND_SHOVEL 1 name:&f&lShovel lore:&7Rank:_&fA durability:4)'
+        - 'chance:(1), item:(DIAMOND_SWORD 1 name:&f&lSword lore:&7Rank:_&fA durability:4)'
+        
+        - 'chance:(1), item:(DIAMOND_PICKAXE 1 name:&f&lPick lore:&7Rank:_&fB durability:3)'
+        - 'chance:(1), item:(DIAMOND_AXE 1 name:&f&lAxe lore:&7Rank:_&fB durability:3)'
+        - 'chance:(1), item:(DIAMOND_SHOVEL 1 name:&f&lShovel lore:&7Rank:_&fB durability:3)'
+        - 'chance:(1), item:(DIAMOND_SWORD 1 name:&f&lSword lore:&7Rank:_&fB durability:3)'
+        
+        - 'chance:(1), item:(DIAMOND_PICKAXE 1 name:&f&lPick lore:&7Rank:_&fC durability:2)'
+        - 'chance:(1), item:(DIAMOND_AXE 1 name:&f&lAxe lore:&7Rank:_&fC durability:2)'
+        - 'chance:(1), item:(DIAMOND_SHOVEL 1 name:&f&lShovel lore:&7Rank:_&fC durability:2)'
+        - 'chance:(1), item:(DIAMOND_SWORD 1 name:&f&lSword lore:&7Rank:_&fC durability:2)'
