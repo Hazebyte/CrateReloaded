@@ -170,6 +170,12 @@ _Enchanted Sword with unbreakable and hidden attributes:_
 display:(diamond_sword 1 sharpness:1 knockback:1 unbreakable:true flag:HIDE_UNBREAKABLE)
 ```
 
+_Sword with durability:_
+
+```yml
+display:(diamond_sword:100 1)
+```
+
 [_Minecraft Head:_](https://github.com/Hazebyte/CrateReloaded/issues/97)
 
 ```yml
