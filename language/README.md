@@ -11,6 +11,8 @@ CrateReloaded supports different languages with UTF-8 encoding.
 * **Xion87** Italian
 * **F0rb1d** Chinese
 * **BluGhostYT** Russian
+* **AbgezocktYT** German
+* **BaoKunVN** Vietnamese
 
 ---
 
