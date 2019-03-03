@@ -7,6 +7,8 @@
   - [Commands and Permissions](getting-started/commands.md)
 - **Customization**
   - [Configuration](config/general.md)
+      - [config.yml](config/config.md)
+      - [crate.yml](config/crate.md)
   - [NPC](config/npc.md)
   - [Effects](config/effects.md)
   - [Translating](config/translating.md)
