@@ -1,38 +1,47 @@
 
 (function (win) {
-    const GIT_CONFIG_URL = 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/master/config/config.yml'
-    const GIT_CRATE_URL = 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/master/config/crate.yml'
-
-    const configData = getConfig().then(data => data)
-    const crateData = getCrate().then(data => data)
-
-    function getConfig () {
+    function get(url, id) {
         return new Promise((resolve, reject) => {
-            $.get(GIT_CONFIG_URL, (data) => {
-                resolve(data)
+            $.get(url, (data) => {
+                resolve({
+                    data,
+                    id
+                })
             })
         })
     }
 
-    function getCrate () {
-        return new Promise((resolve, reject) => {
-            $.get(GIT_CRATE_URL, (data) => {
-                resolve(data)
-            })
-        })
-    }
+    const DS = [
+        {
+            ID: '%CONFIG',
+            URL: 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/master/config/config.yml',
+        },
+        {
+            ID: '%CRATE',
+            URL: 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/master/config/crate.yml',
+        },
+        {
+            ID: '%LANG',
+            URL: 'https://raw.githubusercontent.com/Hazebyte/CrateReloaded/dev/language/SUPPORTED',
+        }
+    ]
 
     win.ScrapePlugin = {
         init () {
             return function (hook) {
                 hook.afterEach((content, next) => {
                     let body = content
-                    configData.then((data) => {
-                        body = body.replace('{{CONFIG}}', data)
-                        next(body)
-                    }).then(crateData.then((data) => {
-                        body = body.replace('{{CRATE}}', data)
-                    })).then(() => {
+                    let promises = []
+                    DS.forEach((d) => {
+                        if (body.indexOf(d.ID) != -1) {
+                            promises.push(get(d.URL, d.ID))
+                        }
+                    })
+                    Promise.all(promises).then((results) => {
+                        results.forEach((result) => {
+                            body = body.replace(result.id, result.data)
+                        })
+                    }).then(() => {
                         next(body)
                     })
                 })

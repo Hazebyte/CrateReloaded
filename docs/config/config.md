@@ -4,5 +4,5 @@
 * [crate.yml](config/crate.md)
 
 ```yaml
-{{CONFIG}}
+%CONFIG
 ```

@@ -6,11 +6,11 @@
 
 # config.md
 ```yaml
-{{CONFIG}}
+%CONFIG
 ```
 
 # crate.md
 
 ```yaml
-{{CRATE}}
+%CRATE
 ```

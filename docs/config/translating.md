@@ -3,6 +3,11 @@
 In the config.yml, you may change the locale setting. If this option is not set, the plugin
 will default to english.
 
+Thanks to our community, we have the following translations...
+```
+%LANG
+```
+
 ## Custom Messages
 
 To adjust messages to your liking, you may modify the local property file. Messages may be adjusted
