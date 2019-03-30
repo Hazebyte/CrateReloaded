@@ -80,12 +80,14 @@ Wave
 
 ## Categories
 
-| **Category** | **Description**                     |
-| ------------ | ----------------------------------- |
-| OPEN         | Runs upon crate opening             |
-| PERSISTENT   | Runs indefinitely                   |
-| ANIMATION    | Runs every tick of an animation     |
-| END          | Runs upon finishing of an animation |
+| **Category** | **Description**                             |
+| ------------ | ------------------------------------------- |
+| OPEN         | Runs upon crate opening                     |
+| PERSISTENT   | Runs indefinitely                           |
+| ANIMATION    | Runs every tick of an animation             |
+| PUSHBACK     | `2.0.9` Runs when a player is pushbacked    |
+| INSPECT      | `2.0.9` Runs when a player inspects a crate |
+| END          | Runs upon finishing of an animation         |
 
 ## Reference and Examples
 
