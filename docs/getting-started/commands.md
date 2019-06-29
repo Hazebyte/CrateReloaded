@@ -12,7 +12,7 @@
 | **/cr list**     |                                              | cr.list         | List all available crates                            |
 | **/cr give to**  | `<player> <crate> (number) (online/offline)` | cr.give.to      | Sends a player a number of crates.                   |
 | **/cr give all** | `<crate> (number)`                           | cr.give.all     | Sends all players a number of crates                 |
-| **/cr set**      | `<crate> (x) (y) (z)`                        | cr.block.set    | Configures a block to handle crates                  |
+| **/cr set**      | `<crate>`                                    | cr.block.set    | Configures a block to handle crates                  |
 | **/cr remove**   | `<crate>`                                    | cr.block.remove | Removes the capability to handle crates from a block |
 
 ## NPCs
