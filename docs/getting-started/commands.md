@@ -1,3 +1,7 @@
+
+?> Arguments with carrots `<>` represent a required parameter. `()` are optional parameters with default fields.
+Arguments with multiple `()` require prior optional parameters to be filled out.
+
 # Commands and Permissions
 
 | **Command**      | **Arguments**                                | **Permission**  | **Details**                                          |
@@ -24,6 +28,3 @@
 | **/cnpc**        |                 |                | Base command     |
 | **/cnpc set**    | `<npc> <crate>` | cr.npc.set     | Register a NPC   |
 | **/cnpc remove** | `<npc> <crate>` | cr.npc.remove  | Unregister a NPC |
-
-?> Arguments with carrots `<>` represent a required parameter. `()` are optional parameters with default fields.
-Arguments with multiple `()` require prior optional parameters to be filled out.
