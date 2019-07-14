@@ -2,6 +2,8 @@
 ?> Arguments with carrots `<>` represent a required parameter. `()` are optional parameters with default fields.
 Arguments with multiple `()` require prior optional parameters to be filled out.
 
+!> It is the same command to give a key and to give a crate.
+
 # Commands and Permissions
 
 | **Command**      | **Arguments**                                | **Permission**  | **Details**                                          |
