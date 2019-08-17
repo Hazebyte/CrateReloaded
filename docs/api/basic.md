@@ -6,10 +6,7 @@ For support, please send us a message in [Github](https://github.com/Hazebyte/Cr
 
 ## Project Setup
 
-To utilize CrateReloaded, you must first link the API to your setup. To do this, you may download the API directly or setup Gradle/Maven.
-
-1. [Direct Download](https://ci.hazebyte.com/job/CrateReloadedAPI/)
-2. [Gradle/Maven](https://github.com/Hazebyte/CrateReloadedAPI)
+To utilize CrateReloaded, you must first link the API to your setup. To do this, you may download the API directly or setup Gradle/Maven. [Instructions](https://github.com/Hazebyte/CrateReloadedAPI)
 
 After you have done this, make sure to add the following line to your plugin.yml.
 
