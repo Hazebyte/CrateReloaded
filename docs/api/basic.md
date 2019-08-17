@@ -70,4 +70,4 @@ boolean is = CrateAPI.getCrateRegistrar().isCrate(item);
 
 ## Next steps
 
-If you think this tutorial is enough, you may want to read the [plugin documentation](https://ci.hazebyte.com/job/CrateReloadedAPI/javadoc/). Otherwise, check the sidebar under API for links to more tutorials.
+If you think this tutorial is enough, you may want to read the [API documentation](https://hazebyte.github.io/CrateReloadedAPI/). Otherwise, check the sidebar under API for links to more tutorials.
