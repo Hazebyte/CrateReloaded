@@ -38,7 +38,7 @@ Crates and keys are physical items in Minecraft. These physical items are what p
 ```YML
 FoodKey:
     ...
-    item: 'tripwire_hook 1 name:&c[&6Foodie_&eKey&c]_&f#124 lore:&7Mmmm,_something_smells_good.\n&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
+    item: 'tripwire_hook 1 name:&c[&6Foodie_&eKey&c]_&f#124 lore:&7Mmmm,_something_smells_good.|&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
     ...
 ```
 
