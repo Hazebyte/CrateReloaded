@@ -14,15 +14,13 @@
 prefix: '&8[&bCrates&8]&e'
 
 # Defines the plugin's language, and region.
-# The link below provides a list of supported languages
-# https://github.com/Hazebyte/CrateReloaded/blob/master/language
 locale: en
 
 # Systematic recording of events
 logger: false
 
 # Decimal format that determines the number of decimals
-# i.e. 3.14 = #.##, 2.5 = #.#
+# e.g. 3.14 = #.##, 2.5 = #.#
 decimal-format: '#'
 
 # How long a player has to wait between actions
@@ -32,16 +30,27 @@ cooldown: 1.0
 # Prevents players from duplicating keys with creative gamemode.
 creative-control: true
 
+# Timezone
+# See https://en.wikipedia.org/wiki/List_of_time_zone_abbreviations
+timezone: 'PST'
+
+# Date Format
+# e.g. Tue, 02 Jan 2018 18:07:59 IST
+date-format: 'E, dd MMM yyyy HH:mm:ss z'
+
 # Claim
 claim:
   # The command prefix. DO NOT MODIFY.
   # ONLY TO BE CHANGED IF PREFIX IS CONFLICTING
   command: 'cr'
+
   # Menu name
-  menu: 'Claim'
+  menu: 'Claim Rewards!'
+
   # If the inventory is full, let the claim manager handle it.
   # Otherwise, it will drop to the ground.
   handle-full-inventory: true
+
   # Remind users that they have rewards to claim
   reminder:
     # Send a message to the player upon joining the server
@@ -50,6 +59,14 @@ claim:
     timer: true
     # Interval in seconds
     period: 900
+
+  # Formatting the items
+  format:
+    item:
+      - '{lore}'
+      - '&7Number of Rewards: &6{number}'
+      - '&7Received on {date}'
+    item-success: '&a&lClaimed!'
 
 # Crate Settings
 crate:
@@ -65,8 +82,11 @@ crate:
   # Shown during an animation
   display: ''
 
-  # Default Menu Name
+  # Default Preview Menu Name
   menu: 'Menu'
+
+  # Confirmation Menu Name
+  confirmation-menu: 'Confirm!'
 
   # Are players allowed to put crates into crafting containers
   craft: false
@@ -127,4 +147,3 @@ crate:
     x: 0.0
     y: 0.0
     z: 0.0
-
