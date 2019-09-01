@@ -2,6 +2,8 @@
 
 For usage, view [effects](config/effects.md)
 
+For the updated list, see [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html)
+
 ## Minecraft 1.9+
 
 ```YML
