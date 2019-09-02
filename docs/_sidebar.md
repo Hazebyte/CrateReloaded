@@ -22,5 +22,5 @@
   - [Screenshots](reference/screenshots.md)
   - [1.X to 2.X](reference/update.md)
   - [FAQ](reference/faq.md)
-- **API** (Developer)
+- **API** (For Developers)
   - [Essentials](api/basic.md)
