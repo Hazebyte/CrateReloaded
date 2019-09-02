@@ -63,9 +63,9 @@ FoodKey:
 | ------------- | ---------- |
 | ROULETTE      | BLANK      |
 | CSGO          | RANDOM     |
-| REVERSE_CSGO  |
-| WHEEL         |
-| REVERSE_WHEEL |
+| CSGO_REVERSE  |
+| RECTANGLE     |
+| RECTANGLE_REVERSE |
 
 </table>
 
