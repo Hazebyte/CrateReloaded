@@ -40,3 +40,9 @@ To activate this system, the player would simply type '/cr claim' ingame.
 ```
 Check config.yml for decimal format
 ```
+
+**Is there virtual key support?**
+```
+There is no inherent support but see https://www.mc-market.org/resources/10502/
+Credits to Luwie
+```
