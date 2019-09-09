@@ -85,8 +85,9 @@ Wave
 | OPEN         | Runs upon crate opening                     |
 | PERSISTENT   | Runs indefinitely                           |
 | ANIMATION    | Runs every tick of an animation             |
-| PUSHBACK     | `2.0.9` Runs when a player is pushbacked    |
-| INSPECT      | `2.0.9` Runs when a player inspects a crate |
+| PUSHBACK     | `v2.0.9` Runs when a player is pushbacked    |
+| REWARD       | `v2.0.17` Runs when a player receives the reward |
+| INSPECT      | `v2.0.9` Runs when a player inspects a crate |
 | END          | Runs upon finishing of an animation         |
 
 ## Reference and Examples
