@@ -46,3 +46,7 @@ Check config.yml for decimal format
 There is no inherent support but see https://www.mc-market.org/resources/10502/
 Credits to Luwie
 ```
+**Can we have multiple crate files?**
+```
+Yes, all valid crate files in the crate folder will be parsed and read
+```
