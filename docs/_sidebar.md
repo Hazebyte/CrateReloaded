@@ -5,6 +5,7 @@
 - **Getting Started**
   - [Installation](getting-started/installation.md)
   - [Commands and Permissions](getting-started/commands.md)
+  - [First-time Usage](getting-started/usage.md)
 - **Customization**
   - [Configuration](config/general.md)
       - [config.yml](config/config.md)

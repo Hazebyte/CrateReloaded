@@ -24,4 +24,5 @@ At this current moment, we do not support Sponge.
 1. In your server folder, create a `plugins` folder if one does not exist.
 2. Drag and drop the `CrateReloaded.jar` and any optional plugin into your `plugins` folder.
 3. Start up the server.
-4. Awesome! You can now start customizing the plugin!
+4. Awesome! You can now begin using the plugin! For usage, click [here](getting-started/usage)
+5. For customization, you can click [here](config/general)
