@@ -35,3 +35,7 @@ Nice, you have now set the crate and it will now function as a key crate
 
 1. Give yourself a key crate `/cr give to {player} FoodKey` 
 2. Left click the block you have set to preview the items. Right click the block you have set to activate the crate. 
+
+# Customizing
+
+[You can now begin customizing the plugin!](config/general.md)
