@@ -314,14 +314,16 @@ Each reward is calculated to a percentage based on its weight.
 Rewards that have the `permission` tag are given only if the player does not
 have the permission.
 
-In the following example, the following reward will execute the command to give
-the player the permission if and only if the user does not have the permission `user.vip`.
+In the following example, the reward will give the user the permission `user.vip` and 64 diamonds only if they
+do not have the permission `user.vip`. Once the player receives the reward, they will not be eligible to receive this reward again because they have received the permission.
 
 ```YML
     reward:
         rewards:
-            - 'permission:(user.vip), cmd:(pex add {player} user.vip)'
+            - 'chance:(10), permission:(user.vip), cmd:(pex add {player} user.vip), cmd:(/give {player} 64 diamond)'
 ```
+
+!> Operators (Ops) have all permissions and won't be able to receive any rewards that have the permission tag.
 
 !> Be sure to include fallback rewards if a player has all permission-based rewards. The plugin handles if there are no rewards
 however you are encouraged catch and handle the situation.
@@ -342,21 +344,22 @@ If the player has the permission `user.vip`, the player will simply receive a me
 
 ##### Unique
 
-Rewards that have the `unique` tag are given once every opening. This means that players may
-receive the same reward if they use the same crate or key multiple times.
+Rewards that have the `unique` tag are given once every opening. This is useful when you have
+a minimum/maximum reward where it is possible to give multiple rewards but only want each reward to be
+given once. This means that each reward line can be **rewarded only once per opening** but
+may be rewarded multiple times if they activate the same crate or key.
 
-!> If you are looking to give a reward once, look at permission based rewards.
+!> If you are looking for rewards that are given only once, take a look at permission-based rewards.
 
-In the following example: With total of _3_ prizes,
-this crate will give the player each reward, _a heal, diamond, and iron_, once.
+In the following example, this crate will give the player the following rewards: _one dirt, one diamond, and one iron_.
+Each reward is unique per crate opening.
 
 ```YML
     reward:
         minimum-rewards: 3
         maximum-rewards: 3
         rewards:
-            # Always heals the player to full
-            - 'unique:(),     chance:(1000),      cmd:(/heal {player})'
+            - 'unique:(),     chance:(1000),      item:(dirt 1)'
             - 'unique:(),     chance:(1000),      item:(diamond 1)'
             - 'unique:(),     chance:(1000),      item:(iron 1)'
 ```
