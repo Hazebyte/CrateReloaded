@@ -323,7 +323,7 @@ do not have the permission `user.vip`. Once the player receives the reward, they
             - 'chance:(10), permission:(user.vip), cmd:(pex add {player} user.vip), cmd:(/give {player} 64 diamond)'
 ```
 
-!> Operators (Ops) have all permissions and won't be able to receive any rewards that have the permission tag.
+!> Operators (ops) have all permissions and won't be able to receive any rewards that have the permission tag.
 
 !> Be sure to include fallback rewards if a player has all permission-based rewards. The plugin handles if there are no rewards
 however you are encouraged catch and handle the situation.
