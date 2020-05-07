@@ -282,8 +282,9 @@ still appear in preview systems but won't be included in reward rolls.
 
 ###### How does the chance system work?
 
-The chance system is based on weights. While the config states that it is a chance, this is misleading
-and actually represents a weight. The explanation is through an example.
+The probability system is not one that is based on chances but one that is based on a weight. This is because we put together all rewards into a single pool to pick a winner. 
+
+An analogy is to imagine a bag of tickets where the plugin will pick out a ticket and that represents the winning reward. Each reward has a "chance" number that represents the number of tickets. The more tickets you put in, the higher probability that it will get choosen, vice versa.  The following is a more concrete example.
 
 > For this example, we choose convenient numbers where the summation adds up to 100.
 > The total does not have to add up to 100.
