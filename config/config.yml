@@ -14,6 +14,8 @@
 prefix: '&8[&bCrates&8]&e'
 
 # Defines the plugin's language, and region.
+# The link below provides a list of supported languages
+# https://github.com/Hazebyte/CrateReloaded/blob/master/language
 locale: en
 
 # Systematic recording of events
@@ -26,9 +28,16 @@ decimal-format: '#'
 # How long a player has to wait between actions
 cooldown: 1.0
 
+# The plugin to utilize for holograms (HolographicDisplays or CMI)
+hologram-plugin: 'HolographicDisplays'
+
 # Creative Control
 # Prevents players from duplicating keys with creative gamemode.
-creative-control: true
+creative:
+  # Enables safety checks
+  safety: true
+  # Allows ops to override the safety checks imposed on creative players
+  exclude-ops: false
 
 # Timezone
 # See https://en.wikipedia.org/wiki/List_of_time_zone_abbreviations
@@ -43,6 +52,10 @@ claim:
   # The command prefix. DO NOT MODIFY.
   # ONLY TO BE CHANGED IF PREFIX IS CONFLICTING
   command: 'cr'
+
+  # The maximum amount of rewards a player can claim
+  # The maximum amount a player can claim is the minimum of either their inventory space or this limit.
+  limit: 15
 
   # Menu name
   menu: 'Claim Rewards!'
@@ -90,6 +103,9 @@ crate:
 
   # Are players allowed to put crates into crafting containers
   craft: false
+
+  # Are players allowed to put crate items into item frames
+  item-frame: false
 
   # Animation Exiting
   # Allows players to exit animations that have not yet been completed
