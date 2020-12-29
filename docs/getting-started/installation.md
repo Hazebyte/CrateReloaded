@@ -15,7 +15,7 @@ At this current moment, we do not support Sponge.
 
 1. [**Vault**](https://www.spigotmc.org/resources/vault.34315/)
 2. **Essentials** or [**EssentialsX**](https://www.spigotmc.org/resources/essentialsx.9089/)
-3. [**HolographicDisplays**](https://dev.bukkit.org/projects/holographic-displays)
+3. [**HolographicDisplays**](https://dev.bukkit.org/projects/holographic-displays) or **CMI (Holographics)**
 4. [**CrateReloadedNPC**](https://www.spigotmc.org/resources/.60992/)
    * Depends on [**Citizens**](https://www.spigotmc.org/resources/citizens.13811/)
 
