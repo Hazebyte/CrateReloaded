@@ -20,3 +20,4 @@ The plugin allows placeholders that dynamically generate text.
 | {raw-chance}         |       | Raw Unformatted Chance                |
 | {random:#,#}         |       | Random number [min, max]              |
 | {random-similar:#,#} |       | Same in-line random number [min, max] |
+| {#012345}            |       | RGB Support                           |
