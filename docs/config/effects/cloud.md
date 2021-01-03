@@ -1,5 +1,6 @@
 # Cloud Effect
 
+![cloud effect](../../_media/effects/cloud.png ":ignore title")
 ## Settings
 
 | Key            | Expects | Description                      |

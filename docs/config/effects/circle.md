@@ -1,5 +1,6 @@
 # Circle Effect
 
+![circle effect](../../_media/effects/circle.png ":ignore title")
 ## Settings
 
 | Key              | Expects | Description                               |

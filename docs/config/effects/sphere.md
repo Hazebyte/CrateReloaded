@@ -1,5 +1,6 @@
 # Sphere Effect
 
+![effect](../../_media/effects/sphere.gif ":ignore title")
 ## Settings
 
 | Key       | Expects | Description                               |
