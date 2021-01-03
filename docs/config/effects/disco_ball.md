@@ -1,5 +1,6 @@
 # DiscoBall Effect
 
+![effect](../../_media/effects/disco_ball.png ":ignore title")
 ## Settings
 
 | Key    | Expects | Description                               |

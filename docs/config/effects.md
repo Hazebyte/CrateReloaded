@@ -29,11 +29,12 @@ The following classes are effects that are officially supported and have been te
 - [original](config/effects/original.md)
 - [sound](config/effects/sound.md)
 - [firework](config/effects/firework.md)
-- [text](config/effects/text.md)
+- [circle](config/effects/circle.md)
 - [cloud](config/effects/cloud.md) `v2.0.36`
-- [sphere](config/effects/sphere.md)
 - [disco ball](config/effects/disco_ball.md)
 - [donut](config/effects/donut.md)
+- [sphere](config/effects/sphere.md)
+- [text](config/effects/text.md)
 
 ## Category
 

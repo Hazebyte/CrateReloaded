@@ -1,5 +1,7 @@
 # Donut Effect
 
+![effect](../../_media/effects/donut.png ":ignore title")
+
 ## Settings
 
 | Key             | Expects | Description                               |
