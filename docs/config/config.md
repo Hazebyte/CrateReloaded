@@ -21,7 +21,7 @@ custom-variables:
     - 'item:(diamond_sword 1 {sword_enchant}), chance:(1)`
 ```
 
-With the custom variable `{sword_enchant}` in defined in config.yml and used in crate.yml, this will give the player a diamond sword with enchantments. See more in [crate.yml](config/crate.yml) to learn how to customize crates.
+With the custom variable `{sword_enchant}` in defined in config.yml and used in crate.yml, this will give the player a diamond sword with enchantments. See more in [crate.yml](config/crate) to learn how to customize crates.
 
 ## Template
 
