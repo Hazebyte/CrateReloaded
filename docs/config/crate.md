@@ -152,35 +152,41 @@ display:(material:durability amount name:myName lore:lore1|lore2 skull:base64 co
 
 #### Examples
 
-_Potion:_
+**Potion:**
 
 ```yml
 display:(potion 1 name:Potion lore:Test effect:haste power:3 duration:180)'
 ```
 
-_Potion with multiple effects:_
+**Potion with multiple effects:**
 
 ```yml
 display:(potion 1 name:Potion lore:Test effect:haste power:3 duration:180 effect:jump_boost power:3 duration:180)'
 ```
 
-_Enchanted Sword with unbreakable and hidden attributes:_
+**Enchanted Sword with unbreakable and hidden attributes:**
 
 ```yml
 display:(diamond_sword 1 sharpness:1 knockback:1 unbreakable:true flag:HIDE_UNBREAKABLE)
 ```
 
-_Sword with durability:_
+**Sword with durability:**
 
 ```yml
 display:(diamond_sword:100 1)
 ```
 
-[_Minecraft Head:_](https://github.com/Hazebyte/CrateReloaded/issues/97)
+[**Minecraft Head:**](https://github.com/Hazebyte/CrateReloaded/issues/97)
 
 ```yml
 display:(player_head 1 name:&aWilltella lore:&aA_delicious_snack!! skull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE1ZGNiMmRhMDJjZjczNDgyOWUxZTI3M2UzMDI1NjE3ZDgwNzE1MTZmOTUzMjUxYjUyNTQ1ZGE4ZDNlOGRiOCJ9fX0)
 display:(player_head 1 name:&aNotch player:notch)
+```
+
+**Custom Model Data:**
+
+```
+display:(diamond_sword{CustomModelData:1001} 1)
 ```
 
 _Flags_
