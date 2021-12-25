@@ -15,8 +15,7 @@ specifies **when** will that effect appear.
 | category       | [link](#category)              | When this effect will appear                      |
 | relativeOffset | "x,y,z"                        | Offsets the effect from the original location     |
 | particle       | [link](reference/particles.md) |
-| particles      | integer                        | The number of particles to spawn per packet       |
-| particleCount  | integer                        | The number of extra particles to spawn per packet |
+| particleCount  | integer                        | The number of particles to spawn per packet       |
 | particleSize   | double                         | Scales the particle size (MC 1.13+)               |
 | visibleRange   | integer                        | The radius at which to display particles          |
 | yawOffset      | double                         | The yaw offset                                    |
